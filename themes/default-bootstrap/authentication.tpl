@@ -108,8 +108,23 @@
 					<!-- Account -->
 					<div class="required form-group">
 						<label for="guest_email">{l s='Email address'} <sup>*</sup></label>
-						<input type="text" class="is_required validate form-control" data-validate="isEmail" id="guest_email" name="guest_email" value="{if isset($smarty.post.guest_email)}{$smarty.post.guest_email}{/if}" />
+						<input type="email" class="is_required validate form-control" data-validate="isEmail" id="guest_email" name="guest_email" value="{if isset($smarty.post.guest_email)}{$smarty.post.guest_email}{/if}" />
 					</div>
+					<div class="required form-group">
+						<label for="guest_email_repeat">Repetir {l s='Email address'} <sup>*</sup></label>
+						<input type="email" class="is_required form-control" id="guest_email_repeat" name="guest_email_repeat" value="{if isset($smarty.post.guest_email_repeat)}{$smarty.post.guest_email_repeat}{/if}" />
+					</div>
+					<script type="text/javascript">
+						$(document).ready(e => {
+							$("#guest_email,#guest_email_repeat").on("keyup", e => {
+								valid = $("#guest_email").val() == $("#guest_email_repeat").val();
+								
+								$("#guest_email_repeat").parent()
+									.removeClass(valid ? "form-error" : "form-ok")
+									.addClass(valid ? "form-ok" : "form-error");
+							});
+						});
+					</script>
 					<div class="cleafix gender-line">
 						<label>{l s='Title'}</label>
 						{foreach from=$genders key=k item=gender}
