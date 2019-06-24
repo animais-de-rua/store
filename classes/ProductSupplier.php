@@ -1,30 +1,32 @@
 <?php
-/*
-* 2007-2016 PrestaShop
-*
-* NOTICE OF LICENSE
-*
-* This source file is subject to the Open Software License (OSL 3.0)
-* that is bundled with this package in the file LICENSE.txt.
-* It is also available through the world-wide-web at this URL:
-* http://opensource.org/licenses/osl-3.0.php
-* If you did not receive a copy of the license and are unable to
-* obtain it through the world-wide-web, please send an email
-* to license@prestashop.com so we can send you a copy immediately.
-*
-* DISCLAIMER
-*
-* Do not edit or add to this file if you wish to upgrade PrestaShop to newer
-* versions in the future. If you wish to customize PrestaShop for your
-* needs please refer to http://www.prestashop.com for more information.
-*
-*  @author PrestaShop SA <contact@prestashop.com>
-*  @copyright  2007-2016 PrestaShop SA
-*  @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
-*  International Registered Trademark & Property of PrestaShop SA
-*/
+/**
+ * 2007-2018 PrestaShop.
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Open Software License (OSL 3.0)
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * https://opensource.org/licenses/OSL-3.0
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@prestashop.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade PrestaShop to newer
+ * versions in the future. If you wish to customize PrestaShop for your
+ * needs please refer to http://www.prestashop.com for more information.
+ *
+ * @author    PrestaShop SA <contact@prestashop.com>
+ * @copyright 2007-2018 PrestaShop SA
+ * @license   https://opensource.org/licenses/OSL-3.0 Open Software License (OSL 3.0)
+ * International Registered Trademark & Property of PrestaShop SA
+ */
 
 /**
+ * ProductSupplierCore class.
+ *
  * @since 1.5.0
  */
 class ProductSupplierCore extends ObjectModel
@@ -66,12 +68,12 @@ class ProductSupplierCore extends ObjectModel
         'table' => 'product_supplier',
         'primary' => 'id_product_supplier',
         'fields' => array(
-            'product_supplier_reference' => array('type' => self::TYPE_STRING, 'validate' => 'isReference', 'size' => 32),
-            'id_product' =>                array('type' => self::TYPE_INT, 'validate' => 'isUnsignedId', 'required' => true),
-            'id_product_attribute' =>        array('type' => self::TYPE_INT, 'validate' => 'isUnsignedId', 'required' => true),
-            'id_supplier' =>                array('type' => self::TYPE_INT, 'validate' => 'isUnsignedId', 'required' => true),
-            'product_supplier_price_te' =>    array('type' => self::TYPE_FLOAT, 'validate' => 'isPrice'),
-            'id_currency' =>                array('type' => self::TYPE_INT, 'validate' => 'isUnsignedId'),
+            'product_supplier_reference' => array('type' => self::TYPE_STRING, 'validate' => 'isReference', 'size' => 64),
+            'id_product' => array('type' => self::TYPE_INT, 'validate' => 'isUnsignedId', 'required' => true),
+            'id_product_attribute' => array('type' => self::TYPE_INT, 'validate' => 'isUnsignedId', 'required' => true),
+            'id_supplier' => array('type' => self::TYPE_INT, 'validate' => 'isUnsignedId', 'required' => true),
+            'product_supplier_price_te' => array('type' => self::TYPE_FLOAT, 'validate' => 'isPrice'),
+            'id_currency' => array('type' => self::TYPE_INT, 'validate' => 'isUnsignedId'),
         ),
     );
 
@@ -110,51 +112,53 @@ class ProductSupplierCore extends ObjectModel
     }
 
     /**
-     * For a given product and supplier, gets the product supplier reference
+     * For a given product and supplier, gets the product supplier reference.
      *
-     * @param int $id_product
-     * @param int $id_product_attribute
-     * @param int $id_supplier
-     * @return string
+     * @param int $idProduct Product ID
+     * @param int $idProductAttribute Product Attribute ID
+     * @param int $idSupplier Supplier ID
+     *
+     * @return string Product Supplier reference
      */
-    public static function getProductSupplierReference($id_product, $id_product_attribute, $id_supplier)
+    public static function getProductSupplierReference($idProduct, $idProductAttribute, $idSupplier)
     {
         // build query
         $query = new DbQuery();
         $query->select('ps.product_supplier_reference');
         $query->from('product_supplier', 'ps');
-        $query->where('ps.id_product = '.(int)$id_product.'
-			AND ps.id_product_attribute = '.(int)$id_product_attribute.'
-			AND ps.id_supplier = '.(int)$id_supplier
+        $query->where('ps.id_product = ' . (int) $idProduct . '
+			AND ps.id_product_attribute = ' . (int) $idProductAttribute . '
+			AND ps.id_supplier = ' . (int) $idSupplier
         );
 
         return Db::getInstance(_PS_USE_SQL_SLAVE_)->getValue($query);
     }
 
     /**
-     * For a given product and supplier, gets the product supplier unit price
+     * For a given product and supplier, gets the product supplier unit price.
      *
-     * @param int $id_product
-     * @param int $id_product_attribute
-     * @param int $id_supplier
-     * @param bool $with_currency Optional
+     * @param int $idProduct Product ID
+     * @param int $idProductAttribute Product Attribute ID
+     * @param int $idSupplier Supplier ID
+     * @param bool $withCurrency Optional With currency
+     *
      * @return array
      */
-    public static function getProductSupplierPrice($id_product, $id_product_attribute, $id_supplier, $with_currency = false)
+    public static function getProductSupplierPrice($idProduct, $idProductAttribute, $idSupplier, $withCurrency = false)
     {
         // build query
         $query = new DbQuery();
         $query->select('ps.product_supplier_price_te');
-        if ($with_currency) {
+        if ($withCurrency) {
             $query->select('ps.id_currency');
         }
         $query->from('product_supplier', 'ps');
-        $query->where('ps.id_product = '.(int)$id_product.'
-			AND ps.id_product_attribute = '.(int)$id_product_attribute.'
-			AND ps.id_supplier = '.(int)$id_supplier
+        $query->where('ps.id_product = ' . (int) $idProduct . '
+			AND ps.id_product_attribute = ' . (int) $idProductAttribute . '
+			AND ps.id_supplier = ' . (int) $idSupplier
         );
 
-        if (!$with_currency) {
+        if (!$withCurrency) {
             return Db::getInstance(_PS_USE_SQL_SLAVE_)->getValue($query);
         }
 
@@ -167,40 +171,42 @@ class ProductSupplierCore extends ObjectModel
     }
 
     /**
-     * For a given product and supplier, gets corresponding ProductSupplier ID
+     * For a given product and supplier, gets corresponding ProductSupplier ID.
      *
-     * @param int $id_product
-     * @param int $id_product_attribute
-     * @param int $id_supplier
+     * @param int $idProduct
+     * @param int $idProductAttribute
+     * @param int $idSupplier
+     *
      * @return array
      */
-    public static function getIdByProductAndSupplier($id_product, $id_product_attribute, $id_supplier)
+    public static function getIdByProductAndSupplier($idProduct, $idProductAttribute, $idSupplier)
     {
         // build query
         $query = new DbQuery();
         $query->select('ps.id_product_supplier');
         $query->from('product_supplier', 'ps');
-        $query->where('ps.id_product = '.(int)$id_product.'
-			AND ps.id_product_attribute = '.(int)$id_product_attribute.'
-			AND ps.id_supplier = '.(int)$id_supplier
+        $query->where('ps.id_product = ' . (int) $idProduct . '
+			AND ps.id_product_attribute = ' . (int) $idProductAttribute . '
+			AND ps.id_supplier = ' . (int) $idSupplier
         );
 
         return Db::getInstance(_PS_USE_SQL_SLAVE_)->getValue($query);
     }
 
     /**
-     * For a given product, retrieves its suppliers
+     * For a given product, retrieves its suppliers.
      *
-     * @param int $id_product
-     * @param int $group_by_supplier
+     * @param int $idProduct
+     * @param int $groupBySupplier
+     *
      * @return PrestaShopCollection Collection of ProductSupplier
      */
-    public static function getSupplierCollection($id_product, $group_by_supplier = true)
+    public static function getSupplierCollection($idProduct, $groupBySupplier = true)
     {
         $suppliers = new PrestaShopCollection('ProductSupplier');
-        $suppliers->where('id_product', '=', (int)$id_product);
+        $suppliers->where('id_product', '=', (int) $idProduct);
 
-        if ($group_by_supplier) {
+        if ($groupBySupplier) {
             $suppliers->groupBy('id_supplier');
         }
 
@@ -208,30 +214,59 @@ class ProductSupplierCore extends ObjectModel
     }
 
     /**
-     * For a given Supplier, Product, returns the purchased price
+     * For a given Supplier, Product, returns the purchased price.
      *
-     * @param int $id_product
-     * @param int $id_product_attribute Optional
-     * @param bool $converted_price Optional
-     * @return Array keys: price_te, id_currency
+     * @param int $idProduct
+     * @param int $idProductAttribute Optional
+     * @param bool $convertedPrice Optional
+     *
+     * @return array keys: price_te, id_currency
      */
-    public static function getProductPrice($id_supplier, $id_product, $id_product_attribute = 0, $converted_price = false)
+    public static function getProductPrice($idSupplier, $idProduct, $idProductAttribute = 0, $convertedPrice = false)
     {
-        if (is_null($id_supplier) || is_null($id_product)) {
+        if (is_null($idSupplier) || is_null($idProduct)) {
             return;
         }
 
         $query = new DbQuery();
         $query->select('product_supplier_price_te as price_te, id_currency');
         $query->from('product_supplier');
-        $query->where('id_product = '.(int)$id_product.' AND id_product_attribute = '.(int)$id_product_attribute);
-        $query->where('id_supplier = '.(int)$id_supplier);
+        $query->where('id_product = ' . (int) $idProduct . ' AND id_product_attribute = ' . (int) $idProductAttribute);
+        $query->where('id_supplier = ' . (int) $idSupplier);
 
         $row = Db::getInstance(_PS_USE_SQL_SLAVE_)->getRow($query);
-        if ($converted_price) {
+        if ($convertedPrice) {
             return Tools::convertPrice($row['price_te'], $row['id_currency']);
         }
 
         return $row['price_te'];
+    }
+
+    /**
+     * For a given product and supplier, gets the product supplier datas.
+     *
+     * @param int $idProduct Product ID
+     * @param int $idProductAttribute Product Attribute ID
+     * @param int $idSupplier Supplier ID
+     *
+     * @return array
+     */
+    public static function getProductSupplierData($idProduct, $idProductAttribute, $idSupplier)
+    {
+        // build query
+        $query = new DbQuery();
+        $query->select('ps.product_supplier_reference, ps.product_supplier_price_te as price, ps.id_currency');
+        $query->from('product_supplier', 'ps');
+        $query->where('ps.id_product = ' . (int) $idProduct . '
+			AND ps.id_product_attribute = ' . (int) $idProductAttribute . '
+			AND ps.id_supplier = ' . (int) $idSupplier
+        );
+
+        $res = Db::getInstance(_PS_USE_SQL_SLAVE_)->executeS($query);
+        if (isset($res[0])) {
+            return $res[0];
+        }
+
+        return $res;
     }
 }

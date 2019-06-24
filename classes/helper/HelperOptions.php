@@ -1,31 +1,31 @@
 <?php
-/*
-* 2007-2016 PrestaShop
-*
-* NOTICE OF LICENSE
-*
-* This source file is subject to the Open Software License (OSL 3.0)
-* that is bundled with this package in the file LICENSE.txt.
-* It is also available through the world-wide-web at this URL:
-* http://opensource.org/licenses/osl-3.0.php
-* If you did not receive a copy of the license and are unable to
-* obtain it through the world-wide-web, please send an email
-* to license@prestashop.com so we can send you a copy immediately.
-*
-* DISCLAIMER
-*
-* Do not edit or add to this file if you wish to upgrade PrestaShop to newer
-* versions in the future. If you wish to customize PrestaShop for your
-* needs please refer to http://www.prestashop.com for more information.
-*
-*  @author PrestaShop SA <contact@prestashop.com>
-*  @copyright  2007-2016 PrestaShop SA
-*  @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
-*  International Registered Trademark & Property of PrestaShop SA
-*/
+/**
+ * 2007-2018 PrestaShop.
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Open Software License (OSL 3.0)
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * https://opensource.org/licenses/OSL-3.0
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@prestashop.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade PrestaShop to newer
+ * versions in the future. If you wish to customize PrestaShop for your
+ * needs please refer to http://www.prestashop.com for more information.
+ *
+ * @author    PrestaShop SA <contact@prestashop.com>
+ * @copyright 2007-2018 PrestaShop SA
+ * @license   https://opensource.org/licenses/OSL-3.0 Open Software License (OSL 3.0)
+ * International Registered Trademark & Property of PrestaShop SA
+ */
 
 /**
- * Use this helper to generate preferences forms, with values stored in the configuration table
+ * Use this helper to generate preferences forms, with values stored in the configuration table.
  */
 class HelperOptionsCore extends Helper
 {
@@ -39,8 +39,10 @@ class HelperOptionsCore extends Helper
     }
 
     /**
-     * Generate a form for options
+     * Generate a form for options.
+     *
      * @param array $option_list
+     *
      * @return string html
      */
     public function generateOptions($option_list)
@@ -59,7 +61,7 @@ class HelperOptionsCore extends Helper
             }
 
             if (!isset($category_data['image'])) {
-                $category_data['image'] = (!empty($tab['module']) && file_exists($_SERVER['DOCUMENT_ROOT']._MODULE_DIR_.$tab['module'].'/'.$tab['class_name'].'.gif') ? _MODULE_DIR_.$tab['module'].'/' : '../img/t/').$tab['class_name'].'.gif';
+                $category_data['image'] = (!empty($tab['module']) && file_exists($_SERVER['DOCUMENT_ROOT'] . _MODULE_DIR_ . $tab['module'] . '/' . $tab['class_name'] . '.gif') ? _MODULE_DIR_ . $tab['module'] . '/' : '../img/t/') . $tab['class_name'] . '.gif';
             }
 
             if (!isset($category_data['fields'])) {
@@ -70,7 +72,7 @@ class HelperOptionsCore extends Helper
 
             if (isset($category_data['tabs'])) {
                 $tabs[$category] = $category_data['tabs'];
-                $tabs[$category]['misc'] = $this->l('Miscellaneous');
+                $tabs[$category]['misc'] = Context::getContext()->getTranslator()->trans('Miscellaneous', array(), 'Admin.Global');
             }
 
             foreach ($category_data['fields'] as $key => $field) {
@@ -102,50 +104,64 @@ class HelperOptionsCore extends Helper
                     $this->context->controller->addJqueryPlugin('colorpicker');
                 }
 
-                if ($field['type'] == 'texarea' || $field['type'] == 'textareaLang') {
-                    $this->context->controller->addJqueryPlugin('autosize');
+                if ($field['type'] == 'textarea' || $field['type'] == 'textareaLang') {
+                    if (isset($field['autoload_rte']) && $field['autoload_rte'] == true) {
+                        $iso = $this->context->language->iso_code;
+                        $this->tpl_vars['iso'] = file_exists(_PS_CORE_DIR_ . '/js/tiny_mce/langs/' . $iso . '.js') ? $iso : 'en';
+                        $this->tpl_vars['path_css'] = _THEME_CSS_DIR_;
+                        $this->tpl_vars['ad'] = __PS_BASE_URI__ . basename(_PS_ADMIN_DIR_);
+                        $this->tpl_vars['tinymce'] = true;
+
+                        $this->context->controller->addJS(_PS_JS_DIR_ . 'tiny_mce/tiny_mce.js');
+                        $this->context->controller->addJS(_PS_JS_DIR_ . 'admin/tinymce.inc.js');
+                    } else {
+                        $this->context->controller->addJqueryPlugin('autosize');
+                    }
                 }
 
                 if ($field['type'] == 'file') {
                     $uploader = new HelperUploader();
-                    $uploader->setId(isset($field['id'])?$field['id']:null);
+                    $uploader->setId(isset($field['id']) ? $field['id'] : null);
                     $uploader->setName($field['name']);
-                    $uploader->setUrl(isset($field['url'])?$field['url']:null);
-                    $uploader->setMultiple(isset($field['multiple'])?$field['multiple']:false);
-                    $uploader->setUseAjax(isset($field['ajax'])?$field['ajax']:false);
-                    $uploader->setMaxFiles(isset($field['max_files'])?$field['max_files']:null);
+                    $uploader->setUrl(isset($field['url']) ? $field['url'] : null);
+                    $uploader->setMultiple(isset($field['multiple']) ? $field['multiple'] : false);
+                    $uploader->setUseAjax(isset($field['ajax']) ? $field['ajax'] : false);
+                    $uploader->setMaxFiles(isset($field['max_files']) ? $field['max_files'] : null);
 
                     if (isset($field['files']) && $field['files']) {
                         $uploader->setFiles($field['files']);
                     } elseif (isset($field['image']) && $field['image']) { // Use for retrocompatibility
                         $uploader->setFiles(array(
                             0 => array(
-                            'type'       => HelperUploader::TYPE_IMAGE,
-                            'image'      => isset($field['image'])?$field['image']:null,
-                            'size'       => isset($field['size'])?$field['size']:null,
-                            'delete_url' => isset($field['delete_url'])?$field['delete_url']:null
-                        )));
+                                'type' => HelperUploader::TYPE_IMAGE,
+                                'image' => isset($field['image']) ? $field['image'] : null,
+                                'size' => isset($field['size']) ? $field['size'] : null,
+                                'delete_url' => isset($field['delete_url']) ? $field['delete_url'] : null,
+                            ),
+                        ));
                     }
 
                     if (isset($field['file']) && $field['file']) { // Use for retrocompatibility
                         $uploader->setFiles(array(
                             0 => array(
-                            'type'       => HelperUploader::TYPE_FILE,
-                            'size'       => isset($field['size'])?$field['size']:null,
-                            'delete_url' => isset($field['delete_url'])?$field['delete_url']:null,
-                            'download_url' => isset($field['file'])?$field['file']:null
-                        )));
+                                'type' => HelperUploader::TYPE_FILE,
+                                'size' => isset($field['size']) ? $field['size'] : null,
+                                'delete_url' => isset($field['delete_url']) ? $field['delete_url'] : null,
+                                'download_url' => isset($field['file']) ? $field['file'] : null,
+                            ),
+                        ));
                     }
 
                     if (isset($field['thumb']) && $field['thumb']) { // Use for retrocompatibility
                         $uploader->setFiles(array(
                             0 => array(
-                            'type'       => HelperUploader::TYPE_IMAGE,
-                            'image'      => isset($field['thumb'])?'<img src="'.$field['thumb'].'" alt="'.$field['title'].'" title="'.$field['title'].'" />':null,
-                        )));
+                                'type' => HelperUploader::TYPE_IMAGE,
+                                'image' => isset($field['thumb']) ? '<img src="' . $field['thumb'] . '" alt="' . $field['title'] . '" title="' . $field['title'] . '" />' : null,
+                            ),
+                        ));
                     }
 
-                    $uploader->setTitle(isset($field['title'])?$field['title']:null);
+                    $uploader->setTitle(isset($field['title']) ? $field['title'] : null);
                     $field['file'] = $uploader->render();
                 }
 
@@ -158,16 +174,21 @@ class HelperOptionsCore extends Helper
 
                 // Fill values for all languages for all lang fields
                 if (substr($field['type'], -4) == 'Lang') {
+                    $field['value'] = array();
                     foreach ($languages as $language) {
                         if ($field['type'] == 'textLang') {
-                            $value = Tools::getValue($key.'_'.$language['id_lang'], Configuration::get($key, $language['id_lang']));
+                            $value = Tools::getValue($key . '_' . $language['id_lang'], Configuration::get($key, $language['id_lang']));
                         } elseif ($field['type'] == 'textareaLang') {
                             $value = Configuration::get($key, $language['id_lang']);
                         } elseif ($field['type'] == 'selectLang') {
                             $value = Configuration::get($key, $language['id_lang']);
                         }
-                        $field['languages'][$language['id_lang']] = $value;
-                        $field['value'][$language['id_lang']] = $this->getOptionValue($key.'_'.strtoupper($language['iso_code']), $field);
+                        if (isset($value)) {
+                            $field['languages'][$language['id_lang']] = $value;
+                        } else {
+                            $field['languages'][$language['id_lang']] = '';
+                        }
+                        $field['value'][$language['id_lang']] = $this->getOptionValue($key . '_' . strtoupper($language['iso_code']), $field);
                     }
                 }
 
@@ -175,17 +196,20 @@ class HelperOptionsCore extends Helper
                 // @todo move this
                 if ($field['type'] == 'maintenance_ip') {
                     $field['script_ip'] = '
-						<script type="text/javascript">
-							function addRemoteAddr()
-							{
-								var length = $(\'input[name=PS_MAINTENANCE_IP]\').attr(\'value\').length;
-								if (length > 0)
-									$(\'input[name=PS_MAINTENANCE_IP]\').attr(\'value\',$(\'input[name=PS_MAINTENANCE_IP]\').attr(\'value\') +\','.Tools::getRemoteAddr().'\');
-								else
-									$(\'input[name=PS_MAINTENANCE_IP]\').attr(\'value\',\''.Tools::getRemoteAddr().'\');
-							}
-						</script>';
-                    $field['link_remove_ip'] = '<button type="button" class="btn btn-default" onclick="addRemoteAddr();"><i class="icon-plus"></i> '.$this->l('Add my IP', 'Helper').'</button>';
+                        <script type="text/javascript">
+                            function addRemoteAddr()
+                            {
+                                var length = $(\'input[name=PS_MAINTENANCE_IP]\').attr(\'value\').length;
+                                if (length > 0) {
+                                    if ($(\'input[name=PS_MAINTENANCE_IP]\').attr(\'value\').indexOf(\'' . Tools::getRemoteAddr() . '\') < 0) {
+                                        $(\'input[name=PS_MAINTENANCE_IP]\').attr(\'value\',$(\'input[name=PS_MAINTENANCE_IP]\').attr(\'value\') +\',' . Tools::getRemoteAddr() . '\');
+                                    }
+                                } else {
+                                    $(\'input[name=PS_MAINTENANCE_IP]\').attr(\'value\',\'' . Tools::getRemoteAddr() . '\');
+                                }
+                            }
+                        </script>';
+                    $field['link_remove_ip'] = '<button type="button" class="btn btn-default" onclick="addRemoteAddr();"><i class="icon-plus"></i> ' . $this->l('Add my IP', 'Helper') . '</button>';
                 }
 
                 // Multishop default value
@@ -228,7 +252,7 @@ class HelperOptionsCore extends Helper
     }
 
     /**
-     * Type = image
+     * Type = image.
      */
     public function displayOptionTypeImage($key, $field, $value)
     {
@@ -238,34 +262,34 @@ class HelperOptionsCore extends Helper
         $i = 0;
         foreach ($field['list'] as $theme) {
             echo '<td class="center" style="width: 180px; padding:0px 20px 20px 0px;">';
-            echo '<input type="radio" name="'.$key.'" id="'.$key.'_'.$theme['name'].'_on" style="vertical-align: text-bottom;" value="'.$theme['name'].'"'.(_THEME_NAME_ == $theme['name'] ? 'checked="checked"' : '').' />';
-            echo '<label class="t" for="'.$key.'_'.$theme['name'].'_on"> '.Tools::strtolower($theme['name']).'</label>';
+            echo '<input type="radio" name="' . $key . '" id="' . $key . '_' . $theme['name'] . '_on" style="vertical-align: text-bottom;" value="' . $theme['name'] . '"' . (_THEME_NAME_ == $theme['name'] ? 'checked="checked"' : '') . ' />';
+            echo '<label class="t" for="' . $key . '_' . $theme['name'] . '_on"> ' . Tools::strtolower($theme['name']) . '</label>';
             echo '<br />';
-            echo '<label class="t" for="'.$key.'_'.$theme['name'].'_on">';
-            echo '<img src="../themes/'.$theme['name'].'/preview.jpg" alt="'.Tools::strtolower($theme['name']).'">';
+            echo '<label class="t" for="' . $key . '_' . $theme['name'] . '_on">';
+            echo '<img src="' . $theme['preview'] . '" alt="' . Tools::strtolower($theme['name']) . '">';
             echo '</label>';
             echo '</td>';
             if (isset($field['max']) && ($i + 1) % $field['max'] == 0) {
                 echo '</tr><tr>';
             }
-            $i++;
+            ++$i;
         }
         echo '</tr>';
         echo '</table>';
     }
 
     /**
-     * Type = price
+     * Type = price.
      */
     public function displayOptionTypePrice($key, $field, $value)
     {
         echo $this->context->currency->getSign('left');
         $this->displayOptionTypeText($key, $field, $value);
-        echo $this->context->currency->getSign('right').' '.$this->l('(tax excl.)', 'Helper');
+        echo $this->context->currency->getSign('right') . ' ' . $this->l('(tax excl.)', 'Helper');
     }
 
     /**
-     * Type = disabled
+     * Type = disabled.
      */
     public function displayOptionTypeDisabled($key, $field, $value)
     {
@@ -282,6 +306,7 @@ class HelperOptionsCore extends Helper
         if (isset($field['defaultValue']) && !$value) {
             $value = $field['defaultValue'];
         }
+
         return Tools::purifyHTML($value);
     }
 }

@@ -1,5 +1,4 @@
-
-[/{shop_url}] 
+[{shop_url}] 
 
 Olá 
 
@@ -8,6 +7,6 @@ Isto é um EMAIL DE TESTE enviado a partir da sua loja.
 Se estiver a ler esta mensagem significa que o teste foi bem
 sucedido!. 
 
-{shop_name} [/{shop_url}] usa a plataforma PrestaShop(tm)
-[http://www.prestashop.com/] 
+{shop_name} [{shop_url}] powered by
+PrestaShop(tm) [http://www.prestashop.com/] 
 

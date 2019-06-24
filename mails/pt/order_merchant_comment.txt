@@ -1,5 +1,4 @@
-
-[/{shop_url}] 
+[{shop_url}] 
 
 Olá {firstname} {lastname}, 
 
@@ -8,6 +7,6 @@ referência {order_name}.
 
 MENSAGEM: {message} 		 
 
-{shop_name} [/{shop_url}] usa a plataforma PrestaShop(tm)
-[http://www.prestashop.com/] 
+{shop_name} [{shop_url}] powered by
+PrestaShop(tm) [http://www.prestashop.com/] 
 

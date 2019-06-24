@@ -1,13 +1,13 @@
 <?php
 /**
- * 2007-2016 PrestaShop
+ * 2007-2018 PrestaShop.
  *
  * NOTICE OF LICENSE
  *
  * This source file is subject to the Open Software License (OSL 3.0)
  * that is bundled with this package in the file LICENSE.txt.
  * It is also available through the world-wide-web at this URL:
- * http://opensource.org/licenses/osl-3.0.php
+ * https://opensource.org/licenses/OSL-3.0
  * If you did not receive a copy of the license and are unable to
  * obtain it through the world-wide-web, please send an email
  * to license@prestashop.com so we can send you a copy immediately.
@@ -18,14 +18,11 @@
  * versions in the future. If you wish to customize PrestaShop for your
  * needs please refer to http://www.prestashop.com for more information.
  *
- *  @author 	PrestaShop SA <contact@prestashop.com>
- *  @copyright  2007-2016 PrestaShop SA
- *  @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
- *  International Registered Trademark & Property of PrestaShop SA
+ * @author    PrestaShop SA <contact@prestashop.com>
+ * @copyright 2007-2018 PrestaShop SA
+ * @license   https://opensource.org/licenses/OSL-3.0 Open Software License (OSL 3.0)
+ * International Registered Trademark & Property of PrestaShop SA
  */
-
-require_once(_PS_TOOL_DIR_.'tcpdf/config/lang/eng.php');
-require_once(_PS_TOOL_DIR_.'tcpdf/tcpdf.php');
 
 /**
  * @since 1.5
@@ -70,7 +67,7 @@ class PDFGeneratorCore extends TCPDF
         'ko' => 'cid0kr',
         'zh' => 'cid0cs',
         'tw' => 'cid0cs',
-        'th' => 'freeserif'
+        'th' => 'freeserif',
     );
 
     /**
@@ -84,7 +81,7 @@ class PDFGeneratorCore extends TCPDF
     }
 
     /**
-     * set the PDF encoding
+     * set the PDF encoding.
      *
      * @param string $encoding
      */
@@ -94,8 +91,7 @@ class PDFGeneratorCore extends TCPDF
     }
 
     /**
-     *
-     * set the PDF header
+     * set the PDF header.
      *
      * @param string $header HTML
      */
@@ -105,8 +101,7 @@ class PDFGeneratorCore extends TCPDF
     }
 
     /**
-     *
-     * set the PDF footer
+     * set the PDF footer.
      *
      * @param string $footer HTML
      */
@@ -116,8 +111,7 @@ class PDFGeneratorCore extends TCPDF
     }
 
     /**
-     *
-     * create the PDF content
+     * create the PDF content.
      *
      * @param string $content HTML
      */
@@ -127,8 +121,7 @@ class PDFGeneratorCore extends TCPDF
     }
 
     /**
-     *
-     * create the PDF pagination
+     * create the PDF pagination.
      *
      * @param string $pagination HTML
      */
@@ -138,7 +131,7 @@ class PDFGeneratorCore extends TCPDF
     }
 
     /**
-     * Change the font
+     * Change the font.
      *
      * @param string $iso_lang
      */
@@ -146,7 +139,7 @@ class PDFGeneratorCore extends TCPDF
     {
         if (array_key_exists($iso_lang, $this->font_by_lang)) {
             $this->font = $this->font_by_lang[$iso_lang];
-        }else {
+        } else {
             $this->font = self::DEFAULT_FONT;
         }
 
@@ -175,9 +168,11 @@ class PDFGeneratorCore extends TCPDF
     }
 
     /**
-     * Render HTML template
+     * Render HTML template.
+     *
      * @param string $filename
      * @param bool $display true:display to user, false:save, 'I','D','S' as fpdf display
+     *
      * @throws PrestaShopException
      *
      * @return string HTML rendered
@@ -208,7 +203,7 @@ class PDFGeneratorCore extends TCPDF
     }
 
     /**
-     * Write a PDF page
+     * Write a PDF page.
      */
     public function writePage()
     {
@@ -220,8 +215,8 @@ class PDFGeneratorCore extends TCPDF
     }
 
     /**
-     * Override of TCPDF::getRandomSeed() - getmypid() is blocked on several hosting
-    */
+     * Override of TCPDF::getRandomSeed() - getmypid() is blocked on several hosting.
+     */
     protected function getRandomSeed($seed = '')
     {
         $seed .= microtime();

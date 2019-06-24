@@ -1,5 +1,4 @@
-
-[/{shop_url}] 
+[{shop_url}] 
 
 Mensagem de um cliente da loja {shop_name} 
 
@@ -11,6 +10,6 @@ Nº DA ENCOMENDA: {order_name}
 
 FICHEIRO ANEXO: {attached_file} 		 
 
-{shop_name} [/{shop_url}] usa a plataforma PrestaShop(tm)
-[http://www.prestashop.com/] 
+{shop_name} [{shop_url}] powered by
+PrestaShop(tm) [http://www.prestashop.com/] 
 

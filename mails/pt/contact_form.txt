@@ -1,11 +1,8 @@
-
-[/{shop_url}] 
+[{shop_url}] 
 
 A sua mensagem para o Apoio ao Cliente da loja {shop_name} 
 
 A sua mensagem foi enviada com sucesso.
-
-MENSAGEM: {message}
 
 Nº DA ENCOMENDA: {order_name}
 
@@ -15,6 +12,6 @@ FICHEIRO ANEXO: {attached_file}
 
 Responderemos o mais breve possível. 
 
-{shop_name} [/{shop_url}] usa a plataforma PrestaShop(tm)
-[http://www.prestashop.com/] 
+{shop_name} [{shop_url}] powered by
+PrestaShop(tm) [http://www.prestashop.com/] 
 

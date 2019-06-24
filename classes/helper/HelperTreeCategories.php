@@ -1,34 +1,33 @@
 <?php
-/*
-* 2007-2016 PrestaShop
-*
-* NOTICE OF LICENSE
-*
-* This source file is subject to the Open Software License (OSL 3.0)
-* that is bundled with this package in the file LICENSE.txt.
-* It is also available through the world-wide-web at this URL:
-* http://opensource.org/licenses/osl-3.0.php
-* If you did not receive a copy of the license and are unable to
-* obtain it through the world-wide-web, please send an email
-* to license@prestashop.com so we can send you a copy immediately.
-*
-* DISCLAIMER
-*
-* Do not edit or add to this file if you wish to upgrade PrestaShop to newer
-* versions in the future. If you wish to customize PrestaShop for your
-* needs please refer to http://www.prestashop.com for more information.
-*
-*  @author PrestaShop SA <contact@prestashop.com>
-*  @copyright  2007-2016 PrestaShop SA
-*  @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
-*  International Registered Trademark & Property of PrestaShop SA
-*/
-
+/**
+ * 2007-2018 PrestaShop.
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Open Software License (OSL 3.0)
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * https://opensource.org/licenses/OSL-3.0
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@prestashop.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade PrestaShop to newer
+ * versions in the future. If you wish to customize PrestaShop for your
+ * needs please refer to http://www.prestashop.com for more information.
+ *
+ * @author    PrestaShop SA <contact@prestashop.com>
+ * @copyright 2007-2018 PrestaShop SA
+ * @license   https://opensource.org/licenses/OSL-3.0 Open Software License (OSL 3.0)
+ * International Registered Trademark & Property of PrestaShop SA
+ */
 class HelperTreeCategoriesCore extends TreeCore
 {
-    const DEFAULT_TEMPLATE             = 'tree_categories.tpl';
+    const DEFAULT_TEMPLATE = 'tree_categories.tpl';
     const DEFAULT_NODE_FOLDER_TEMPLATE = 'tree_node_folder_radio.tpl';
-    const DEFAULT_NODE_ITEM_TEMPLATE   = 'tree_node_item_radio.tpl';
+    const DEFAULT_NODE_ITEM_TEMPLATE = 'tree_node_item_radio.tpl';
 
     private $_disabled_categories;
     private $_input_name;
@@ -42,9 +41,13 @@ class HelperTreeCategoriesCore extends TreeCore
     private $_use_shop_restriction;
     private $_children_only = false;
 
-    public function __construct($id, $title = null, $root_category = null,
-        $lang = null, $use_shop_restriction = true)
-    {
+    public function __construct(
+        $id,
+        $title = null,
+        $root_category = null,
+        $lang = null,
+        $use_shop_restriction = true
+    ) {
         parent::__construct($id);
 
         if (isset($title)) {
@@ -59,17 +62,45 @@ class HelperTreeCategoriesCore extends TreeCore
         $this->setUseShopRestriction($use_shop_restriction);
     }
 
-    private function fillTree(&$categories, $id_category)
+    private function fillTree(&$categories, $rootCategoryId)
     {
         $tree = array();
-        foreach ($categories[$id_category] as $category) {
-            $tree[$category['id_category']] = $category;
-            if (!empty($categories[$category['id_category']])) {
-                $tree[$category['id_category']]['children'] = $this->fillTree($categories, $category['id_category']);
-            } elseif ($result = Category::hasChildren($category['id_category'], $this->getLang(), false, $this->getShop()->id)) {
-                $tree[$category['id_category']]['children'] = array($result[0]['id_category'] => $result[0]);
+        $rootCategoryId = (int) $rootCategoryId;
+
+        foreach ($categories[$rootCategoryId] as $category) {
+            $categoryId = (int) $category['id_category'];
+            $tree[$categoryId] = $category;
+
+            if (Category::hasChildren($categoryId, $this->getLang(), false, $this->getShop()->id)) {
+                $categoryChildren = Category::getChildren(
+                    $categoryId,
+                    $this->getLang(),
+                    false,
+                    $this->getShop()->id
+                );
+
+                foreach ($categoryChildren as $child) {
+                    $childId = (int) $child['id_category'];
+
+                    if (!array_key_exists('children', $tree[$categoryId])) {
+                        $tree[$categoryId]['children'] = array($childId => $child);
+                    } else {
+                        $tree[$categoryId]['children'][$childId] = $child;
+                    }
+
+                    $categories[$childId] = array($child);
+                }
+
+                foreach ($tree[$categoryId]['children'] as $childId => $child) {
+                    $subtree = $this->fillTree($categories, $childId);
+
+                    foreach ($subtree as $subcategoryId => $subcategory) {
+                        $tree[$categoryId]['children'][$subcategoryId] = $subcategory;
+                    }
+                }
             }
         }
+
         return $tree;
     }
 
@@ -78,10 +109,9 @@ class HelperTreeCategoriesCore extends TreeCore
         if (!isset($this->_data)) {
             $shop = $this->getShop();
             $lang = $this->getLang();
-            $root_category = (int)$this->getRootCategory();
+            $root_category = (int) $this->getRootCategory();
             if ($this->_full_tree) {
-                $this->setData(Category::getNestedCategories(
-                    $root_category, $lang, false, null, $this->useShopRestriction()));
+                $this->setData(Category::getNestedCategories($root_category, $lang, false, null, $this->useShopRestriction()));
                 $this->setDataSearch(Category::getAllCategoriesName($root_category, $lang, false, null, $this->useShopRestriction()));
             } elseif ($this->_children_only) {
                 if (empty($root_category)) {
@@ -132,12 +162,14 @@ class HelperTreeCategoriesCore extends TreeCore
     public function setChildrenOnly($value)
     {
         $this->_children_only = $value;
+
         return $this;
     }
 
     public function setFullTree($value)
     {
         $this->_full_tree = $value;
+
         return $this;
     }
 
@@ -146,10 +178,10 @@ class HelperTreeCategoriesCore extends TreeCore
         return $this->_full_tree;
     }
 
-
     public function setDisabledCategories($value)
     {
         $this->_disabled_categories = $value;
+
         return $this;
     }
 
@@ -161,6 +193,7 @@ class HelperTreeCategoriesCore extends TreeCore
     public function setInputName($value)
     {
         $this->_input_name = $value;
+
         return $this;
     }
 
@@ -176,6 +209,7 @@ class HelperTreeCategoriesCore extends TreeCore
     public function setLang($value)
     {
         $this->_lang = $value;
+
         return $this;
     }
 
@@ -213,6 +247,7 @@ class HelperTreeCategoriesCore extends TreeCore
         }
 
         $this->_root_category = $value;
+
         return $this;
     }
 
@@ -228,6 +263,7 @@ class HelperTreeCategoriesCore extends TreeCore
         }
 
         $this->_selected_categories = $value;
+
         return $this;
     }
 
@@ -243,6 +279,7 @@ class HelperTreeCategoriesCore extends TreeCore
     public function setShop($value)
     {
         $this->_shop = $value;
+
         return $this;
     }
 
@@ -274,35 +311,38 @@ class HelperTreeCategoriesCore extends TreeCore
 
     public function setUseCheckBox($value)
     {
-        $this->_use_checkbox = (bool)$value;
+        $this->_use_checkbox = (bool) $value;
+
         return $this;
     }
 
     public function setUseSearch($value)
     {
-        $this->_use_search = (bool)$value;
+        $this->_use_search = (bool) $value;
+
         return $this;
     }
 
     public function setUseShopRestriction($value)
     {
-        $this->_use_shop_restriction = (bool)$value;
+        $this->_use_shop_restriction = (bool) $value;
+
         return $this;
     }
 
     public function useCheckBox()
     {
-        return (isset($this->_use_checkbox) && $this->_use_checkbox);
+        return isset($this->_use_checkbox) && $this->_use_checkbox;
     }
 
     public function useSearch()
     {
-        return (isset($this->_use_search) && $this->_use_search);
+        return isset($this->_use_search) && $this->_use_search;
     }
 
     public function useShopRestriction()
     {
-        return (isset($this->_use_shop_restriction) && $this->_use_shop_restriction);
+        return isset($this->_use_shop_restriction) && $this->_use_shop_restriction;
     }
 
     public function render($data = null)
@@ -325,23 +365,25 @@ class HelperTreeCategoriesCore extends TreeCore
         if ($this->useSearch()) {
             $this->addAction(new TreeToolbarSearchCategories(
                 'Find a category:',
-                $this->getId().'-categories-search')
-            );
+                $this->getId() . '-categories-search'
+            ));
             $this->setAttribute('use_search', $this->useSearch());
         }
 
         $collapse_all = new TreeToolbarLink(
             'Collapse All',
             '#',
-            '$(\'#'.$this->getId().'\').tree(\'collapseAll\');$(\'#collapse-all-'.$this->getId().'\').hide();$(\'#expand-all-'.$this->getId().'\').show(); return false;',
-            'icon-collapse-alt');
-        $collapse_all->setAttribute('id', 'collapse-all-'.$this->getId());
+            '$(\'#' . $this->getId() . '\').tree(\'collapseAll\');$(\'#collapse-all-' . $this->getId() . '\').hide();$(\'#expand-all-' . $this->getId() . '\').show(); return false;',
+            'icon-collapse-alt'
+        );
+        $collapse_all->setAttribute('id', 'collapse-all-' . $this->getId());
         $expand_all = new TreeToolbarLink(
             'Expand All',
             '#',
-            '$(\'#'.$this->getId().'\').tree(\'expandAll\');$(\'#collapse-all-'.$this->getId().'\').show();$(\'#expand-all-'.$this->getId().'\').hide(); return false;',
-            'icon-expand-alt');
-        $expand_all->setAttribute('id', 'expand-all-'.$this->getId());
+            '$(\'#' . $this->getId() . '\').tree(\'expandAll\');$(\'#collapse-all-' . $this->getId() . '\').show();$(\'#expand-all-' . $this->getId() . '\').hide(); return false;',
+            'icon-expand-alt'
+        );
+        $expand_all->setAttribute('id', 'expand-all-' . $this->getId());
         $this->addAction($collapse_all);
         $this->addAction($expand_all);
 
@@ -349,15 +391,17 @@ class HelperTreeCategoriesCore extends TreeCore
             $check_all = new TreeToolbarLink(
                 'Check All',
                 '#',
-                'checkAllAssociatedCategories($(\'#'.$this->getId().'\')); return false;',
-                'icon-check-sign');
-            $check_all->setAttribute('id', 'check-all-'.$this->getId());
+                'checkAllAssociatedCategories($(\'#' . $this->getId() . '\')); return false;',
+                'icon-check-sign'
+            );
+            $check_all->setAttribute('id', 'check-all-' . $this->getId());
             $uncheck_all = new TreeToolbarLink(
                 'Uncheck All',
                 '#',
-                'uncheckAllAssociatedCategories($(\'#'.$this->getId().'\')); return false;',
-                'icon-check-empty');
-            $uncheck_all->setAttribute('id', 'uncheck-all-'.$this->getId());
+                'uncheckAllAssociatedCategories($(\'#' . $this->getId() . '\')); return false;',
+                'icon-check-empty'
+            );
+            $uncheck_all->setAttribute('id', 'uncheck-all-' . $this->getId());
             $this->addAction($check_all);
             $this->addAction($uncheck_all);
             $this->setNodeFolderTemplate('tree_node_folder_checkbox.tpl');
@@ -368,6 +412,7 @@ class HelperTreeCategoriesCore extends TreeCore
         $this->setAttribute('selected_categories', $this->getSelectedCategories());
         $this->getContext()->smarty->assign('root_category', Configuration::get('PS_ROOT_CATEGORY'));
         $this->getContext()->smarty->assign('token', Tools::getAdminTokenLite('AdminProducts'));
+
         return parent::render($data);
     }
 
@@ -384,7 +429,7 @@ class HelperTreeCategoriesCore extends TreeCore
 
         $html = '';
         foreach ($data as $item) {
-            if (array_key_exists('children', $item)
+            if (is_array($item) && array_key_exists('children', $item)
                 && !empty($item['children'])) {
                 $html .= $this->getContext()->smarty->createTemplate(
                     $this->getTemplateFile($this->getNodeFolderTemplate()),
@@ -392,7 +437,7 @@ class HelperTreeCategoriesCore extends TreeCore
                 )->assign(array(
                     'input_name' => $this->getInputName(),
                     'children' => $this->renderNodes($item['children']),
-                    'node'     => $item
+                    'node' => $item,
                 ))->fetch();
             } else {
                 $html .= $this->getContext()->smarty->createTemplate(
@@ -400,7 +445,7 @@ class HelperTreeCategoriesCore extends TreeCore
                     $this->getContext()->smarty
                 )->assign(array(
                     'input_name' => $this->getInputName(),
-                    'node' => $item
+                    'node' => $item,
                 ))->fetch();
             }
         }
@@ -428,7 +473,7 @@ class HelperTreeCategoriesCore extends TreeCore
 
         foreach ($categories as $key => &$category) {
             if (isset($parent) && in_array($category['id_category'], $selected)) {
-                $selected_childs++;
+                ++$selected_childs;
             }
 
             if (isset($category['children']) && !empty($category['children'])) {
@@ -441,6 +486,7 @@ class HelperTreeCategoriesCore extends TreeCore
         }
 
         $parent['selected_childs'] = $selected_childs;
+
         return $selected_childs;
     }
 }

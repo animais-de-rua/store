@@ -1,5 +1,4 @@
-
-[/{shop_url}] 
+[{shop_url}] 
 
 Olá {firstname} {lastname},
 
@@ -7,9 +6,7 @@ Obrigado por ter criado uma conta de cliente em {shop_name}.
 
 Estes são os dados da sua conta:
 
-ENDEREÇO DE EMAIL: {email}
-
-PALAVRA-PASSE: {passwd} 		 
+ENDEREÇO DE EMAIL: {email} 		 
 
 Dicas Importantes de Segurança:
 
@@ -23,8 +20,8 @@ Dicas Importantes de Segurança:
 favor avise-nos imediatamente.
 
 Agora já pode fazer encomendas na nossa loja: {shop_name}
-[/{shop_url}] 
+[{shop_url}] 
 
-{shop_name} [/{shop_url}] usa a plataforma PrestaShop(tm)
-[http://www.prestashop.com/] 
+{shop_name} [{shop_url}] powered by
+PrestaShop(tm) [http://www.prestashop.com/] 
 

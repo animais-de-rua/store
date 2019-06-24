@@ -1,31 +1,31 @@
 <?php
-/*
-* 2007-2016 PrestaShop
-*
-* NOTICE OF LICENSE
-*
-* This source file is subject to the Open Software License (OSL 3.0)
-* that is bundled with this package in the file LICENSE.txt.
-* It is also available through the world-wide-web at this URL:
-* http://opensource.org/licenses/osl-3.0.php
-* If you did not receive a copy of the license and are unable to
-* obtain it through the world-wide-web, please send an email
-* to license@prestashop.com so we can send you a copy immediately.
-*
-* DISCLAIMER
-*
-* Do not edit or add to this file if you wish to upgrade PrestaShop to newer
-* versions in the future. If you wish to customize PrestaShop for your
-* needs please refer to http://www.prestashop.com for more information.
-*
-*  @author PrestaShop SA <contact@prestashop.com>
-*  @copyright  2007-2016 PrestaShop SA
-*  @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
-*  International Registered Trademark & Property of PrestaShop SA
-*/
+/**
+ * 2007-2018 PrestaShop.
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Open Software License (OSL 3.0)
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * https://opensource.org/licenses/OSL-3.0
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@prestashop.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade PrestaShop to newer
+ * versions in the future. If you wish to customize PrestaShop for your
+ * needs please refer to http://www.prestashop.com for more information.
+ *
+ * @author    PrestaShop SA <contact@prestashop.com>
+ * @copyright 2007-2018 PrestaShop SA
+ * @license   https://opensource.org/licenses/OSL-3.0 Open Software License (OSL 3.0)
+ * International Registered Trademark & Property of PrestaShop SA
+ */
 
 /**
- * Represents the products kept in warehouses
+ * Represents the products kept in warehouses.
  *
  * @since 1.5.0
  */
@@ -46,6 +46,9 @@ class StockCore extends ObjectModel
     /** @var int Product EAN13 */
     public $ean13;
 
+    /** @var string Product ISBN */
+    public $isbn;
+
     /** @var string UPC */
     public $upc;
 
@@ -65,15 +68,16 @@ class StockCore extends ObjectModel
         'table' => 'stock',
         'primary' => 'id_stock',
         'fields' => array(
-            'id_warehouse' =>            array('type' => self::TYPE_INT, 'validate' => 'isUnsignedId', 'required' => true),
-            'id_product' =>            array('type' => self::TYPE_INT, 'validate' => 'isUnsignedId', 'required' => true),
-            'id_product_attribute' =>    array('type' => self::TYPE_INT, 'validate' => 'isUnsignedId', 'required' => true),
-            'reference' =>                array('type' => self::TYPE_STRING, 'validate' => 'isReference'),
-            'ean13' =>                    array('type' => self::TYPE_STRING, 'validate' => 'isEan13'),
-            'upc' =>                    array('type' => self::TYPE_STRING, 'validate' => 'isUpc'),
-            'physical_quantity' =>        array('type' => self::TYPE_INT, 'validate' => 'isUnsignedInt', 'required' => true),
-            'usable_quantity' =>        array('type' => self::TYPE_INT, 'validate' => 'isInt', 'required' => true),
-            'price_te' =>                array('type' => self::TYPE_FLOAT, 'validate' => 'isPrice', 'required' => true),
+            'id_warehouse' => array('type' => self::TYPE_INT, 'validate' => 'isUnsignedId', 'required' => true),
+            'id_product' => array('type' => self::TYPE_INT, 'validate' => 'isUnsignedId', 'required' => true),
+            'id_product_attribute' => array('type' => self::TYPE_INT, 'validate' => 'isUnsignedId', 'required' => true),
+            'reference' => array('type' => self::TYPE_STRING, 'validate' => 'isReference'),
+            'ean13' => array('type' => self::TYPE_STRING, 'validate' => 'isEan13'),
+            'isbn' => array('type' => self::TYPE_STRING, 'validate' => 'isIsbn'),
+            'upc' => array('type' => self::TYPE_STRING, 'validate' => 'isUpc'),
+            'physical_quantity' => array('type' => self::TYPE_INT, 'validate' => 'isUnsignedInt', 'required' => true),
+            'usable_quantity' => array('type' => self::TYPE_INT, 'validate' => 'isInt', 'required' => true),
+            'price_te' => array('type' => self::TYPE_FLOAT, 'validate' => 'isPrice', 'required' => true),
         ),
     );
 
@@ -112,18 +116,18 @@ class StockCore extends ObjectModel
     }
 
     /**
-     * Gets reference, ean13 and upc of the current product
-     * Stores it in stock for stock_mvt integrity and history purposes
+     * Gets reference, ean13 , isbn and upc of the current product
+     * Stores it in stock for stock_mvt integrity and history purposes.
      */
     protected function getProductInformations()
     {
         // if combinations
-        if ((int)$this->id_product_attribute > 0) {
+        if ((int) $this->id_product_attribute > 0) {
             $query = new DbQuery();
-            $query->select('reference, ean13, upc');
+            $query->select('reference, ean13, isbn, upc');
             $query->from('product_attribute');
-            $query->where('id_product = '.(int)$this->id_product);
-            $query->where('id_product_attribute = '.(int)$this->id_product_attribute);
+            $query->where('id_product = ' . (int) $this->id_product);
+            $query->where('id_product_attribute = ' . (int) $this->id_product_attribute);
             $rows = Db::getInstance()->executeS($query);
 
             if (!is_array($rows)) {
@@ -133,27 +137,30 @@ class StockCore extends ObjectModel
             foreach ($rows as $row) {
                 $this->reference = $row['reference'];
                 $this->ean13 = $row['ean13'];
+                $this->isbn = $row['isbn'];
                 $this->upc = $row['upc'];
             }
         } else {
             // else, simple product
 
-            $product = new Product((int)$this->id_product);
+            $product = new Product((int) $this->id_product);
             if (Validate::isLoadedObject($product)) {
                 $this->reference = $product->reference;
                 $this->ean13 = $product->ean13;
+                $this->isbn = $product->isbn;
                 $this->upc = $product->upc;
             }
         }
     }
 
     /**
-     * Webservice : used to get the real quantity of a product
+     * Webservice : used to get the real quantity of a product.
      */
     public function getWsRealQuantity()
     {
         $manager = StockManagerFactory::getManager();
         $quantity = $manager->getProductRealQuantities($this->id_product, $this->id_product_attribute, $this->id_warehouse, true);
+
         return $quantity;
     }
 
@@ -163,18 +170,18 @@ class StockCore extends ObjectModel
             return false;
         }
 
-        return Db::getInstance()->execute('DELETE FROM '._DB_PREFIX_.'stock WHERE `id_product` = '.(int)$id_product.' AND `id_product_attribute` = '.(int)$id_product_attribute);
+        return Db::getInstance()->execute('DELETE FROM ' . _DB_PREFIX_ . 'stock WHERE `id_product` = ' . (int) $id_product . ' AND `id_product_attribute` = ' . (int) $id_product_attribute);
     }
 
     public static function productIsPresentInStock($id_product = 0, $id_product_attribute = 0, $id_warehouse = 0)
     {
-        if (!(int)$id_product && !is_int($id_product_attribute) && !(int)$id_warehouse) {
+        if (!(int) $id_product && !is_int($id_product_attribute) && !(int) $id_warehouse) {
             return false;
         }
 
-        $result = Db::getInstance()->executeS('SELECT `id_stock` FROM '._DB_PREFIX_.'stock
-			WHERE `id_warehouse` = '.(int)$id_warehouse.' AND `id_product` = '.(int)$id_product.((int)$id_product_attribute ? ' AND `id_product_attribute` = '.$id_product_attribute : ''));
+        $result = Db::getInstance()->executeS('SELECT `id_stock` FROM ' . _DB_PREFIX_ . 'stock
+			WHERE `id_warehouse` = ' . (int) $id_warehouse . ' AND `id_product` = ' . (int) $id_product . ((int) $id_product_attribute ? ' AND `id_product_attribute` = ' . $id_product_attribute : ''));
 
-        return (is_array($result) && !empty($result) ? true : false);
+        return is_array($result) && !empty($result) ? true : false;
     }
 }

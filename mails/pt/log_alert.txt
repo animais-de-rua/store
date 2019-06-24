@@ -1,14 +1,13 @@
-
-[/{shop_url}] 
+[{shop_url}] 
 
 Olá {firstname} {lastname}, 
 
 AVISO: recebeu na sua Área de Administração uma nova entrada nos
 registos.
 
-Isto pode ser verificado no menu "FERRAMENTAS" > "REGISTOS" na sua
-Área de Administração. 		 
+You can check for it in the "TOOLS" > "LOGS" section of your Back
+Office. 		 
 
-{shop_name} [/{shop_url}] usa a plataforma PrestaShop(tm)
-[http://www.prestashop.com/] 
+{shop_name} [{shop_url}] powered by
+PrestaShop(tm) [http://www.prestashop.com/] 
 

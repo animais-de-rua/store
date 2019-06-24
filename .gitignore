@@ -31,3 +31,6 @@ error_log
 /modules/homeslider/images/*.png
 /docs/CHANGELOG.txt
 __MACOSX
+/vendor
+/var
+*.zip

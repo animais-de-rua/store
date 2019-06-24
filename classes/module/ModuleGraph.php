@@ -1,29 +1,28 @@
 <?php
-/*
-* 2007-2016 PrestaShop
-*
-* NOTICE OF LICENSE
-*
-* This source file is subject to the Open Software License (OSL 3.0)
-* that is bundled with this package in the file LICENSE.txt.
-* It is also available through the world-wide-web at this URL:
-* http://opensource.org/licenses/osl-3.0.php
-* If you did not receive a copy of the license and are unable to
-* obtain it through the world-wide-web, please send an email
-* to license@prestashop.com so we can send you a copy immediately.
-*
-* DISCLAIMER
-*
-* Do not edit or add to this file if you wish to upgrade PrestaShop to newer
-* versions in the future. If you wish to customize PrestaShop for your
-* needs please refer to http://www.prestashop.com for more information.
-*
-*  @author PrestaShop SA <contact@prestashop.com>
-*  @copyright  2007-2016 PrestaShop SA
-*  @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
-*  International Registered Trademark & Property of PrestaShop SA
-*/
-
+/**
+ * 2007-2018 PrestaShop.
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Open Software License (OSL 3.0)
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * https://opensource.org/licenses/OSL-3.0
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@prestashop.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade PrestaShop to newer
+ * versions in the future. If you wish to customize PrestaShop for your
+ * needs please refer to http://www.prestashop.com for more information.
+ *
+ * @author    PrestaShop SA <contact@prestashop.com>
+ * @copyright 2007-2018 PrestaShop SA
+ * @license   https://opensource.org/licenses/OSL-3.0 Open Software License (OSL 3.0)
+ * International Registered Trademark & Property of PrestaShop SA
+ */
 abstract class ModuleGraphCore extends Module
 {
     protected $_employee;
@@ -34,7 +33,7 @@ abstract class ModuleGraphCore extends Module
     /** @var array of strings graph legends (X axis) */
     protected $_legend = array();
 
-    /**@var array string graph titles */
+    /** @var array string graph titles */
     protected $_titles = array('main' => null, 'x' => null, 'y' => null);
 
     /** @var ModuleGraphEngine graph engine */
@@ -61,11 +60,11 @@ abstract class ModuleGraphCore extends Module
         // If the granularity is inferior to 1 day
         if ($this->_employee->stats_date_from == $this->_employee->stats_date_to) {
             if ($legend) {
-                for ($i = 0; $i < 24; $i++) {
+                for ($i = 0; $i < 24; ++$i) {
                     if ($layers == 1) {
                         $this->_values[$i] = 0;
                     } else {
-                        for ($j = 0; $j < $layers; $j++) {
+                        for ($j = 0; $j < $layers; ++$j) {
                             $this->_values[$j][$i] = 0;
                         }
                     }
@@ -75,10 +74,10 @@ abstract class ModuleGraphCore extends Module
             if (is_callable(array($this, 'setDayValues'))) {
                 $this->setDayValues($layers);
             }
-        }
-        // If the granularity is inferior to 1 month
-        // @TODO : change to manage 28 to 31 days
-        elseif (strtotime($this->_employee->stats_date_to) - strtotime($this->_employee->stats_date_from) <= 2678400) {
+        } elseif (strtotime($this->_employee->stats_date_to) - strtotime($this->_employee->stats_date_from) <= 2678400) {
+            // If the granularity is inferior to 1 month
+            // @TODO : change to manage 28 to 31 days
+
             if ($legend) {
                 $days = array();
                 if ($from_array['mon'] == $to_array['mon']) {
@@ -98,7 +97,7 @@ abstract class ModuleGraphCore extends Module
                     if ($layers == 1) {
                         $this->_values[$i] = 0;
                     } else {
-                        for ($j = 0; $j < $layers; $j++) {
+                        for ($j = 0; $j < $layers; ++$j) {
                             $this->_values[$j][$i] = 0;
                         }
                     }
@@ -108,9 +107,9 @@ abstract class ModuleGraphCore extends Module
             if (is_callable(array($this, 'setMonthValues'))) {
                 $this->setMonthValues($layers);
             }
-        }
-        // If the granularity is less than 1 year
-        elseif (strtotime('-1 year', strtotime($this->_employee->stats_date_to)) < strtotime($this->_employee->stats_date_from)) {
+        } elseif (strtotime('-1 year', strtotime($this->_employee->stats_date_to)) < strtotime($this->_employee->stats_date_from)) {
+            // If the granularity is less than 1 year
+
             if ($legend) {
                 $months = array();
                 if ($from_array['year'] == $to_array['year']) {
@@ -129,7 +128,7 @@ abstract class ModuleGraphCore extends Module
                     if ($layers == 1) {
                         $this->_values[$i] = 0;
                     } else {
-                        for ($j = 0; $j < $layers; $j++) {
+                        for ($j = 0; $j < $layers; ++$j) {
                             $this->_values[$j][$i] = 0;
                         }
                     }
@@ -139,9 +138,9 @@ abstract class ModuleGraphCore extends Module
             if (is_callable(array($this, 'setYearValues'))) {
                 $this->setYearValues($layers);
             }
-        }
-        // If the granularity is greater than 1 year
-        else {
+        } else {
+            // If the granularity is greater than 1 year
+
             if ($legend) {
                 $years = array();
                 for ($i = $from_array['year']; $i <= $to_array['year']; ++$i) {
@@ -151,7 +150,7 @@ abstract class ModuleGraphCore extends Module
                     if ($layers == 1) {
                         $this->_values[$i] = 0;
                     } else {
-                        for ($j = 0; $j < $layers; $j++) {
+                        for ($j = 0; $j < $layers; ++$j) {
                             $this->_values[$j][$i] = 0;
                         }
                     }
@@ -171,7 +170,7 @@ abstract class ModuleGraphCore extends Module
         $this->setEmployee($context->employee->id);
         $this->setLang($context->language->id);
 
-        $layers = isset($datas['layers']) ?  $datas['layers'] : 1;
+        $layers = isset($datas['layers']) ? $datas['layers'] : 1;
         if (isset($datas['option'])) {
             $this->setOption($datas['option'], $layers);
         }
@@ -180,7 +179,7 @@ abstract class ModuleGraphCore extends Module
         // @todo use native CSV PHP functions ?
         // Generate first line (column titles)
         if (is_array($this->_titles['main'])) {
-            for ($i = 0, $total_main = count($this->_titles['main']); $i <= $total_main; $i++) {
+            for ($i = 0, $total_main = count($this->_titles['main']); $i <= $total_main; ++$i) {
                 if ($i > 0) {
                     $this->_csv .= ';';
                 }
@@ -189,7 +188,7 @@ abstract class ModuleGraphCore extends Module
                 }
             }
         } else { // If there is only one column title, there is in fast two column (the first without title)
-            $this->_csv .= ';'.$this->_titles['main'];
+            $this->_csv .= ';' . $this->_titles['main'];
         }
         $this->_csv .= "\n";
         if (count($this->_legend)) {
@@ -197,12 +196,12 @@ abstract class ModuleGraphCore extends Module
             if ($datas['type'] == 'pie') {
                 foreach ($this->_legend as $key => $legend) {
                     for ($i = 0, $total_main = (is_array($this->_titles['main']) ? count($this->_values) : 1); $i < $total_main; ++$i) {
-                        $total += (is_array($this->_values[$i])  ? $this->_values[$i][$key] : $this->_values[$key]);
+                        $total += (is_array($this->_values[$i]) ? $this->_values[$i][$key] : $this->_values[$key]);
                     }
                 }
             }
             foreach ($this->_legend as $key => $legend) {
-                $this->_csv .= $legend.';';
+                $this->_csv .= $legend . ';';
                 for ($i = 0, $total_main = (is_array($this->_titles['main']) ? count($this->_values) : 1); $i < $total_main; ++$i) {
                     if (!isset($this->_values[$i]) || !is_array($this->_values[$i])) {
                         if (isset($this->_values[$key])) {
@@ -237,7 +236,7 @@ abstract class ModuleGraphCore extends Module
             ob_end_clean();
         }
         header('Content-Type: application/octet-stream');
-        header('Content-Disposition: attachment; filename="'.$this->displayName.' - '.time().'.csv"');
+        header('Content-Disposition: attachment; filename="' . $this->displayName . ' - ' . time() . '.csv"');
         echo $this->_csv;
         exit;
     }
@@ -247,10 +246,10 @@ abstract class ModuleGraphCore extends Module
         if (!Validate::isModuleName($render)) {
             die(Tools::displayError());
         }
-        if (!Tools::file_exists_cache($file = _PS_ROOT_DIR_.'/modules/'.$render.'/'.$render.'.php')) {
+        if (!Tools::file_exists_cache($file = _PS_ROOT_DIR_ . '/modules/' . $render . '/' . $render . '.php')) {
             die(Tools::displayError());
         }
-        require_once($file);
+        require_once $file;
         $this->_render = new $render($type);
 
         $this->getData($layers);
@@ -276,17 +275,17 @@ abstract class ModuleGraphCore extends Module
     {
         $context = Context::getContext();
         if (!($render = Configuration::get('PS_STATS_RENDER'))) {
-            return Tools::displayError('No graph engine selected');
+            return Context::getContext()->getTranslator()->trans('No graph engine selected', array(), 'Admin.Modules.Notification');
         }
         if (!Validate::isModuleName($render)) {
             die(Tools::displayError());
         }
-        if (!file_exists(_PS_ROOT_DIR_.'/modules/'.$render.'/'.$render.'.php')) {
-            return Tools::displayError('Graph engine selected is unavailable.');
+        if (!file_exists(_PS_ROOT_DIR_ . '/modules/' . $render . '/' . $render . '.php')) {
+            return Context::getContext()->getTranslator()->trans('Graph engine selected is unavailable.', array(), 'Admin.Modules.Notification');
         }
 
-        $id_employee = (int)$context->employee->id;
-        $id_lang = (int)$context->language->id;
+        $id_employee = (int) $context->employee->id;
+        $id_lang = (int) $context->language->id;
 
         if (!isset($params['layers'])) {
             $params['layers'] = 1;
@@ -306,9 +305,10 @@ abstract class ModuleGraphCore extends Module
         $url_params['module'] = Tools::getValue('module');
         $url_params['id_employee'] = $id_employee;
         $url_params['id_lang'] = $id_lang;
-        $drawer = 'drawer.php?'.http_build_query(array_map('Tools::safeOutput', $url_params), '', '&');
+        $drawer = 'drawer.php?' . http_build_query(array_map('Tools::safeOutput', $url_params), '', '&');
 
-        require_once(_PS_ROOT_DIR_.'/modules/'.$render.'/'.$render.'.php');
+        require_once _PS_ROOT_DIR_ . '/modules/' . $render . '/' . $render . '.php';
+
         return call_user_func(array($render, 'hookGraphEngine'), $params, $drawer);
     }
 
@@ -327,13 +327,14 @@ abstract class ModuleGraphCore extends Module
         if (empty($employee->stats_date_from) || empty($employee->stats_date_to)
             || $employee->stats_date_from == '0000-00-00' || $employee->stats_date_to == '0000-00-00') {
             if (empty($employee->stats_date_from) || $employee->stats_date_from == '0000-00-00') {
-                $employee->stats_date_from = date('Y').'-01-01';
+                $employee->stats_date_from = date('Y') . '-01-01';
             }
             if (empty($employee->stats_date_to) || $employee->stats_date_to == '0000-00-00') {
-                $employee->stats_date_to = date('Y').'-12-31';
+                $employee->stats_date_to = date('Y') . '-12-31';
             }
             $employee->update();
         }
+
         return $employee;
     }
 
@@ -345,9 +346,10 @@ abstract class ModuleGraphCore extends Module
     public static function getDateBetween($employee = null)
     {
         if ($employee = ModuleGraph::getEmployee($employee)) {
-            return ' \''.$employee->stats_date_from.' 00:00:00\' AND \''.$employee->stats_date_to.' 23:59:59\' ';
+            return ' \'' . pSQL($employee->stats_date_from) . ' 00:00:00\' AND \'' . pSQL($employee->stats_date_to) . ' 23:59:59\' ';
         }
-        return ' \''.date('Y-m').'-01 00:00:00\' AND \''.date('Y-m-t').' 23:59:59\' ';
+
+        return ' \'' . date('Y-m') . '-01 00:00:00\' AND \'' . date('Y-m-t') . ' 23:59:59\' ';
     }
 
     public function getLang()

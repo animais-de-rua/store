@@ -1,5 +1,4 @@
-
-[/{shop_url}] 
+[{shop_url}] 
 
 Olá {firstname} {lastname}, 
 
@@ -8,8 +7,9 @@ Olá {firstname} {lastname},
 Por favor, não responda diretamente a este e-mail, não vamos
 recebê-lo. 
 
-Para responder, por favor, use o seguinte link: {link} [/{link}] 
+Para responder, por favor, use o seguinte link: {link}
+[{link}] 
 
-{shop_name} [/{shop_url}] usa a plataforma PrestaShop(tm)
-[http://www.prestashop.com/] 
+{shop_name} [{shop_url}] powered by
+PrestaShop(tm) [http://www.prestashop.com/] 
 

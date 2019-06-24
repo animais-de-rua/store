@@ -1,26 +1,27 @@
-/*
-*
-* NOTICE OF LICENSE
-*
-* This source file is subject to the Open Software License (OSL 3.0)
-* that is bundled with this package in the file LICENSE.txt.
-* It is also available through the world-wide-web at this URL:
-* http://opensource.org/licenses/osl-3.0.php
-* If you did not receive a copy of the license and are unable to
-* obtain it through the world-wide-web, please send an email
-* to license@prestashop.com so we can send you a copy immediately.
-*
-* DISCLAIMER
-*
-* Do not edit or add to this file if you wish to upgrade PrestaShop to newer
-* versions in the future. If you wish to customize PrestaShop for your
-* needs please refer to http://www.prestashop.com for more information.
-*
-*  @author PrestaShop SA <contact@prestashop.com>
-*  @copyright  2007-2016 PrestaShop SA
-*  @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
-*  International Registered Trademark & Property of PrestaShop SA
-*/
+/**
+ * 2007-2018 PrestaShop
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Open Software License (OSL 3.0)
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * https://opensource.org/licenses/OSL-3.0
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@prestashop.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade PrestaShop to newer
+ * versions in the future. If you wish to customize PrestaShop for your
+ * needs please refer to http://www.prestashop.com for more information.
+ *
+ * @author    PrestaShop SA <contact@prestashop.com>
+ * @copyright 2007-2018 PrestaShop SA
+ * @license   https://opensource.org/licenses/OSL-3.0 Open Software License (OSL 3.0)
+ * International Registered Trademark & Property of PrestaShop SA
+ */
 
 var ajax_running_timeout = null;
 
@@ -35,84 +36,85 @@ function str2url(str, encoding, ucfirst)
 		str = str.replace(/[^a-z0-9\s\'\:\/\[\]-]\\u00A1-\\uFFFF/g,'');
 	else
 	{
-		/* Lowercase */
-		str = str.replace(/[\u00E0\u00E1\u00E2\u00E3\u00E5\u0101\u0103\u0105\u0430]/g, 'a');
-        str = str.replace(/[\u0431]/g, 'b');
-		str = str.replace(/[\u00E7\u0107\u0109\u010D\u0446]/g, 'c');
-		str = str.replace(/[\u010F\u0111\u0434]/g, 'd');
-		str = str.replace(/[\u00E8\u00E9\u00EA\u00EB\u0113\u0115\u0117\u0119\u011B\u0435\u044D]/g, 'e');
-        str = str.replace(/[\u0444]/g, 'f');
-		str = str.replace(/[\u011F\u0121\u0123\u0433\u0491]/g, 'g');
-		str = str.replace(/[\u0125\u0127]/g, 'h');
-		str = str.replace(/[\u00EC\u00ED\u00EE\u00EF\u0129\u012B\u012D\u012F\u0131\u0438\u0456]/g, 'i');
-		str = str.replace(/[\u0135\u0439]/g, 'j');
-		str = str.replace(/[\u0137\u0138\u043A]/g, 'k');
-		str = str.replace(/[\u013A\u013C\u013E\u0140\u0142\u043B]/g, 'l');
-        str = str.replace(/[\u043C]/g, 'm');
-		str = str.replace(/[\u00F1\u0144\u0146\u0148\u0149\u014B\u043D]/g, 'n');
-		str = str.replace(/[\u00F2\u00F3\u00F4\u00F5\u00F8\u014D\u014F\u0151\u043E]/g, 'o');
-        str = str.replace(/[\u043F]/g, 'p');
-		str = str.replace(/[\u0155\u0157\u0159\u0440]/g, 'r');
-		str = str.replace(/[\u015B\u015D\u015F\u0161\u0441]/g, 's');
-		str = str.replace(/[\u00DF]/g, 'ss');
-		str = str.replace(/[\u0163\u0165\u0167\u0442]/g, 't');
-		str = str.replace(/[\u00F9\u00FA\u00FB\u0169\u016B\u016D\u016F\u0171\u0173\u0443]/g, 'u');
-        str = str.replace(/[\u0432]/g, 'v');
-		str = str.replace(/[\u0175]/g, 'w');
-		str = str.replace(/[\u00FF\u0177\u00FD\u044B]/g, 'y');
-		str = str.replace(/[\u017A\u017C\u017E\u0437]/g, 'z');
-		str = str.replace(/[\u00E4\u00E6]/g, 'ae');
-        str = str.replace(/[\u0447]/g, 'ch');
-        str = str.replace(/[\u0445]/g, 'kh');
-		str = str.replace(/[\u0153\u00F6]/g, 'oe');
-		str = str.replace(/[\u00FC]/g, 'ue');
-        str = str.replace(/[\u0448]/g, 'sh');
-        str = str.replace(/[\u0449]/g, 'ssh');
-        str = str.replace(/[\u044F]/g, 'ya');
-        str = str.replace(/[\u0454]/g, 'ye');
-        str = str.replace(/[\u0457]/g, 'yi');
-        str = str.replace(/[\u0451]/g, 'yo');
-        str = str.replace(/[\u044E]/g, 'yu');
-        str = str.replace(/[\u0436]/g, 'zh');
 
-		/* Uppercase */
-		str = str.replace(/[\u0100\u0102\u0104\u00C0\u00C1\u00C2\u00C3\u00C4\u00C5\u0410]/g, 'A');
-        str = str.replace(/[\u0411]/g, 'B');
-		str = str.replace(/[\u00C7\u0106\u0108\u010A\u010C\u0426]/g, 'C');
-		str = str.replace(/[\u010E\u0110\u0414]/g, 'D');
-		str = str.replace(/[\u00C8\u00C9\u00CA\u00CB\u0112\u0114\u0116\u0118\u011A\u0415\u042D]/g, 'E');
-        str = str.replace(/[\u0424]/g, 'F');
-		str = str.replace(/[\u011C\u011E\u0120\u0122\u0413\u0490]/g, 'G');
-		str = str.replace(/[\u0124\u0126]/g, 'H');
-		str = str.replace(/[\u0128\u012A\u012C\u012E\u0130\u0418\u0406]/g, 'I');
-		str = str.replace(/[\u0134\u0419]/g, 'J');
-		str = str.replace(/[\u0136\u041A]/g, 'K');
-		str = str.replace(/[\u0139\u013B\u013D\u0139\u0141\u041B]/g, 'L');
-        str = str.replace(/[\u041C]/g, 'M');
-		str = str.replace(/[\u00D1\u0143\u0145\u0147\u014A\u041D]/g, 'N');
-		str = str.replace(/[\u00D3\u014C\u014E\u0150\u041E]/g, 'O');
-        str = str.replace(/[\u041F]/g, 'P');
-		str = str.replace(/[\u0154\u0156\u0158\u0420]/g, 'R');
-		str = str.replace(/[\u015A\u015C\u015E\u0160\u0421]/g, 'S');
-		str = str.replace(/[\u0162\u0164\u0166\u0422]/g, 'T');
-		str = str.replace(/[\u00D9\u00DA\u00DB\u0168\u016A\u016C\u016E\u0170\u0172\u0423]/g, 'U');
-        str = str.replace(/[\u0412]/g, 'V');
-		str = str.replace(/[\u0174]/g, 'W');
-		str = str.replace(/[\u0176\u042B]/g, 'Y');
-		str = str.replace(/[\u0179\u017B\u017D\u0417]/g, 'Z');
-		str = str.replace(/[\u00C4\u00C6]/g, 'AE');
-        str = str.replace(/[\u0427]/g, 'CH');
-        str = str.replace(/[\u0425]/g, 'KH');
-		str = str.replace(/[\u0152\u00D6]/g, 'OE');
-		str = str.replace(/[\u00DC]/g, 'UE');
-        str = str.replace(/[\u0428]/g, 'SH');
-        str = str.replace(/[\u0429]/g, 'SHH');
-        str = str.replace(/[\u042F]/g, 'YA');
-        str = str.replace(/[\u0404]/g, 'YE');
-        str = str.replace(/[\u0407]/g, 'YI');
-        str = str.replace(/[\u0401]/g, 'YO');
-        str = str.replace(/[\u042E]/g, 'YU');
-        str = str.replace(/[\u0416]/g, 'ZH');
+	  /* Lowercase */
+    str = str.replace(/[\u00E0\u00E1\u00E2\u00E3\u00E5\u0101\u0103\u0105\u0430\u1EA7\u1EA3\u1EA1\u1EAF\u1EB1\u1EB3\u1EB5\u1EB7\u1EA5\u1EA9\u1EAB\u1EAD]/g, 'a');
+    str = str.replace(/[\u0431]/g, 'b');
+    str = str.replace(/[\u00E7\u0107\u0109\u010D\u0446]/g, 'c');
+    str = str.replace(/[\u010F\u0111\u0434]/g, 'd');
+    str = str.replace(/[\u00E8\u00E9\u00EA\u00EB\u0113\u0115\u0117\u0119\u011B\u0435\u044D\u1EC7\u1EBB\u1EBD\u1EB9\u1EBF\u1EC1\u1EC3\u1EC5]/g, 'e');
+    str = str.replace(/[\u0444]/g, 'f');
+    str = str.replace(/[\u011F\u0121\u0123\u0433\u0491]/g, 'g');
+    str = str.replace(/[\u0125\u0127]/g, 'h');
+    str = str.replace(/[\u00EC\u00ED\u00EE\u00EF\u0129\u012B\u012D\u012F\u0131\u0438\u0456\u1EC9\u1ECB]/g, 'i');
+    str = str.replace(/[\u0135\u0439]/g, 'j');
+    str = str.replace(/[\u0137\u0138\u043A]/g, 'k');
+    str = str.replace(/[\u013A\u013C\u013E\u0140\u0142\u043B]/g, 'l');
+    str = str.replace(/[\u043C]/g, 'm');
+    str = str.replace(/[\u00F1\u0144\u0146\u0148\u0149\u014B\u043D]/g, 'n');
+    str = str.replace(/[\u00F2\u00F3\u00F4\u00F5\u00F8\u014D\u014F\u0151\u043E\u01A1]/g, 'o');
+    str = str.replace(/[\u043F]/g, 'p');
+    str = str.replace(/[\u0155\u0157\u0159\u0440]/g, 'r');
+    str = str.replace(/[\u015B\u015D\u015F\u0161\u0441]/g, 's');
+    str = str.replace(/[\u00DF]/g, 'ss');
+    str = str.replace(/[\u0163\u0165\u0167\u0442]/g, 't');
+    str = str.replace(/[\u00F9\u00FA\u00FB\u0169\u016B\u016D\u016F\u0171\u0173\u0443\u1EED]/g, 'u');
+    str = str.replace(/[\u0432]/g, 'v');
+    str = str.replace(/[\u0175]/g, 'w');
+    str = str.replace(/[\u00FF\u0177\u00FD\u044B]/g, 'y');
+    str = str.replace(/[\u017A\u017C\u017E\u0437]/g, 'z');
+    str = str.replace(/[\u00E4\u00E6]/g, 'ae');
+    str = str.replace(/[\u0447]/g, 'ch');
+    str = str.replace(/[\u0445]/g, 'kh');
+    str = str.replace(/[\u0153\u00F6]/g, 'oe');
+    str = str.replace(/[\u00FC]/g, 'ue');
+    str = str.replace(/[\u0448]/g, 'sh');
+    str = str.replace(/[\u0449]/g, 'ssh');
+    str = str.replace(/[\u044F]/g, 'ya');
+    str = str.replace(/[\u0454]/g, 'ye');
+    str = str.replace(/[\u0457]/g, 'yi');
+    str = str.replace(/[\u0451]/g, 'yo');
+    str = str.replace(/[\u044E]/g, 'yu');
+    str = str.replace(/[\u0436]/g, 'zh');
+
+    /* Uppercase */
+    str = str.replace(/[\u0100\u0102\u0104\u00C0\u00C1\u00C2\u00C3\u00C4\u00C5\u0410\u1EA2\u1EA0\u1EAE\u1EB0\u1EB2\u1EB4\u1EB6\u1EA4\u1EA6\u1EA8\u1EAA\u1EAC]/g, 'A');
+    str = str.replace(/[\u0411]/g, 'B');
+    str = str.replace(/[\u00C7\u0106\u0108\u010A\u010C\u0426]/g, 'C');
+    str = str.replace(/[\u010E\u0110\u0414]/g, 'D');
+    str = str.replace(/[\u00C8\u00C9\u00CA\u00CB\u0112\u0114\u0116\u0118\u011A\u0415\u042D\u1EBA\u1EBC\u1EB8\u1EBE\u1EC0\u1EC2\u1EC4\u1EC6]/g, 'E');
+    str = str.replace(/[\u0424]/g, 'F');
+    str = str.replace(/[\u011C\u011E\u0120\u0122\u0413\u0490]/g, 'G');
+    str = str.replace(/[\u0124\u0126]/g, 'H');
+    str = str.replace(/[\u0128\u012A\u012C\u012E\u0130\u0418\u0406\u00CD\u00CC\u1EC8\u1ECA]/g, 'I');
+    str = str.replace(/[\u0134\u0419]/g, 'J');
+    str = str.replace(/[\u0136\u041A]/g, 'K');
+    str = str.replace(/[\u0139\u013B\u013D\u0141\u041B]/g, 'L');
+    str = str.replace(/[\u041C]/g, 'M');
+    str = str.replace(/[\u00D1\u0143\u0145\u0147\u014A\u041D]/g, 'N');
+    str = str.replace(/[\u00D3\u014C\u014E\u0150\u041E]/g, 'O');
+    str = str.replace(/[\u041F]/g, 'P');
+    str = str.replace(/[\u0154\u0156\u0158\u0420]/g, 'R');
+    str = str.replace(/[\u015A\u015C\u015E\u0160\u0421]/g, 'S');
+    str = str.replace(/[\u0162\u0164\u0166\u0422]/g, 'T');
+    str = str.replace(/[\u00D9\u00DA\u00DB\u0168\u016A\u016C\u016E\u0170\u0172\u0423]/g, 'U');
+    str = str.replace(/[\u0412]/g, 'V');
+    str = str.replace(/[\u0174]/g, 'W');
+    str = str.replace(/[\u0176\u042B]/g, 'Y');
+    str = str.replace(/[\u0179\u017B\u017D\u0417]/g, 'Z');
+    str = str.replace(/[\u00C4\u00C6]/g, 'AE');
+    str = str.replace(/[\u0427]/g, 'CH');
+    str = str.replace(/[\u0425]/g, 'KH');
+    str = str.replace(/[\u0152\u00D6]/g, 'OE');
+    str = str.replace(/[\u00DC]/g, 'UE');
+    str = str.replace(/[\u0428]/g, 'SH');
+    str = str.replace(/[\u0429]/g, 'SHH');
+    str = str.replace(/[\u042F]/g, 'YA');
+    str = str.replace(/[\u0404]/g, 'YE');
+    str = str.replace(/[\u0407]/g, 'YI');
+    str = str.replace(/[\u0401]/g, 'YO');
+    str = str.replace(/[\u042E]/g, 'YU');
+    str = str.replace(/[\u0416]/g, 'ZH');
 
 		str = str.toLowerCase();
 
@@ -445,8 +447,6 @@ function stockManagementActivationAuthorization()
 		getE('PS_ORDER_OUT_OF_STOCK_off').disabled = false;
 		getE('PS_DISPLAY_QTIES_on').disabled = false;
 		getE('PS_DISPLAY_QTIES_off').disabled = false;
-		getE('PS_ADVANCED_STOCK_MANAGEMENT_on').disabled = false;
-		getE('PS_ADVANCED_STOCK_MANAGEMENT_off').disabled = false;
 	}
 	else
 	{
@@ -456,29 +456,6 @@ function stockManagementActivationAuthorization()
 		getE('PS_ORDER_OUT_OF_STOCK_on').checked = true;
 		getE('PS_ORDER_OUT_OF_STOCK_on').disabled = 'disabled';
 		getE('PS_ORDER_OUT_OF_STOCK_off').disabled = 'disabled';
-		getE('PS_ADVANCED_STOCK_MANAGEMENT_off').checked = true;
-		getE('PS_ADVANCED_STOCK_MANAGEMENT_on').disabled = 'disabled';
-		getE('PS_ADVANCED_STOCK_MANAGEMENT_off').disabled = 'disabled';
-		getE('PS_FORCE_ASM_NEW_PRODUCT_off').checked = true;
-		getE('PS_FORCE_ASM_NEW_PRODUCT_on').disabled = 'disabled';
-		getE('PS_FORCE_ASM_NEW_PRODUCT_off').disabled = 'disabled';
-		getE('PS_DEFAULT_WAREHOUSE_NEW_PRODUCT').disabled = 'disabled';
-	}
-}
-
-function advancedStockManagementActivationAuthorization()
-{
-	if (getE('PS_ADVANCED_STOCK_MANAGEMENT_on').checked)
-	{
-		getE('PS_FORCE_ASM_NEW_PRODUCT_on').disabled = false;
-		getE('PS_FORCE_ASM_NEW_PRODUCT_off').disabled = false;
-		getE('PS_DEFAULT_WAREHOUSE_NEW_PRODUCT').disabled = false;
-	}
-	else
-	{
-		getE('PS_FORCE_ASM_NEW_PRODUCT_off').checked = true;
-		getE('PS_FORCE_ASM_NEW_PRODUCT_on').disabled = 'disabled';
-		getE('PS_FORCE_ASM_NEW_PRODUCT_off').disabled = 'disabled';
 		getE('PS_DEFAULT_WAREHOUSE_NEW_PRODUCT').disabled = 'disabled';
 	}
 }
@@ -565,7 +542,7 @@ function addRelatedProduct(id_product_to_add, product_name)
 	if (!id_product_to_add || id_product == id_product_to_add)
 		return;
 	$('#related_product_name').html(product_name);
-	$('input[name=id_product_redirected]').val(id_product_to_add);
+	$('input[name=id_type_redirected]').val(id_product_to_add);
 	$('#related_product_autocomplete_input').parent().hide();
 	$('#related_product_remove').show();
 }
@@ -573,7 +550,7 @@ function addRelatedProduct(id_product_to_add, product_name)
 function removeRelatedProduct()
 {
 	$('#related_product_name').html(no_related_product);
-	$('input[name=id_product_redirected]').val(0);
+	$('input[name=id_type_redirected]').val(0);
 	$('#related_product_remove').hide();
 	$('#related_product_autocomplete_input').parent().fadeIn();
 }
@@ -725,11 +702,11 @@ $(document).ready(function()
 	if (typeof formToMove != 'undefined' && typeof formDestination != 'undefined' )
 	{
 		$('<hr style="margin 24px 0;" />').appendTo('#'+formDestination)
-		$('#theme_fieldset_'+formToMove+' .form-wrapper').appendTo('#'+formDestination);
+		$('#configuration_fieldset_'+formToMove+' .form-wrapper').appendTo('#'+formDestination);
 	}
 
 	$('select.chosen').each(function(k, item){
-		$(item).chosen({disable_search_threshold: 10, search_contains: true});
+		$(item).chosen({disable_search_threshold: 10, search_contains: true, width: '100%', });
 	});
 	// Apply chosen() when modal is loaded
 	$(document).on('shown.bs.modal', function (e) {
@@ -863,7 +840,7 @@ $(document).ready(function()
 		var moduleLink = $(this).data('link');
 		var authorUri = $(this).data('author-uri');
 		var isValidUri = /(https?):\/\/([a-z0-9\.]*)?(prestashop.com).*/gi;
-		var addonsSearchLink = 'http://addons.prestashop.com/en/search?search_query='+encodeURIComponent(moduleDisplayName)+'&utm_source=back-office&utm_medium=addons-certified&utm_campaign=back-office-'+iso_user.toUpperCase();
+		var addonsSearchLink = 'https://addons.prestashop.com/en/search?search_query='+encodeURIComponent(moduleDisplayName)+'&utm_source=back-office&utm_medium=addons-certified&utm_campaign=back-office-'+iso_user.toUpperCase();
 
 		$('.modal #untrusted-module-logo').attr('src', moduleImage);
 		$('.modal .module-display-name-placeholder').text(moduleDisplayName);
@@ -921,15 +898,19 @@ $(document).ready(function()
 		return false;
 	});
 
-	/** make sure that all the swap id is present in the dom to prevent mistake **/
-	if (typeof $('#addSwap') !== undefined && typeof $("#removeSwap") !== undefined &&
-		typeof $('#selectedSwap') !== undefined && typeof $('#availableSwap') !== undefined)
-	{
-		bindSwapButton('add', 'available', 'selected');
-		bindSwapButton('remove', 'selected', 'available');
-
-		$('button:submit').click(bindSwapSave);
-	}
+	$('.swap-container').each(function() {
+		/** make sure that all the swap id is present in the dom to prevent mistake **/
+		if (typeof $('.addSwap', this) !== undefined && typeof $(".removeSwap", this) !== undefined &&
+			typeof $('.selectedSwap', this) !== undefined && typeof $('.availableSwap', this) !== undefined)
+		{
+			bindSwapButton('add', 'available', 'selected', this);
+			bindSwapButton('remove', 'selected', 'available', this);
+		
+			$('button:submit').click(function() {
+				bindSwapSave(this);
+			});
+		}
+	});
 
 	if (typeof host_mode !== 'undefined' && host_mode)
 	{
@@ -954,25 +935,29 @@ $(document).ready(function()
     if ($('.kpi-container').length) {
         refresh_kpis();
     }
+
+    $('.kpi-refresh').on('click', '.refresh-kpis', function () {
+        refresh_kpis(true);
+    });
 });
 
-function bindSwapSave()
+function bindSwapSave(context)
 {
-	if ($('#selectedSwap option').length !== 0)
-		$('#selectedSwap option').attr('selected', 'selected');
+	if ($('.selectedSwap option', context).length !== 0)
+		$('.selectedSwap option', context).attr('selected', 'selected');
 	else
-		$('#availableSwap option').attr('selected', 'selected');
+		$('.availableSwap option', context).attr('selected', 'selected');
 }
 
-function bindSwapButton(prefix_button, prefix_select_remove, prefix_select_add)
+function bindSwapButton(prefix_button, prefix_select_remove, prefix_select_add, context)
 {
-	$('#'+prefix_button+'Swap').on('click', function(e) {
+	$('.'+prefix_button+'Swap', context).on('click', function(e) {
 		e.preventDefault();
-		$('#' + prefix_select_remove + 'Swap option:selected').each(function() {
-			$('#' + prefix_select_add + 'Swap').append("<option value='"+$(this).val()+"'>"+$(this).text()+"</option>");
+		$('.' + prefix_select_remove + 'Swap option:selected', context).each(function() {
+			$('.' + prefix_select_add + 'Swap', context).append("<option value='"+$(this).val()+"'>"+$(this).text()+"</option>");
 			$(this).remove();
 		});
-		$('#selectedSwap option').prop('selected', true);
+		$('.selectedSwap option', context).prop('selected', true);
 	});
 }
 
@@ -1194,12 +1179,56 @@ function sendBulkAction(form, action)
 	$(form).submit();
 }
 
+/**
+ * Searches for current controller and current CRUD action. This data can be used to know from where an ajax call is done (source tracking for example).
+ * Action is 'index' by default.
+ * For instance, only used for back-office.
+ * @param force_action optional string to override action part of the result.
+ */
+function getControllerActionMap(force_action) {
+	query = window.location.search.substring(1);
+	vars = query.split("&");
+	controller = "Admin";
+	action = "index";
+
+	for (i = 0 ; i < vars.length; i++) {
+		pair = vars[i].split("=");
+
+		if (pair[0] == "token")
+			continue;
+		if (pair[0] == "controller")
+			controller = pair[1];
+
+		if (pair.length == 1) {
+			if (pair[0].indexOf("add") != -1)
+				action = "new";
+			else if (pair[0].indexOf("view") != -1)
+				action = "view";
+			else if (pair[0].indexOf("edit") != -1 || pair[0].indexOf("modify") != -1 || pair[0].indexOf("update") != -1)
+				action = "edit";
+			else if (pair[0].indexOf("delete") != -1)
+				action = "delete";
+		}
+	}
+
+	if (force_action !== undefined)
+		action = force_action;
+
+	if (typeof help_class_name != 'undefined')
+		controller = help_class_name;
+
+	return new Array('back-office',controller, action);
+}
+
 function openModulesList()
 {
+
 	if (!modules_list_loaded)
 	{
+		header = $('#modules_list_container .modal-header').html();
+
 		$.ajax({
-			type: "POST",
+			type: "GET",
 			url : admin_modules_link,
 			async: true,
 			data : {
@@ -1207,23 +1236,51 @@ function openModulesList()
 				controller : "AdminModules",
 				action : "getTabModulesList",
 				tab_modules_list : tab_modules_list,
-				back_tab_modules_list : window.location.href
+				back_tab_modules_list : window.location.href,
+				admin_list_from_source : getControllerActionMap().join()
 			},
 			success : function(data)
 			{
 				$('#modules_list_container_tab_modal').html(data).slideDown();
 				$('#modules_list_loader').hide();
-				modules_list_loaded = true;
+				modules_list_loaded = data;
 				$('.help-tooltip').tooltip();
+				controllerQuickView();
 			}
 		});
 	}
 	else
 	{
-		$('#modules_list_container_tab_modal').slideDown();
+		$('#modules_list_container_tab_modal').html(modules_list_loaded).slideDown();
 		$('#modules_list_loader').hide();
+		$('#modules_list_container .modal-header').html(header);
+		controllerQuickView();
 	}
 	return false;
+}
+
+function controllerQuickView()
+{
+	$('.controller-quick-view').click(function()
+	{
+		$.ajax({
+			type: "POST",
+			url : admin_modules_link,
+			dataType: 'json',
+			async: true,
+			data : {
+				ajax : "1",
+				controller : "AdminModules",
+				action : "GetModuleReadMoreView",
+				module: $(this).data("name"),
+			},
+			success : function(data)
+			{
+				$('#modules_list_container_tab_modal').html(data.body);
+				$('#modules_list_container .modal-header').html(data.header);
+			}
+		});
+	});
 }
 
 function bindAddonsButtons()
@@ -1530,12 +1587,16 @@ function parseDate(date){
 
 function refresh_kpis()
 {
+	var force = (arguments.length == 1 && arguments[0] == true);
 	$('.box-stats').each(function() {
 		if ($(this).attr('id')) {
 			var functionName = 'refresh_' + $(this).attr('id').replace(/-/g, '_');
-
 			if (typeof window[functionName] === 'function') {
-				window[functionName]();
+				if (force) {
+					window[functionName](true); // force refresh, ignoring cache delay
+				} else {
+					window[functionName]();
+				}
 			}
 		}
 	});
@@ -1543,15 +1604,15 @@ function refresh_kpis()
 
 function createSqlQueryName()
 {
-	var container = false;
-	if ($('.breadcrumb-container'))
-		container = $('.breadcrumb-container').first().text().replace(/\s+/g, ' ').trim();
-	var current = false;
-	if ($('.breadcrumb-current'))
-		current = $('.breadcrumb-current').first().text().replace(/\s+/g, ' ').trim();
-	var title = false;
-	if ($('.page-title'))
-		title = $('.page-title').first().text().replace(/\s+/g, ' ').trim();
+  var container = false;
+  var current = false;
+  if ($('.breadcrumb')) {
+    container = $('.breadcrumb li').eq(0).text().replace(/\s+/g, ' ').trim();
+    current = $('.breadcrumb li').eq(-1).text().replace(/\s+/g, ' ').trim();
+  }
+  var title = false;
+  if ($('h2.title'))
+    title = $('h2.title').first().text().replace(/\s+/g, ' ').trim();
 
 	var name = false;
 	if (container && current && container != current)
@@ -1582,6 +1643,13 @@ function confirm_link(head_text, display_text, confirm_text, cancel_text, confir
 		else
 			document.location = cancel_link;
 	});
+
+}
+
+function TogglePackage(detail)
+{
+    var pack = $('#pack_items_' + detail);
+    pack.css('display', (pack.css('display') == 'block') ? "none" : "block");
 }
 function countDown($source, $target) {
 	var max = $source.attr("data-maxchar");
