@@ -34,3 +34,4 @@ __MACOSX
 /vendor
 /var
 *.zip
+/themes/adr/assets/cache
