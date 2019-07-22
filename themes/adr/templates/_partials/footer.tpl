@@ -30,7 +30,7 @@
   </div>
 </div-->
 
-<div class="footer-container">
+<div class="footer-container" style="margin: 0; padding: 0">
   <div class="container">
     <!--div class="row">
       {block name='hook_footer'}
@@ -246,6 +246,11 @@
           background: #EEE;
           border: 1px solid #FFF;
         }
+        @media (min-width: 1200px) {
+            .container {
+                width: 1180px;
+            }
+        }
     </style>
     
     <script>
@@ -307,7 +312,7 @@
             <h4>Animais ajudados até hoje</h4>
         </div>
         <div class="column column-33 logo">
-            <i class="icon icon-logo"></i>
+            <i class="icon icon-logo" style="font-size:3rem"></i>
         </div>
     </div>
 
@@ -338,7 +343,7 @@
             <a target="_blank" class="color-link" rel="noopener" title="Youtube" href="https://www.youtube.com/user/animaisderuaAdR"><i class="icon icon-youtube"></i></a>
         </div>
         <div class="column column-33 contact">
-            <p><a href="/form/contact" class="color-link lined light">Formulário de Contacto</a></p>
+            <p><a href="mailto:loja@animaisderua.org" class="color-link lined light">loja@animaisderua.org</a></p>
             <p><a href="/privacy-policy" class="color-link lined light">Política de privacidade</a></p>
         </div>
     </div>
