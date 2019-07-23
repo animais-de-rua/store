@@ -1,4 +1,3 @@
-
 [{shop_url}] 
 
 A sua mensagem para o Apoio ao Cliente da loja {shop_name} 

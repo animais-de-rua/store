@@ -1,4 +1,3 @@
-
 [{shop_url}] 
 
 Olá {firstname} {lastname}, 

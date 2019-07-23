@@ -1,9 +1,8 @@
-
 [{shop_url}] 
 
 Olá {firstname} {lastname},
 
-Obrigado por fazer compras na {shop_name}! 
+Obrigada por fazer compras na {shop_name}! 
 
 ENCOMENDA: {order_name} Realizada a {date}
 
@@ -55,7 +54,7 @@ PAGAMENTO: {payment}
 
 {invoice_block_txt} 
 
-Pode rever a sua encomenda e descarregar a sua fatura em
+Pode rever a sua encomenda em
 "Histórico de encomendas" [{history_url}] da sua
 conta de cliente clicando em "A minha conta"
 [{my_account_url}] na nossa loja. 

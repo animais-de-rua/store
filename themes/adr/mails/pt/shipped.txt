@@ -1,4 +1,3 @@
-
 [{shop_url}] 
 
 Olá {firstname} {lastname},
@@ -7,9 +6,9 @@ O seu pedido foi enviado
 
 A sua encomenda com a referência {order_name} já foi enviada.
 
-Obrigado por fazer compras na {shop_name}! 		 
+Obrigada por fazer compras na {shop_name}! 		 
 
-Pode rever a sua encomenda e descarregar a sua fatura em
+Pode rever a sua encomenda em
 "Histórico de encomendas" [{history_url}] da sua
 conta de cliente clicando em "A minha conta"
 [{my_account_url}] na nossa loja. 
