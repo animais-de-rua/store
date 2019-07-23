@@ -45,24 +45,24 @@
 
     <link rel="stylesheet" type="text/css" href="{__PS_BASE_URI__ }themes/adr/fonts/icomoon.css">
     <style>
-        .row {
+        #footer .row {
             display: flex;
         }
-        .row.row-wrap {
+        #footer .row.row-wrap {
             flex-wrap: wrap;
         }
         @media (min-width: 40rem) {
-            .row {
+            #footer .row {
                 flex-direction: row;
                 margin-left: -1rem;
                 width: calc(100% + 2rem);
             }
         }
-        .row .column.column-67 {
+        #footer .row .column.column-67 {
             flex: 0 0 66.6666%;
             max-width: 66.6666%;
         }
-        .row .column.column-33 {
+        #footer .row .column.column-33 {
             flex: 0 0 33.3333%;
             max-width: 33.3333%;
         }
@@ -247,8 +247,21 @@
           border: 1px solid #FFF;
         }
         @media (min-width: 1200px) {
-            .container {
+            #footer .container {
                 width: 1180px;
+            }
+        }
+        @media (max-width: 768px) {
+            #footer .container {
+                padding: 0 15px;
+            }
+            #footer .row.row-wrap .column[class*=" column-"] {
+                margin-left: 0;
+                max-width: 100%;
+                flex: 0 0 100%;
+            }
+            #footer .row {
+                margin: 0;
             }
         }
     </style>
