@@ -93,6 +93,7 @@ a {
 }
 
 /* Product details */
+#_desktop_search_filters_clear_all,
 div.product-information > div.tabs > ul > li:nth-child(2) {
     display: none;
 }
@@ -112,4 +113,8 @@ div.product-information > div.tabs > ul > li:nth-child(2) {
 
 .product-quantity .input-group-btn-vertical .btn {
     border: 1px solid #e73728;
+}
+
+.block-categories {
+    display: none;
 }
