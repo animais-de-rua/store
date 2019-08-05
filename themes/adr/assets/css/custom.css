@@ -94,7 +94,8 @@ a {
 
 /* Product details */
 #_desktop_search_filters_clear_all,
-div.product-information > div.tabs > ul > li:nth-child(2) {
+div.product-information > div.tabs > ul > li:nth-child(2),
+.product-discounts {
     display: none;
 }
 
