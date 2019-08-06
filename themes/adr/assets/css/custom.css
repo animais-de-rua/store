@@ -94,8 +94,10 @@ a {
 
 /* Product details */
 #_desktop_search_filters_clear_all,
+#search_filters,
 div.product-information > div.tabs > ul > li:nth-child(2),
-.product-discounts {
+.product-discounts,
+.block-categories {
     display: none;
 }
 
@@ -116,6 +118,11 @@ div.product-information > div.tabs > ul > li:nth-child(2),
     border: 1px solid #e73728;
 }
 
-.block-categories {
-    display: none;
+@media (min-width: 768px) {
+    .header-top .col-md-2 {
+        width: 25%;
+    }
+    .header-top .col-md-10 {
+        width: 75%;
+    }
 }
