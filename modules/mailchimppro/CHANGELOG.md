@@ -1,0 +1,151 @@
+## [2.0.2] - 2017-06-20
+- Upgrade toastr.css
+- Finish middleware integration
+- Improve list members sync
+- Properly trigger double opt in
+- Add opt-in status to MC customer list view
+- Add merge_fields to list member
+- Implement API key check
+- Improve Oauth2 flow
+- Fix promo code does not sync properly
+- Product sync fix
+- Fix ajaxq isQueueRunning method
+- Show success message only when all requests are completed
+- Implement e-commerce data delete
+- Add output filtering to smarty templates
+- Add Changelog
+- Show meaningful error message @ OrderSync
+- Force ProductFormatter::sanitizeLanguageFieldToString for string
+- Show the products synced success message ONLY after ALL products were synced
+## [2.0.1] - 2019-01-16
+- Correct addons suggestions
+- Implement promo code sync views
+- Implement promoCode sync action in sync ctrl
+- PrestaShop 1.6 compatibility fix
+- Add module to moduleRoutes hook
+- Remove auto generated CHANGELOG
+- Implement promo code sync during setup
+- Add promo codes to the order sync
+- Add Promo rules menu item to the module menu
+- Add PromoCodes and PromoRules controller
+- Implement CartRuleSync command
+- Rename cart rule formatter to Promo rule formatter
+## [2.0.0] - 2019-12-14
+- Align center the pagination
+- Refactor pagination
+- Remove unused hooks
+- Fix member list pagination
+- Implement list members controller
+- Move pagination rendering to separate method
+- Use OrderSyncCommand instead of raw api calls in @ hookActionValidateOrder
+- Improve OrderSyncCommand
+- Remove unthrown exception
+- Refactor BaseAPICommand
+- Include API response in MailChimpException message
+- Use only customer id in order formatter
+- Check if an order in API has related customer
+- Fix supported API methods array
+- Implement customer sync js functionality
+- Add customer sync tpls
+- Implement customer sync process method @ wizard ctrl
+- Fix tab title icon, which caused HTML parse error
+- Display an empty message if there is no associated order in MC API
+- During signup use CustomerSync command instead of spaghetti
+- Improve CustomerSyncCommand to take into consideration DOI
+- Implement ListMemberFormatter
+- Use class constants instead of hardcoded strings to determine API method
+- Add automations controller 2 backoffice
+- Set current store to is updating=false
+- Set MAILCHIMP_SCRIPT_VERIFIED to false after API key change
+- Fix code inspection notices
+- Ignore config.xml
+- Read 999 lists for dropdown
+- Change product sync completed message @ setup wizard
+- Small refactor @ setup-wizard.js
+- Actually execute the StorySyncCommand
+- Use ::class instead of hardcoded class @ hookActionObjectUpdateAfter
+- Implement automatic store update on shop update
+- Replace ids with classes @ sync controller tpl
+- Remove unused _batch.tpl
+- Skip cart sync on address change @ BO
+- Send the Mailchimp campaign id with the order if it's available
+- Sanitize language fields (arrays) to string
+- Validate, validate, validate
+- Google Hangouts Fix
+- Improve ListFactory
+- Check for Product object at actionProductUpdate
+- Use only the current shop context at ShopSync
+- Improve sync view text and hint
+- Improve sync page tpls
+- Add ext-zip and php version to composer require
+- Improve sync controller
+- Fix store delete path
+- Improve design by Mailchimp style
+- Remove unused bo controllers
+- Improve the usage of the Mailchimp brand and design guidelines
+- Merged multi-request-product-sync into master
+- Basic implementation of multi request product sync
+- PS Module validatior fixes
+- Improve sync controller
+- Check if connected_site key exists on setMedia hook
+- Make Product::hasCombinations PS 1.6 compatible
+- Improve ProductSync
+- Improve error handling when registering MC Js
+- Add MailChimp Sites controller
+- Use proper url for store @ StoreFormatter
+- Improve ListFactory error message
+- FIx panel alignment
+- Fix lists modal url
+- Fix old PS 1.6 protected base link method
+- Fix validator errors
+- Implement link helper to ensure backwards compatibility to PS 1.6
+- Implement account info
+- Implement detailed BATCH responses
+- File mode changes
+- Implement order sync
+- Improve sync controller
+- Add is_syncing and is_active attribute to store formatter
+- Remove unused code from module config
+- Create customer sync command
+- Improve sync controller
+- Add a navbar which navigates to MC objects controllers
+- Add docblocks to methods @ AdminMailchimpProConfig
+- Separate the big config form into multiple smaller forms
+- Add note to product image size option
+- Clean up the sidemenu items
+- Improve SetupWizard controller
+- Fix sync mode command bug allows only BATCH
+- Unset list_id when patching Stores to MailChimp
+- Implement list factory
+- Implement ability to select product image size which will be used @ sync
+- Improve setup wizard
+- Developers, developers, developers
+- Validate validate validate part 2
+- Validator validator validator
+- Show MailChimp carts and orders in PS Backoffice controllers
+- Improve cart and orders sync
+- Fix MailChimp site verification footer hook
+- Fix incorrect pagination on Mailchimp object controllers
+- Start implementing the setup wizard
+- Start implementing the config wizard
+- Use dropdown list for list selection
+- Make getApiClient public
+- Move tpl files in views/templates/admin folder
+- Properly implement mailchimp cookie
+- Fix module install process
+- Improve ListsController
+- Fix wrong image links
+- Fix url generation for product images
+- Obligatory placeholder commit message
+- Imlement cart rule sync
+- Implement cart rule formatter
+- Implement store formatter
+- Replace MC StoreID with PrestaShop store ID
+- Fix product image link in formatter
+- Refactor, refactor, refactor
+- Refactor services into commands
+- Stuff
+- Add Site Verified config
+- Implement OrderStateFormatter
+- Project init
+- Initial commit

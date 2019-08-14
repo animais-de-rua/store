@@ -1,35 +1,29 @@
-[{shop_url}] 
+{shop_url}
 
-Olá, 
+Olá,
 
-Recebeu um novo pedido de devolução para {shop_name}. 
+Recebeu um novo pedido de devolução para {shop_name}.
 
-Dados da devolução 
+Return Details
 
-ENCOMENDA: {order_name} Efetuada em {date}
+Encomenda: {order_name} Realizada a {date}
 
-CLIENTE: {firstname} {lastname}, ({email}) 
+Cliente: {firstname} {lastname}, ({email})
 
-REFERÊNCIA
-
-PRODUTO
-
-QUANTIDADE
-
-{items} 
+Referência	Produto	Quantidade   {items}
 
 Endereço de entrega
 
-{delivery_block_html} 		 
+{delivery_block_html}
 
 Endereço de faturação
 
-{invoice_block_html} 
+{invoice_block_html}
 
-Mensagem do cliente: 
+Mensagem do cliente:
 
-{message} 
+{message}
 
-{shop_name} [{shop_url}] powered by
-PrestaShop(tm) [http://www.prestashop.com/] 
+[{shop_name}]({shop_url})
 
+Powered by [PrestaShop](http://www.prestashop.com/)

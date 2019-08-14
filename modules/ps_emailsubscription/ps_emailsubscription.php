@@ -57,7 +57,7 @@ class Ps_Emailsubscription extends Module implements WidgetInterface
 
         $this->entity_manager = $entity_manager;
 
-        $this->version = '2.3.0';
+        $this->version = '2.4.0';
         $this->author = 'PrestaShop';
         $this->error = false;
         $this->valid = false;
@@ -126,6 +126,7 @@ class Ps_Emailsubscription extends Module implements WidgetInterface
             `ip_registration_newsletter` varchar(15) NOT NULL,
             `http_referer` VARCHAR(255) NULL,
             `active` TINYINT(1) NOT NULL DEFAULT \'0\',
+            `id_lang` int(10) NOT NULL DEFAULT \'0\',
             PRIMARY KEY(`id`)
         ) ENGINE='._MYSQL_ENGINE_.' default CHARSET=utf8');
     }
@@ -222,6 +223,10 @@ class Ps_Emailsubscription extends Module implements WidgetInterface
                 'active' => 'subscribed',
                 'search' => false,
             ),
+            'iso_code' => array(
+                'title' => $this->trans('Iso language', array(), 'Modules.Emailsubscription.Admin'),
+                'search' => false,
+            ),             
             'newsletter_date_add' => array(
                 'title' => $this->trans('Subscribed on', array(), 'Modules.Emailsubscription.Admin'),
                 'type' => 'date',
@@ -392,12 +397,13 @@ class Ps_Emailsubscription extends Module implements WidgetInterface
     public function getSubscribers()
     {
         $dbquery = new DbQuery();
-        $dbquery->select('c.`id_customer` AS `id`, s.`name` AS `shop_name`, gl.`name` AS `gender`, c.`lastname`, c.`firstname`, c.`email`, c.`newsletter` AS `subscribed`, c.`newsletter_date_add`');
+        $dbquery->select('c.`id_customer` AS `id`, s.`name` AS `shop_name`, gl.`name` AS `gender`, c.`lastname`, c.`firstname`, c.`email`, c.`newsletter` AS `subscribed`, c.`newsletter_date_add`, l.`iso_code`');
         $dbquery->from('customer', 'c');
         $dbquery->leftJoin('shop', 's', 's.id_shop = c.id_shop');
         $dbquery->leftJoin('gender', 'g', 'g.id_gender = c.id_gender');
         $dbquery->leftJoin('gender_lang', 'gl', 'g.id_gender = gl.id_gender AND gl.id_lang = '.(int) $this->context->employee->id_lang);
         $dbquery->where('c.`newsletter` = 1');
+        $dbquery->leftJoin('lang', 'l', 'l.id_lang = c.id_lang');        
         if ($this->_searched_email) {
             $dbquery->where('c.`email` LIKE \'%'.pSQL($this->_searched_email).'%\' ');
         }
@@ -405,9 +411,10 @@ class Ps_Emailsubscription extends Module implements WidgetInterface
         $customers = Db::getInstance(_PS_USE_SQL_SLAVE_)->executeS($dbquery->build());
 
         $dbquery = new DbQuery();
-        $dbquery->select('CONCAT(\'N\', e.`id`) AS `id`, s.`name` AS `shop_name`, NULL AS `gender`, NULL AS `lastname`, NULL AS `firstname`, e.`email`, e.`active` AS `subscribed`, e.`newsletter_date_add`');
+        $dbquery->select('CONCAT(\'N\', e.`id`) AS `id`, s.`name` AS `shop_name`, NULL AS `gender`, NULL AS `lastname`, NULL AS `firstname`, e.`email`, e.`active` AS `subscribed`, e.`newsletter_date_add`, l.`iso_code`');
         $dbquery->from('emailsubscription', 'e');
         $dbquery->leftJoin('shop', 's', 's.id_shop = e.id_shop');
+        $dbquery->leftJoin('lang', 'l', 'l.id_lang = e.id_lang');
         $dbquery->where('e.`active` = 1');
         if ($this->_searched_email) {
             $dbquery->where('e.`email` LIKE \'%'.pSQL($this->_searched_email).'%\' ');
@@ -506,7 +513,7 @@ class Ps_Emailsubscription extends Module implements WidgetInterface
      */
     protected function registerGuest($email, $active = true)
     {
-        $sql = 'INSERT INTO '._DB_PREFIX_.'emailsubscription (id_shop, id_shop_group, email, newsletter_date_add, ip_registration_newsletter, http_referer, active)
+        $sql = 'INSERT INTO '._DB_PREFIX_.'emailsubscription (id_shop, id_shop_group, email, newsletter_date_add, ip_registration_newsletter, http_referer, active, id_lang)
                 VALUES
                 ('.$this->context->shop->id.',
                 '.$this->context->shop->id_shop_group.',
@@ -519,7 +526,8 @@ class Ps_Emailsubscription extends Module implements WidgetInterface
                     WHERE c.id_guest = '.(int) $this->context->customer->id.'
                     ORDER BY c.date_add DESC LIMIT 1
                 ),
-                '.(int) $active.'
+                '.(int) $active.',
+                '. $this->context->language->id . '
                 )';
 
         return Db::getInstance()->execute($sql);
@@ -1094,7 +1102,7 @@ class Ps_Emailsubscription extends Module implements WidgetInterface
             if (!$nb = count($result)) {
                 $this->_html .= $this->displayError($this->trans('No customers found with these filters!', array(), 'Modules.Emailsubscription.Admin'));
             } elseif ($fd = @fopen(dirname(__FILE__).'/'.strval(preg_replace('#\.{2,}#', '.', Tools::getValue('action'))).'_'.$this->file, 'w')) {
-                $header = array('id', 'shop_name', 'gender', 'lastname', 'firstname', 'email', 'subscribed', 'subscribed_on');
+                $header = array('id', 'shop_name', 'gender', 'lastname', 'firstname', 'email', 'subscribed', 'subscribed_on','iso_language');
                 $array_to_export = array_merge(array($header), $result);
                 foreach ($array_to_export as $tab) {
                     $this->myFputCsv($fd, $tab);
@@ -1161,12 +1169,13 @@ class Ps_Emailsubscription extends Module implements WidgetInterface
         $customers = array();
         if ($who == 1 || $who == 0 || $who == 3) {
             $dbquery = new DbQuery();
-            $dbquery->select('c.`id_customer` AS `id`, s.`name` AS `shop_name`, gl.`name` AS `gender`, c.`lastname`, c.`firstname`, c.`email`, c.`newsletter` AS `subscribed`, c.`newsletter_date_add`');
+            $dbquery->select('c.`id_customer` AS `id`, s.`name` AS `shop_name`, gl.`name` AS `gender`, c.`lastname`, c.`firstname`, c.`email`, c.`newsletter` AS `subscribed`, c.`newsletter_date_add`, l.`iso_code`');
             $dbquery->from('customer', 'c');
             $dbquery->leftJoin('shop', 's', 's.id_shop = c.id_shop');
             $dbquery->leftJoin('gender', 'g', 'g.id_gender = c.id_gender');
             $dbquery->leftJoin('gender_lang', 'gl', 'g.id_gender = gl.id_gender AND gl.id_lang = '.$this->context->employee->id_lang);
             $dbquery->where('c.`newsletter` = '.($who == 3 ? 0 : 1));
+            $dbquery->leftJoin('lang', 'l', 'l.id_lang = c.id_lang');
             if ($optin == 2 || $optin == 1) {
                 $dbquery->where('c.`optin` = '.($optin == 1 ? 0 : 1));
             }
@@ -1187,10 +1196,11 @@ class Ps_Emailsubscription extends Module implements WidgetInterface
         $non_customers = array();
         if (($who == 0 || $who == 2) && (!$optin || $optin == 2) && !$country) {
             $dbquery = new DbQuery();
-            $dbquery->select('CONCAT(\'N\', e.`id`) AS `id`, s.`name` AS `shop_name`, NULL AS `gender`, NULL AS `lastname`, NULL AS `firstname`, e.`email`, e.`active` AS `subscribed`, e.`newsletter_date_add`');
+            $dbquery->select('CONCAT(\'N\', e.`id`) AS `id`, s.`name` AS `shop_name`, NULL AS `gender`, NULL AS `lastname`, NULL AS `firstname`, e.`email`, e.`active` AS `subscribed`, e.`newsletter_date_add`, l.`iso_code`');
             $dbquery->from('emailsubscription', 'e');
             $dbquery->leftJoin('shop', 's', 's.id_shop = e.id_shop');
             $dbquery->where('e.`active` = 1');
+            $dbquery->leftJoin('lang', 'l', 'l.id_lang = e.id_lang');
             if ($id_shop) {
                 $dbquery->where('e.`id_shop` = '.$id_shop);
             }
@@ -1264,7 +1274,7 @@ class Ps_Emailsubscription extends Module implements WidgetInterface
             if (Db::getInstance()->execute($sql)) {
                 return json_encode(true);
             }
-            return json_encode($this->l('Newsletter subscription: Unable to delete customer using email.'));
+            return json_encode($this->trans('Newsletter subscription: no email to delete, this customer has not registered.', array(), 'Modules.Emailsubscription.Admin'));
         }
     }
     public function hookActionExportGDPRData($customer)
@@ -1274,7 +1284,7 @@ class Ps_Emailsubscription extends Module implements WidgetInterface
             if ($res = Db::getInstance()->ExecuteS($sql)) {
                 return json_encode($res);
             }
-            return json_encode($this->l('Newsletter subscription: Unable to export customer using email.'));
+            return json_encode($this->trans('Newsletter subscription: no email to export, this customer has not registered.', array(), 'Modules.Emailsubscription.Admin'));
        }
    }
 }

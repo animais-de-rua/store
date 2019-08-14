@@ -1,12 +1,11 @@
-[{shop_url}] 
+{shop_url}
 
-Olá, 
+Olá,
 
-O stock está abaixo do valor mínimo especificado de:
-{warning_coverage}.
+Your stock cover is now less than the specified minimum of: {warning_coverage}
 
-EM STOCK: {current_coverage} 		 
+Em stock: {current_coverage}
 
-{shop_name} [{shop_url}] powered by
-PrestaShop(tm) [http://www.prestashop.com/] 
+[{shop_name}]({shop_url})
 
+Powered by [PrestaShop](http://www.prestashop.com/)

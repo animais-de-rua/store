@@ -1,15 +1,17 @@
-[{shop_url}] 
+{shop_url}
 
-Mensagem de um cliente da loja {shop_name} 
+Mensagem de um cliente da loja {shop_name}
 
-EMAIL DO CLIENTE: {email}
+Customer Email Address: {email}
 
-MENSAGEM DO CLIENTE: {message}
+N.º da Encomenda #:  {order_name}
 
-Nº DA ENCOMENDA: {order_name}
+Ficheiro anexo: {attached_file}
 
-FICHEIRO ANEXO: {attached_file} 		 
+Mensagem do cliente:
 
-{shop_name} [{shop_url}] powered by
-PrestaShop(tm) [http://www.prestashop.com/] 
+{message}
 
+[{shop_name}]({shop_url})
+
+Powered by [PrestaShop](http://www.prestashop.com/)

@@ -5,7 +5,7 @@
       <trans-unit id="feede4b4294c44c907966ddd76e23614" approved="yes">
         <source>Your page will be saved as a draft</source>
         <target state="translated">A sua página será guardada como um rascunho</target>
-        <note>Line: 55</note>
+        <note>Line: 59</note>
       </trans-unit>
     </body>
   </file>
@@ -33,7 +33,7 @@
       <trans-unit id="307cd46da080d0ad19ec342feb2aa6d6" approved="yes">
         <source>If you want to order/move the following data, please select a shop from the shop list.</source>
         <target state="translated">Se quiser ordenar/mover ao dados seguintes, por favor selecione uma loja da lista de lojas.</target>
-        <note>Line: 34</note>
+        <note>Line: 38</note>
       </trans-unit>
     </body>
   </file>
@@ -46,21 +46,12 @@
       </trans-unit>
     </body>
   </file>
-  <file original="controllers/admin/AdminCmsCategoriesController.php" source-language="en" target-language="pt-PT" datatype="plaintext">
-    <body>
-      <trans-unit id="29dae1d163226f90bb206b333bbffe1d" approved="yes">
-        <source>The page Category cannot be moved here.</source>
-        <target state="translated">A página Categoria não pode ser movida para aqui.</target>
-        <note>Line: 106</note>
-      </trans-unit>
-    </body>
-  </file>
   <file original="controllers/admin/AdminCmsController.php" source-language="en" target-language="pt-PT" datatype="plaintext">
     <body>
       <trans-unit id="5ece607071fe59ddc4c88dc6abfe2310" approved="yes">
         <source>No items found</source>
         <target state="translated">Nenhum item encontrado</target>
-        <note>Line: 316</note>
+        <note>Line: 324</note>
       </trans-unit>
     </body>
   </file>
@@ -80,11 +71,6 @@
         <source>Incorrect value for the selected PNG image compression.</source>
         <target state="translated">Valor incorreto para a compressão do ficheiro PNG escolhido.</target>
         <note>Line: 364</note>
-      </trans-unit>
-      <trans-unit id="e8be55bf3a30501aef09d2e74de97976" approved="yes">
-        <source>This name already exists.</source>
-        <target state="translated">Este nome já existe.</target>
-        <note>Line: 390</note>
       </trans-unit>
       <trans-unit id="b88862891dbf9c20a73bc59258407d0b" approved="yes">
         <source>Source file does not exist or is empty (%filepath%)</source>
@@ -160,30 +146,10 @@
         <target state="translated">O ficheiro enviado é muito grande.</target>
         <note>Line: 922</note>
       </trans-unit>
-      <trans-unit id="1ecb89bb5b6dce906edaf8e12968c167" approved="yes">
-        <source>Invalid file format.</source>
-        <target state="translated">Formato de ficheiro inválido.</target>
-        <note>Line: 366</note>
-      </trans-unit>
       <trans-unit id="d4c8009943f24c4318bef97058cc6ffa" approved="yes">
         <source>Failed to move uploaded file.</source>
         <target state="translated">Erro ao mover o ficheiro enviado.</target>
         <note>Line: 380</note>
-      </trans-unit>
-      <trans-unit id="3cb5c48f468125102a98fe83a277029d" approved="yes">
-        <source>Warning: if no email logo is available, the main logo will be used instead.</source>
-        <target state="translated">Aviso: se não estiver disponível nenhum logótipo para o e-mail será usado o logótipo principal.</target>
-        <note>Line: 428</note>
-      </trans-unit>
-      <trans-unit id="4a9fdf95b29176bd9260016655a80852" approved="yes">
-        <source>Your RTL stylesheets has been generated successfully</source>
-        <target state="translated">O seu arquivo de estilo RTL foi gerado com sucesso</target>
-        <note>Line: 1059</note>
-      </trans-unit>
-      <trans-unit id="9ccfef29efe298e9a48295a69436e11f" approved="yes">
-        <source><![CDATA[Your theme has been correctly reset to its default settings. You may want to regenerate your images. See the Improve > Design > Images Settings screen for the 'Regenerate thumbnails' button.]]></source>
-        <target state="translated"><![CDATA[O seu tema foi reinicializado corretamente para as suas predefinições. Pode recriar as suas imagens. Ver o ecrã Melhorar > Design > Definições de imagens para o botão "Recriar ícones".]]></target>
-        <note>Line: 1078</note>
       </trans-unit>
     </body>
   </file>
@@ -192,7 +158,7 @@
       <trans-unit id="412b4a82ba6153e19f17f490b5f1aa88" approved="yes">
         <source>This theme is not valid for PrestaShop 1.7</source>
         <target state="translated">Este tema não é válido para o PrestaShop 1.7</target>
-        <note>Line: 359</note>
+        <note>Line: 362</note>
       </trans-unit>
     </body>
   </file>
@@ -206,7 +172,7 @@
       <trans-unit id="7d88c564a7f74d56564402cd5e054b13" approved="yes">
         <source>An error occurred. The template "%s" is missing.</source>
         <target state="translated">Ocorreu um erro. O template "%s" está em falta.</target>
-        <note>Line: 116</note>
+        <note>Line: 118</note>
       </trans-unit>
     </body>
   </file>
@@ -215,7 +181,7 @@
       <trans-unit id="f003149576f4755d74550952febe14bb" approved="yes">
         <source>An error occurred while uploading the favicon: cannot copy file "%s" to folder "%s".</source>
         <target state="translated">Ocorreu um erro durante o carregamento do favicon:  não é possível copiar o ficheiro "%s" para a pasta "%s".</target>
-        <note>Line: 170</note>
+        <note>Line: 175</note>
       </trans-unit>
     </body>
   </file>
@@ -224,7 +190,57 @@
       <trans-unit id="ebc7584c0a97bc4aa867c11fc4760b3f" approved="yes">
         <source>Your theme has been correctly exported: %path%</source>
         <target state="translated">O seu tema foi exportado corretamente: %path%</target>
-        <note>Line: 58</note>
+        <note>Line: 57</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/PrestaShopBundle/Controller/Admin/Improve/Design/CmsPageController.php" source-language="en" target-language="pt-PT" datatype="plaintext">
+    <body>
+      <trans-unit id="29dae1d163226f90bb206b333bbffe1d" approved="yes">
+        <source>The page Category cannot be moved here.</source>
+        <target state="translated">A página Categoria não pode ser movida para aqui.</target>
+        <note>Line: 1135</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/PrestaShopBundle/Controller/Admin/Improve/Design/ThemeController.php" source-language="en" target-language="pt-PT" datatype="plaintext">
+    <body>
+      <trans-unit id="4a9fdf95b29176bd9260016655a80852" approved="yes">
+        <source>Your RTL stylesheets has been generated successfully</source>
+        <target state="translated">O seu arquivo de estilo RTL foi gerado com sucesso</target>
+        <note>Line: 358</note>
+      </trans-unit>
+      <trans-unit id="9ccfef29efe298e9a48295a69436e11f" approved="yes">
+        <source><![CDATA[Your theme has been correctly reset to its default settings. You may want to regenerate your images. See the Improve > Design > Images Settings screen for the 'Regenerate thumbnails' button.]]></source>
+        <target state="translated"><![CDATA[O seu tema foi reinicializado corretamente para as suas predefinições. Pode recriar as suas imagens. Ver o ecrã Melhorar > Design > Definições de imagens para o botão "Recriar ícones".]]></target>
+        <note>Line: 385</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/PrestaShopBundle/Form/Admin/Configure/AdvancedParameters/Import/ImportDataConfigurationFormDataProvider.php" source-language="en" target-language="pt-PT" datatype="plaintext">
+    <body>
+      <trans-unit id="e8be55bf3a30501aef09d2e74de97976" approved="yes">
+        <source>This name already exists.</source>
+        <target state="translated">Este nome já existe.</target>
+        <note>Line: 144</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/PrestaShopBundle/Form/Admin/Improve/Design/Theme/ImportThemeType.php" source-language="en" target-language="pt-PT" datatype="plaintext">
+    <body>
+      <trans-unit id="1ecb89bb5b6dce906edaf8e12968c167" approved="yes">
+        <source>Invalid file format.</source>
+        <target state="translated">Formato de ficheiro inválido.</target>
+        <note>Line: 68</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/PrestaShopBundle/Resources/views/Admin/Improve/Design/Theme/Blocks/logo_configuration.html.twig" source-language="en" target-language="pt-PT" datatype="plaintext">
+    <body>
+      <trans-unit id="3cb5c48f468125102a98fe83a277029d" approved="yes">
+        <source>Warning: if no email logo is available, the main logo will be used instead.</source>
+        <target state="translated">Aviso: se não estiver disponível nenhum logótipo para o e-mail será usado o logótipo principal.</target>
+        <note>Line: 100</note>
       </trans-unit>
     </body>
   </file>

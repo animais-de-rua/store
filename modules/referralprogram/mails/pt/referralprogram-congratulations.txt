@@ -1,16 +1,13 @@
-[{shop_url}] 
+{shop_url}
 
-Parabéns! 
+Parabéns!
 
-O seu amigo {sponsored_firstname} {sponsored_lastname} fez a primeira
-encomenda em {shop_name} [{shop_url}]!
+Your referred friend {sponsored_firstname} {sponsored_lastname} has placed his/her first order on [{shop_name}]({shop_url})!
 
-Temos o prazer de lhe oferecer um Vale de Desconto no valor de
-{discount_display} (VALE Nº {discount_name}) que pode ser usado na
-sua próxima encomenda. 		 
+We are pleased to offer you a voucher worth {discount_display} (VOUCHER # {discount_name}) that you can use on your next order.
 
-Com os melhores cumprimentos, 
+Com os melhores cumprimentos,
 
-{shop_name} [{shop_url}] powered by
-PrestaShop(tm) [http://www.prestashop.com/] 
+[{shop_name}]({shop_url})
 
+Powered by [PrestaShop](http://www.prestashop.com/)

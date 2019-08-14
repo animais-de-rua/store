@@ -1,69 +1,41 @@
-[{shop_url}] 
+{shop_url}
 
 Olá {firstname} {lastname},
 
-Obrigado por fazer compras na {shop_name}! 
+Thank you for shopping on {shop_name}!
 
-ENCOMENDA: {order_name} Realizada a {date}
+Detalhes da encomenda
 
-PAGAMENTO: {payment} 		 
+Encomenda: {order_name} Realizada a {date}
 
-REFERÊNCIA
+Pagamento: {payment}
 
-PRODUTO
+Referência	Produto	Preço unitário	Quantidade	Preço total  {products_txt} {discounts_txt}
+Produtos	{total_products}
+Descontos	{total_discounts}
+Embrulho de presente	{total_wrapping}
+Envio	{total_shipping}
+Including total tax	{total_tax_paid}
+Total pago	{total_paid}
 
-PREÇO UNITÁRIO
+Envio
 
-QUANTIDADE
+Transportadora: {carrier}
 
-PREÇO TOTAL
+Pagamento: {payment}
 
-{products_txt} 
+Endereço de entrega
 
-{discounts} 
+{delivery_block_txt}
 
-PRODUTOS 
+Endereço de faturação
 
-{total_products} 
+{invoice_block_txt}
 
-DESCONTOS 
+Follow your order and download your invoice on our shop, go to the [Order history and details]({history_url}) section of your customer account.
 
-{total_discounts} 
+If you have a guest account, you can follow your order via the [Guest Tracking]({guest_tracking_url}) section on our shop.
 
-EMBRULHO DE PRESENTE 
+[{shop_name}]({shop_url})
 
-{total_wrapping} 
-
-ENVIO 
-
-{total_shipping} 
-
-TOTAL DE IMPOSTO PAGO 
-
-{total_tax_paid} 
-
-TOTAL PAGO 
-
-{total_paid} 
-
-TRANSPORTADORA: {carrier}
-
-PAGAMENTO: {payment} 		 
-
-{delivery_block_txt} 
-
-{invoice_block_txt} 
-
-Pode rever a sua encomenda e descarregar a sua fatura em
-"Histórico de encomendas" [{history_url}] da sua
-conta de cliente clicando em "A minha conta"
-[{my_account_url}] na nossa loja. 
-
-Se tiver uma conta de visitante, pode seguir a sua encomenda em
-"Enc. de visitantes"
-[{guest_tracking_url}?id_order={order_name}] da
-nossa loja. 
-
-{shop_name} [{shop_url}] powered by
-PrestaShop(tm) [http://www.prestashop.com/] 
-
+Powered by [PrestaShop](http://www.prestashop.com/)

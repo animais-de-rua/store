@@ -1,17 +1,17 @@
-[{shop_url}] 
+{shop_url}
 
-A sua mensagem para o Apoio ao Cliente da loja {shop_name} 
+Olá {firstname} {lastname},
 
-A sua mensagem foi enviada com sucesso.
+Your message has been sent successfully, thank you for taking the time to write!
 
-Nº DA ENCOMENDA: {order_name}
+N.º da Encomenda #:  {order_name}
 
-PRODUTO: {product_name}
+Produto:  {product_name}
 
-FICHEIRO ANEXO: {attached_file} 		 
+Ficheiro anexo: {attached_file}
 
-Responderemos o mais breve possível. 
+We will reply as soon as possible.
 
-{shop_name} [{shop_url}] powered by
-PrestaShop(tm) [http://www.prestashop.com/] 
+[{shop_name}]({shop_url})
 
+Powered by [PrestaShop](http://www.prestashop.com/)

@@ -1,14 +1,13 @@
-
 [{shop_url}] 
 
 Olá {firstname} {lastname},
 
-Obrigado por fazer compras na {shop_name}! 
+Obrigada por fazer compras na {shop_name}! 
 
 O pagamento da sua encomenda com a referência {order_name} foi
 processado com sucesso. 
 
-Pode rever a sua encomenda e descarregar a sua fatura em
+Pode rever a sua encomenda em
 "Histórico de encomendas" [{history_url}] da sua
 conta de cliente clicando em "A minha conta"
 [{my_account_url}] na nossa loja. 

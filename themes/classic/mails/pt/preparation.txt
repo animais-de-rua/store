@@ -1,4 +1,3 @@
-
 [{shop_url}] 
 
 Olá {firstname} {lastname}, 
@@ -6,7 +5,7 @@ Olá {firstname} {lastname},
 Estamos a processar a sua encomenda feita em {shop_name} com a
 referência {order_name}. 
 
-Pode rever a sua encomenda e descarregar a sua fatura em
+Pode rever a sua encomenda em
 "Histórico de encomendas" [{history_url}] da sua
 conta de cliente clicando em "A minha conta"
 [{my_account_url}] na nossa loja. 

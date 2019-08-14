@@ -27,6 +27,12 @@
         <target state="translated">Nº da Loja</target>
         <note>Line: 326</note>
       </trans-unit>
+      <trans-unit id="bb8956c67b82c7444a80c6b2433dd8b4" approved="yes">
+        <source>Are you sure you want to uninstall this module?</source>
+        <target state="translated">Tem a certeza que quer desinstalar este módulo?</target>
+        <note>Line: 92
+Comment: Confirm uninstall</note>
+      </trans-unit>
     </body>
   </file>
 </xliff>

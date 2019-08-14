@@ -1,9 +1,9 @@
-[{shop_url}] 
+{shop_url}
 
-Olá, 
+Olá,
 
-OBRIGADO POR SUBSCREVER A NOSSA NEWSLETTER. 
+Obrigado por subscrever a nossa newsletter.
 
-{shop_name} [{shop_url}] powered by
-PrestaShop(tm) [http://www.prestashop.com/] 
+[{shop_name}]({shop_url})
 
+Powered by [PrestaShop](http://www.prestashop.com/)

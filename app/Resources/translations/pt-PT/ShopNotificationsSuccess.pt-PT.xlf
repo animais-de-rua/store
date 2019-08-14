@@ -42,7 +42,7 @@
       <trans-unit id="7c8682d92dfb1522b4cc2975608e582d" approved="yes">
         <source>Information successfully updated.</source>
         <target state="translated">Informações atualizadas com sucesso.</target>
-        <note>Line: 57</note>
+        <note>Line: 56</note>
       </trans-unit>
     </body>
   </file>
@@ -65,7 +65,7 @@
       <trans-unit id="19b1f74d6e96f3db9805e8d5c9301b7a" approved="yes">
         <source>Your password has been successfully reset and a confirmation has been sent to your email address: %s</source>
         <target state="translated">A sua palavra-passe foi redefinida com sucesso e uma confirmação foi enviada para o seu endereço de e-mail: %s</target>
-        <note>Line: 180</note>
+        <note>Line: 199</note>
       </trans-unit>
     </body>
   </file>

@@ -1,4 +1,3 @@
-
 [{shop_url}] 
 
 {firstname_friend} {lastname_friend}, Junte-se a nós! 

@@ -110,90 +110,51 @@
       <trans-unit id="f2d1c5443636295e9720caac90ea8d93" approved="yes">
         <source>Your internal name for this attribute.</source>
         <target state="translated">O nome interno para este atributo.</target>
-        <note>Line: 202</note>
+        <note>Line: 204</note>
       </trans-unit>
       <trans-unit id="b5e6921c2d093fbcb0088c9466ee9983" approved="yes">
         <source>The public name for this attribute, displayed to the customers.</source>
         <target state="translated">O nome público para este atributo, apresentado aos clientes.</target>
-        <note>Line: 211</note>
+        <note>Line: 213</note>
       </trans-unit>
       <trans-unit id="580de47d3bc3e99a0b6aba55066a983a" approved="yes">
         <source>The way the attribute's values will be presented to the customers in the product's page.</source>
         <target state="translated">A forma como estes atributos serão apresentados aos clientes na página de produtos.</target>
-        <note>Line: 224</note>
+        <note>Line: 226</note>
       </trans-unit>
       <trans-unit id="71c476c94d0a0e3dfc0826afd03d2dda" approved="yes">
         <source>Choose the attribute group for this value.</source>
         <target state="translated">Escolha o grupo de atributos para este valor.</target>
-        <note>Line: 272</note>
+        <note>Line: 274</note>
       </trans-unit>
       <trans-unit id="22cbf85c41427960736dc10cfec5faf4" approved="yes">
         <source>Choose a color with the color picker, or enter an HTML color (e.g. "lightblue", "#CC6600").</source>
         <target state="translated">Escolha a cor com o seletor de cor, ou insira uma cor HTML (ex: "lightblue", "#CC6600").</target>
-        <note>Line: 310</note>
+        <note>Line: 312</note>
       </trans-unit>
       <trans-unit id="dd24a1142c1070a0efbdf43b4f0167cc" approved="yes">
         <source>Upload an image file containing the color texture from your computer.</source>
         <target state="translated">Carregar um ficheiro de imagem que contenha a textura colorida a partir do seu computador.</target>
-        <note>Line: 318</note>
+        <note>Line: 320</note>
       </trans-unit>
       <trans-unit id="ba353198430b2004efeb1ac6d1f410d0" approved="yes">
         <source>This will override the HTML color!</source>
         <target state="translated">Isto irá substituir a cor HTML!</target>
-        <note>Line: 319</note>
+        <note>Line: 321</note>
       </trans-unit>
       <trans-unit id="7d5672f569de406c85249db6f1c99ec0" approved="yes">
         <source>Save then add another value</source>
         <target state="translated">Guardar e adicionar novo valor</target>
-        <note>Line: 558</note>
+        <note>Line: 565</note>
       </trans-unit>
     </body>
   </file>
   <file original="controllers/admin/AdminCategoriesController.php" source-language="en" target-language="pt-PT" datatype="plaintext">
     <body>
-      <trans-unit id="42f9ee5026d32792987af851a2ea0343" approved="yes">
-        <source>This is the main image for your category, displayed in the category page. The category description will overlap this image and appear in its top-left corner.</source>
-        <target state="translated">Esta é a imagem principal da sua categoria, apresentada na página da categoria. A descrição da categoria sobrepõe-se a esta imagem no canto superior esquerdo.</target>
-        <note>Line: 567</note>
-      </trans-unit>
-      <trans-unit id="c5d262df2fa3b92141eb8bb37b1fb9b7" approved="yes">
-        <source>Displays a small image in the parent category's page, if the theme allows it.</source>
-        <target state="translated">Apresenta uma pequena imagem na página da categoria de origem, se o tema gráfico o permitir.</target>
-        <note>Line: 578</note>
-      </trans-unit>
-      <trans-unit id="9cbbbb4e43f08deda211ff24e6fd542f" approved="yes">
-        <source>The category thumbnail appears in the menu as a small image representing the category, if the theme allows it.</source>
-        <target state="translated">A miniatura da categoria aparece no menu como uma pequena imagem que representa a categoria, se o tema gráfico o permitir.</target>
-        <note>Line: 589</note>
-      </trans-unit>
       <trans-unit id="7e35726fb991605ab3d0e6406599e6ef" approved="yes">
         <source>To add "tags," click in the field, write something, and then press "Enter."</source>
         <target state="translated">Para adicionar palavras, clique no campo, escreva alguma coisa, e depois pressione "Enter".</target>
         <note>Line: 618</note>
-      </trans-unit>
-      <trans-unit id="09e2683b6b92b326691cd992f6e5684b" approved="yes">
-        <source>Only letters, numbers, underscore (_) and the minus (-) character are allowed.</source>
-        <target state="translated">Só letras, números, sublinhado(_) e hifen(-) são caracteres permitidos.</target>
-        <note>Line: 626</note>
-      </trans-unit>
-      <trans-unit id="53d98bd116f47fdfe15c8eb4525c5e99" approved="yes">
-        <source>You now have three default customer groups.</source>
-        <target state="translated">Tem agora três grupos de clientes padrão .</target>
-        <note>Line: 633</note>
-      </trans-unit>
-      <trans-unit id="463848257c086c4816d9f4c020a8d19e" approved="yes">
-        <source>Mark all of the customer groups which you would like to have access to this category.</source>
-        <target state="translated">Marcar todos os Grupos de Clientes aos quais pretende dar acesso a esta Categoria.</target>
-        <note>Line: 637</note>
-      </trans-unit>
-    </body>
-  </file>
-  <file original="controllers/admin/AdminCmsCategoriesController.php" source-language="en" target-language="pt-PT" datatype="plaintext">
-    <body>
-      <trans-unit id="bed3b3133d292db46a0d28c5d91811b9" approved="yes">
-        <source>Only letters and the minus (-) character are allowed.</source>
-        <target state="translated">Apenas são permitidas letras, números e o símbolo menos (-).</target>
-        <note>Line: 291</note>
       </trans-unit>
     </body>
   </file>
@@ -217,62 +178,62 @@
       <trans-unit id="d60419d8fec86275eb0752ce43556e6f" approved="yes">
         <source>Port to use to connect to your IMAP server.</source>
         <target state="translated">Porta a usar para se ligar ao seu servidor IMAP.</target>
-        <note>Line: 173</note>
+        <note>Line: 174</note>
       </trans-unit>
       <trans-unit id="b8453d9982fb11c704dca368e5107677" approved="yes">
         <source>User to use to connect to your IMAP server.</source>
         <target state="translated">Nome de utilizador a usar para se ligar ao seu servidor IMAP.</target>
-        <note>Line: 179</note>
+        <note>Line: 180</note>
       </trans-unit>
       <trans-unit id="849dafe04c2f54cb0dc079da9ca15a8f" approved="yes">
         <source>Password to use to connect your IMAP server.</source>
         <target state="translated">Palavra-passe a utilizar para se ligar ao seu servidor IMAP.</target>
-        <note>Line: 184</note>
+        <note>Line: 185</note>
       </trans-unit>
       <trans-unit id="e9d5cadd20f10058a5bb0823aed17584" approved="yes">
         <source>Delete messages after synchronization. If you do not enable this option, the synchronization will take more time.</source>
         <target state="translated">Eliminar mensagens após a sincronização. Se não ativar essa opção, a sincronização vai demorar mais tempo.</target>
-        <note>Line: 189</note>
+        <note>Line: 190</note>
       </trans-unit>
       <trans-unit id="eca83facb7294ab0f66e1dec9fc66efd" approved="yes">
         <source>Create new threads for unrecognized emails.</source>
         <target state="translated">Criar novos tópicos para emails desconhecidos.</target>
-        <note>Line: 194</note>
+        <note>Line: 195</note>
       </trans-unit>
       <trans-unit id="38033ed4d12ca354e503266bd9a59105" approved="yes">
         <source>Use POP3 instead of IMAP.</source>
         <target state="translated">Utilizar POP3 em vez de IMAP.</target>
-        <note>Line: 199</note>
+        <note>Line: 200</note>
       </trans-unit>
       <trans-unit id="3abb33532b4b4e0201dbdde08eced7ee" approved="yes">
         <source>Do not use RSH or SSH to establish a preauthenticated IMAP sessions.</source>
         <target state="translated">Não usar RSH nem SSH para estabelecer uma sessão IMAP pré-autenticada.</target>
-        <note>Line: 205</note>
+        <note>Line: 206</note>
       </trans-unit>
       <trans-unit id="89884c64df4330255f1fc07dadfb5dd4" approved="yes">
         <source>Use the Secure Socket Layer (TLS/SSL) to encrypt the session.</source>
         <target state="translated">Usar ligação segura (TLS/SSL) para encriptar a sessão.</target>
-        <note>Line: 210</note>
+        <note>Line: 211</note>
       </trans-unit>
       <trans-unit id="f5c4e8df7daa8f49d8f68ae25deab8c7" approved="yes">
         <source>Validate certificates from the TLS/SSL server.</source>
         <target state="translated">Validar certificados do servidor TLS/SSL.</target>
-        <note>Line: 215</note>
+        <note>Line: 216</note>
       </trans-unit>
       <trans-unit id="244789498d5c439efc7a4a05975dc391" approved="yes">
         <source>Do not validate certificates from the TLS/SSL server. This is only needed if a server uses self-signed certificates.</source>
         <target state="translated">Não validar os certificados do servidor TLS/SSL. Isto só é necessário se o servidor usar certificados auto-assinados.</target>
-        <note>Line: 220</note>
+        <note>Line: 221</note>
       </trans-unit>
       <trans-unit id="eabd6d4298e21426642606fe653585c9" approved="yes">
         <source>Force use of start-TLS to encrypt the session, and reject connection to servers that do not support it.</source>
         <target state="translated">Forçar o uso de start-TLS para encriptar a sessão, e rejeitar a ligação a servidores que não o suportem.</target>
-        <note>Line: 225</note>
+        <note>Line: 226</note>
       </trans-unit>
       <trans-unit id="5b035ec3dccf9e9d875e0b830062a9ff" approved="yes">
         <source>Do not use start-TLS to encrypt the session, even with servers that support it.</source>
         <target state="translated">Não usar o start-TLS para encriptar a sessão, mesmo com servidores que a suportem.</target>
-        <note>Line: 230</note>
+        <note>Line: 231</note>
       </trans-unit>
     </body>
   </file>
@@ -291,31 +252,26 @@
       <trans-unit id="07fc7dc79c8046bb36d97b4332dab1ca" approved="yes">
         <source>Back to the list</source>
         <target state="translated">Voltar à lista</target>
-        <note>Line: 267</note>
+        <note>Line: 268</note>
       </trans-unit>
       <trans-unit id="d8aac6665c79faf4f411fe0da93ab23c" approved="yes">
         <source>Add new feature values</source>
         <target state="translated">Adicionar novos valores de características</target>
-        <note>Line: 263</note>
+        <note>Line: 264</note>
       </trans-unit>
     </body>
   </file>
   <file original="controllers/admin/AdminManufacturersController.php" source-language="en" target-language="pt-PT" datatype="plaintext">
     <body>
-      <trans-unit id="0205bdbccc495138a109bd8710053565" approved="yes">
-        <source>Upload a brand logo from your computer.</source>
-        <target state="translated">Envie um logótipo da marca a partir do seu computador.</target>
-        <note>Line: 356</note>
-      </trans-unit>
       <trans-unit id="643544fd7876fa0f017ba6233f46b4c3" approved="yes">
         <source>To add "tags," click inside the field, write something, and then press "Enter."</source>
         <target state="translated">Para adicionar palavras, clique no campo, escreva alguma coisa, e depois pressione "Enter".</target>
-        <note>Line: 382</note>
+        <note>Line: 396</note>
       </trans-unit>
       <trans-unit id="b7d8f05036844ad562ed08715bb480b4" approved="yes">
         <source>Company name for this brand</source>
         <target state="translated">Nome da empresa para esta marca</target>
-        <note>Line: 509</note>
+        <note>Line: 523</note>
       </trans-unit>
     </body>
   </file>
@@ -324,32 +280,32 @@
       <trans-unit id="dd0479e67d24cd2c2868d4c6b2dcba9a" approved="yes">
         <source>Company name for this supplier</source>
         <target state="translated">Nome da empresa para este Fornecedor</target>
-        <note>Line: 138</note>
+        <note>Line: 145</note>
       </trans-unit>
       <trans-unit id="afd7431f75b5801226c9ee37acc1a504" approved="yes">
         <source>Will appear in the list of suppliers.</source>
         <target state="translated">Irá ser mostrado na lista de fornecedores.</target>
-        <note>Line: 149</note>
+        <note>Line: 156</note>
       </trans-unit>
       <trans-unit id="b51bea4eee9d9ef6bd9a6849337013d5" approved="yes">
         <source>Phone number for this supplier</source>
         <target state="translated">Número de telefone deste fornecedor</target>
-        <note>Line: 160</note>
+        <note>Line: 167</note>
       </trans-unit>
       <trans-unit id="c24c0c9cd7bdb34eaff67028b0cb8349" approved="yes">
         <source>Mobile phone number for this supplier.</source>
         <target state="translated">Número de telemóvel deste fornecedor.</target>
-        <note>Line: 169</note>
+        <note>Line: 176</note>
       </trans-unit>
       <trans-unit id="e865605842d16d0d11c266c731e00507" approved="yes">
         <source>Upload a supplier logo from your computer.</source>
         <target state="translated">Enviar um logotipo do fornecedor.</target>
-        <note>Line: 234</note>
+        <note>Line: 241</note>
       </trans-unit>
       <trans-unit id="3ef61077e04c24d0b712a1b0ea036255" approved="yes">
         <source>To add "tags" click in the field, write something and then press "Enter".</source>
         <target state="translated">Para adicionar etiquetas, clique no campo, escreva algo e carregue na tecla "Enter".</target>
-        <note>Line: 259</note>
+        <note>Line: 266</note>
       </trans-unit>
     </body>
   </file>
@@ -358,8 +314,14 @@
       <trans-unit id="cc2ac103a9c1411fd67952983e25978a" approved="yes">
         <source>Create a new product: CTRL+P</source>
         <target state="translated">Crie um novo produto: CTRL+P</target>
-        <note>Line: 327</note>
+        <note>Line: 360</note>
       </trans-unit>
+    </body>
+  </file>
+  <file original="src/PrestaShopBundle/Form/Admin/Catalog/Category/AbstractCategoryType.php" source-language="en" target-language="pt-PT" datatype="plaintext">
+    <body>
+      
+      
     </body>
   </file>
   <file original="src/PrestaShopBundle/Form/Admin/Product/ProductInformation.php" source-language="en" target-language="pt-PT" datatype="plaintext">
@@ -377,12 +339,12 @@
       <trans-unit id="7f6c27a96363effdda77216cf1251400" approved="yes">
         <source><![CDATA[The summary is a short sentence describing your product.<br />It will appears at the top of your shop's product page, in product lists, and in search engines' results page (so it's important for SEO). To give more details about your product, use the "Description" tab.]]></source>
         <target state="translated"><![CDATA[O resumo é uma frase que descreve sucintamente o seu produto.<br />Aparece na parte superior da página do produto da sua loja, na lista de produtos, e na página dos resultados da pesquisa (por isso é importante para o SEO). Para fornecer mais informações sobre o seu produto, utilize o separador «Descrição».]]></target>
-        <note>Line: 197</note>
+        <note>Line: 202</note>
       </trans-unit>
       <trans-unit id="1fbfcc9642d39544207c67f66ec3bc00" approved="yes">
         <source>Search and add a related product</source>
         <target state="translated">Pesquisar e adicionar um produto relacionado</target>
-        <note>Line: 286</note>
+        <note>Line: 291</note>
       </trans-unit>
     </body>
   </file>
@@ -452,22 +414,31 @@
       </trans-unit>
     </body>
   </file>
+  <file original="src/PrestaShopBundle/Resources/views/Admin/Improve/Design/Cms/Blocks/category_form.html.twig" source-language="en" target-language="pt-PT" datatype="plaintext">
+    <body>
+      <trans-unit id="bed3b3133d292db46a0d28c5d91811b9" approved="yes">
+        <source>Only letters and the minus (-) character are allowed.</source>
+        <target state="translated">Apenas são permitidas letras, números e o símbolo menos (-).</target>
+        <note>Line: 75</note>
+      </trans-unit>
+    </body>
+  </file>
   <file original="src/PrestaShopBundle/Resources/views/Admin/Product/CatalogPage/Lists/products_table.html.twig" source-language="en" target-language="pt-PT" datatype="plaintext">
     <body>
       <trans-unit id="542f59279cd5d73dfbdb069ce0833b0a" approved="yes">
         <source>Search name</source>
         <target state="translated">Pesquisar nome</target>
-        <note>Line: 99</note>
+        <note>Line: 104</note>
       </trans-unit>
       <trans-unit id="3ce14776b1408d0dc406766fd0c6a45d" approved="yes">
         <source>Search ref.</source>
         <target state="translated">Pesquisar referência</target>
-        <note>Line: 108</note>
+        <note>Line: 114</note>
       </trans-unit>
       <trans-unit id="84645920bd0fb266cb4acdbc00003e62" approved="yes">
         <source>Search category</source>
         <target state="translated">Pesquisar categoria</target>
-        <note>Line: 117</note>
+        <note>Line: 124</note>
       </trans-unit>
     </body>
   </file>
@@ -818,6 +789,49 @@
         <source>Take me out of there!</source>
         <target state="translated">Tire-me daqui!</target>
         <note>Line: 66</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/PrestaShopBundle/Resources/views/Admin/Sell/Catalog/Categories/Blocks/form.html.twig" source-language="en" target-language="pt-PT" datatype="plaintext">
+    <body>
+      <trans-unit id="42f9ee5026d32792987af851a2ea0343" approved="yes">
+        <source>This is the main image for your category, displayed in the category page. The category description will overlap this image and appear in its top-left corner.</source>
+        <target state="translated">Esta é a imagem principal da sua categoria, apresentada na página da categoria. A descrição da categoria sobrepõe-se a esta imagem no canto superior esquerdo.</target>
+        <note>Line: 82</note>
+      </trans-unit>
+      <trans-unit id="c5d262df2fa3b92141eb8bb37b1fb9b7" approved="yes">
+        <source>Displays a small image in the parent category's page, if the theme allows it.</source>
+        <target state="translated">Apresenta uma pequena imagem na página da categoria de origem, se o tema gráfico o permitir.</target>
+        <note>Line: 97</note>
+      </trans-unit>
+      <trans-unit id="9cbbbb4e43f08deda211ff24e6fd542f" approved="yes">
+        <source>The category thumbnail appears in the menu as a small image representing the category, if the theme allows it.</source>
+        <target state="translated">A miniatura da categoria aparece no menu como uma pequena imagem que representa a categoria, se o tema gráfico o permitir.</target>
+        <note>Line: 121</note>
+      </trans-unit>
+      <trans-unit id="09e2683b6b92b326691cd992f6e5684b" approved="yes">
+        <source>Only letters, numbers, underscore (_) and the minus (-) character are allowed.</source>
+        <target state="translated">Só letras, números, sublinhado(_) e hifen(-) são caracteres permitidos.</target>
+        <note>Line: 166</note>
+      </trans-unit>
+      <trans-unit id="53d98bd116f47fdfe15c8eb4525c5e99" approved="yes">
+        <source>You now have three default customer groups.</source>
+        <target state="translated">Tem agora três grupos de clientes padrão .</target>
+        <note>Line: 179</note>
+      </trans-unit>
+      <trans-unit id="463848257c086c4816d9f4c020a8d19e" approved="yes">
+        <source>Mark all of the customer groups which you would like to have access to this category.</source>
+        <target state="translated">Marcar todos os Grupos de Clientes aos quais pretende dar acesso a esta Categoria.</target>
+        <note>Line: 171</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/PrestaShopBundle/Resources/views/Admin/Sell/Catalog/Manufacturer/Blocks/form.html.twig" source-language="en" target-language="pt-PT" datatype="plaintext">
+    <body>
+      <trans-unit id="0205bdbccc495138a109bd8710053565" approved="yes">
+        <source>Upload a brand logo from your computer.</source>
+        <target state="translated">Envie um logótipo da marca a partir do seu computador.</target>
+        <note>Line: 60</note>
       </trans-unit>
     </body>
   </file>

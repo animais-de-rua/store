@@ -320,7 +320,7 @@
       <trans-unit id="0071aa279bd1583754a544277740f047" approved="yes">
         <source>Delete item #</source>
         <target state="translated">Eliminar o item nº</target>
-        <note>Line: 108</note>
+        <note>Line: 112</note>
       </trans-unit>
     </body>
   </file>
@@ -383,6 +383,16 @@
         <source>Please note that for security reasons, you can only add modules that are being distributed on PrestaShop Addons, the official marketplace.</source>
         <target state="translated">Por favor note que por razões de segurança, apenas pode adicionar módulos que são distribuídos no site do PrestaShop.</target>
         <note>Line: 85</note>
+      </trans-unit>
+      <trans-unit id="95e3873b64426add2f3818e6a98dc9fb" approved="yes">
+        <source>Search on PrestaShop Marketplace:</source>
+        <target state="translated">Pesquisar no PrestaShop Marketplace:</target>
+        <note>Line: 43</note>
+      </trans-unit>
+      <trans-unit id="3a2d5fe857d8f9541136a124c2edec6c" approved="yes">
+        <source>Or</source>
+        <target state="translated">ou</target>
+        <note>Line: 53</note>
       </trans-unit>
     </body>
   </file>
@@ -1006,7 +1016,7 @@
       <trans-unit id="83057027f6b988dd2dbe422f6f3ddd21" approved="yes">
         <source>No module was found for this hook.</source>
         <target state="translated">Não foi encontrado um módulo para este gancho.</target>
-        <note>Line: 157</note>
+        <note>Line: 161</note>
       </trans-unit>
     </body>
   </file>
@@ -1106,12 +1116,12 @@
       <trans-unit id="0d9175fe89fb80d815e7d03698b6e83a" approved="yes">
         <source>Gift</source>
         <target state="translated">Presente</target>
-        <note>Line: 769</note>
+        <note>Line: 779</note>
       </trans-unit>
       <trans-unit id="c78ba40a94a132dc170cba2f8c66f310" approved="yes">
         <source>Search for an existing product by typing the first letters of its name.</source>
         <target state="translated">Pesquisar por um produto existente por introduzir as primeiras letras do nome.</target>
-        <note>Line: 1198</note>
+        <note>Line: 1208</note>
       </trans-unit>
     </body>
   </file>
@@ -1125,42 +1135,42 @@
       <trans-unit id="e5bd639f4d74cf2c52afada77086f788" approved="yes">
         <source>Process a standard refund</source>
         <target state="translated">Processar um reembolso padrão</target>
-        <note>Line: 902</note>
+        <note>Line: 905</note>
       </trans-unit>
       <trans-unit id="c4b689eeebf8e942907a1cc1d086dba6" approved="yes">
         <source>Process a partial refund</source>
         <target state="translated">Processar um reembolso parcial</target>
-        <note>Line: 903</note>
+        <note>Line: 906</note>
       </trans-unit>
       <trans-unit id="cc61945cbbf46721a053467c395c666f" approved="yes">
         <source>Refunded</source>
         <target state="translated">Reembolsado</target>
-        <note>Line: 931</note>
+        <note>Line: 934</note>
       </trans-unit>
       <trans-unit id="6a5efd211a422296eab4adc476c98f0e" approved="yes">
         <source>Return products</source>
         <target state="translated">Devolver produtos</target>
-        <note>Line: 1196</note>
+        <note>Line: 1199</note>
       </trans-unit>
       <trans-unit id="74c06eb18eeb118d7b3c623d0c717290" approved="yes">
         <source>Refund products</source>
         <target state="translated">Reembolsar produtos</target>
-        <note>Line: 1196</note>
+        <note>Line: 1199</note>
       </trans-unit>
       <trans-unit id="4b8def9be8f45a8d6baea36b26868965" approved="yes">
         <source>Cancel products</source>
         <target state="translated">Cancelar produtos</target>
-        <note>Line: 1196</note>
+        <note>Line: 1199</note>
       </trans-unit>
       <trans-unit id="867343577fa1f33caa632a19543bd252" approved="yes">
         <source>Keywords</source>
         <target state="translated">Palavras-chave</target>
-        <note>Line: 1265</note>
+        <note>Line: 1268</note>
       </trans-unit>
       <trans-unit id="6416e8cb5fc0a208d94fa7f5a300dbc4" approved="yes">
         <source>Warehouse</source>
         <target state="translated">Armazém</target>
-        <note>Line: 930</note>
+        <note>Line: 933</note>
       </trans-unit>
     </body>
   </file>
@@ -1169,7 +1179,7 @@
       <trans-unit id="f2bbdf9f72c085adc4d0404e370f0f4c" approved="yes">
         <source>Attribute</source>
         <target state="translated">Atributo</target>
-        <note>Line: 79</note>
+        <note>Line: 83</note>
       </trans-unit>
     </body>
   </file>
@@ -1252,11 +1262,6 @@
   </file>
   <file original="admin-dev/themes/default/template/controllers/themes/configurelayouts.tpl" source-language="en" target-language="pt-PT" datatype="plaintext">
     <body>
-      <trans-unit id="193cfc9be3b995831c6af2fea6650e60" approved="yes">
-        <source>Page</source>
-        <target state="translated">Página</target>
-        <note>Line: 40</note>
-      </trans-unit>
       <trans-unit id="ebd9bec4d70abc789d439c1f136b0538" approved="yes">
         <source>Layout</source>
         <target state="translated">Esquema</target>
@@ -1266,16 +1271,6 @@
   </file>
   <file original="admin-dev/themes/default/template/controllers/themes/helpers/form/form.tpl" source-language="en" target-language="pt-PT" datatype="plaintext">
     <body>
-      <trans-unit id="95e3873b64426add2f3818e6a98dc9fb" approved="yes">
-        <source>Search on PrestaShop Marketplace:</source>
-        <target state="translated">Pesquisar no PrestaShop Marketplace:</target>
-        <note>Line: 40</note>
-      </trans-unit>
-      <trans-unit id="3a2d5fe857d8f9541136a124c2edec6c" approved="yes">
-        <source>Or</source>
-        <target state="translated">ou</target>
-        <note>Line: 50</note>
-      </trans-unit>
       <trans-unit id="1beaf22ea4850d25af342d91b0f25624" approved="yes">
         <source>See all themes</source>
         <target state="translated">Ver todos os temas gráficos</target>
@@ -1901,47 +1896,47 @@
       <trans-unit id="6ccfec41b65de46efeb7ca242341e8ea" approved="yes">
         <source>Please fill at least one field to perform a search in this list.</source>
         <target state="translated">Deve preencher pelo menos um campo para fazer uma pesquisa nesta lista.</target>
-        <note>Line: 108</note>
+        <note>Line: 113</note>
       </trans-unit>
       <trans-unit id="e129ae480280e47ef82fc7702f8321ba" approved="yes">
         <source>Refresh list</source>
         <target state="translated">Atualizar lista</target>
-        <note>Line: 141</note>
+        <note>Line: 157</note>
       </trans-unit>
       <trans-unit id="dbcd43f8ba2bafd1bccc57fe9c8b5d7b" approved="yes">
         <source>Show SQL query</source>
         <target state="translated">Mostrar consultas SQL</target>
-        <note>Line: 150</note>
+        <note>Line: 166</note>
       </trans-unit>
       <trans-unit id="351b6d570b6ba15fe66e85c1eaf9ec64" approved="yes">
         <source>Export to SQL Manager</source>
         <target state="translated">Exportar para o gestor SQL</target>
-        <note>Line: 155</note>
+        <note>Line: 171</note>
       </trans-unit>
       <trans-unit id="4493e821e06072415518bd7ae4077996" approved="yes">
         <source>Shop group</source>
         <target state="translated">Grupo da Loja</target>
-        <note>Line: 294</note>
+        <note>Line: 310</note>
       </trans-unit>
       <trans-unit id="e12167aa0a7698e6ebc92b4ce3909b53" approved="yes">
         <source>To</source>
         <target state="translated">até</target>
-        <note>Line: 334</note>
+        <note>Line: 350</note>
       </trans-unit>
       <trans-unit id="e9c7e4df74077626f7e42797c65273c4" approved="yes">
         <source>and stay</source>
         <target state="translated">e ficar</target>
-        <note>Line: 187</note>
+        <note>Line: 203</note>
       </trans-unit>
       <trans-unit id="5da618e8e4b89c66fe86e32cdafde142" approved="yes">
         <source>From</source>
         <target state="translated">De</target>
-        <note>Line: 327</note>
+        <note>Line: 343</note>
       </trans-unit>
       <trans-unit id="526d688f37a86d3c3f27d0c5016eb71d" approved="yes">
         <source>Reset</source>
         <target state="translated">Reinicializar</target>
-        <note>Line: 386</note>
+        <note>Line: 402</note>
       </trans-unit>
     </body>
   </file>
@@ -2446,17 +2441,17 @@
       <trans-unit id="151648106e4bf98297882ea2ea1c4b0e" approved="yes">
         <source>Update successful</source>
         <target state="translated">Atualizado com sucesso</target>
-        <note>Line: 74</note>
+        <note>Line: 76</note>
       </trans-unit>
       <trans-unit id="358cc9ee3a3d23d3390e5043122d9bea" approved="yes">
         <source>PrestaShop was unable to log in to Addons. Please check your credentials and your Internet connection.</source>
         <target state="translated">O PrestaShop não conseguiu autenticar-se nos Addons. Por favor verifique as suas credenciais e se está ligado à internet.</target>
-        <note>Line: 75</note>
+        <note>Line: 77</note>
       </trans-unit>
       <trans-unit id="7bb36e0f484d91aeba5d83fe2af63d28" approved="yes">
         <source>Search for a product</source>
         <target state="translated">Pesquisar um produto</target>
-        <note>Line: 76</note>
+        <note>Line: 78</note>
       </trans-unit>
     </body>
   </file>
@@ -2465,37 +2460,37 @@
       <trans-unit id="c821206b336b401bccf058f664f8255d" approved="yes">
         <source>Your shop is in debug mode.</source>
         <target state="translated">A sua loja está no modo de depuração.</target>
-        <note>Line: 43</note>
+        <note>Line: 34</note>
       </trans-unit>
       <trans-unit id="13886bc255a80b7c11e0585013feeb30" approved="yes">
         <source>All the PHP errors and messages are displayed. When you no longer need it, [1]turn off[/1] this mode.</source>
         <target state="translated">Todos os erros PHP e mensagens são apresentados. Quando não necessitar mais, [1]desligue[/1] este modo.</target>
-        <note>Line: 43</note>
+        <note>Line: 34</note>
       </trans-unit>
       <trans-unit id="ec3028a12402ab7f43962a6f3a667b6e" approved="yes">
         <source>Debug mode</source>
         <target state="translated">Modo de descoberta de erros (debug)</target>
-        <note>Line: 47</note>
+        <note>Line: 38</note>
       </trans-unit>
       <trans-unit id="67a33d40bef41c3b79d6b973bfcbc89a" approved="yes">
         <source>Your shop is in maintenance.</source>
         <target state="translated">A sua loja está em manutenção.</target>
-        <note>Line: 58</note>
+        <note>Line: 50</note>
       </trans-unit>
       <trans-unit id="929f5283d0fa1e9eecf20cc294f981e5" approved="yes">
         <source><![CDATA[Your visitors and customers cannot access your shop while in maintenance mode.%s To manage the maintenance settings, go to Shop Parameters > Maintenance tab.]]></source>
         <target state="translated"><![CDATA[Os seus clientes e visitantes não podem obter acesso à sua loja enquanto esta estiver em modo de manutenção. %s Para gerir as definições de manutenção, ir para o separador Preferências > Manutenção.]]></target>
-        <note>Line: 58</note>
+        <note>Line: 50</note>
       </trans-unit>
       <trans-unit id="38a27c0c7ef7a05e13efa2798ee21533" approved="yes">
         <source>Maintenance mode</source>
         <target state="translated">Modo de manutenção</target>
-        <note>Line: 61</note>
+        <note>Line: 53</note>
       </trans-unit>
       <trans-unit id="9ff082251dea737459c9f32e73ca7a62" approved="yes">
         <source>For security reasons, you must also delete the /install folder.</source>
         <target state="translated">Por questões de segurança, deve também eliminar a pasta "install".</target>
-        <note>Line: 93</note>
+        <note>Line: 84</note>
       </trans-unit>
     </body>
   </file>
@@ -2504,117 +2499,192 @@
       <trans-unit id="ec211f7c20af43e742bf2570c3cb84f9" approved="yes">
         <source>Add</source>
         <target state="translated">Adicionar</target>
-        <note>Line: 599</note>
+        <note>Line: 615</note>
       </trans-unit>
       <trans-unit id="7dce122004969d56ae2e0245cb754d35" approved="yes">
         <source>Edit</source>
         <target state="translated">Editar</target>
-        <note>Line: 649</note>
+        <note>Line: 671</note>
       </trans-unit>
       <trans-unit id="4ee29ca12c7d126654bd0e5275de6135" approved="yes">
         <source>List</source>
         <target state="translated">Lista</target>
-        <note>Line: 608</note>
+        <note>Line: 626</note>
       </trans-unit>
       <trans-unit id="6e9783376d951cfd780e9fdb67a0f02c" approved="yes">
         <source>View details</source>
         <target state="translated">Ver detalhes</target>
-        <note>Line: 613</note>
+        <note>Line: 632</note>
       </trans-unit>
       <trans-unit id="dae8ace18bdcbcc6ae5aece263e14fe8" approved="yes">
         <source>Options</source>
         <target state="translated">Opções</target>
-        <note>Line: 617</note>
+        <note>Line: 637</note>
       </trans-unit>
       <trans-unit id="92a8f0b9d28a89b480bd1d29f46f0484" approved="yes">
         <source>Generator</source>
         <target state="translated">Gerador</target>
-        <note>Line: 621</note>
+        <note>Line: 642</note>
       </trans-unit>
       <trans-unit id="ef61fb324d729c341ea8ab9901e23566" approved="yes">
         <source>Add new</source>
         <target state="translated">Adicionar novo</target>
-        <note>Line: 1635</note>
+        <note>Line: 1666</note>
       </trans-unit>
       <trans-unit id="4351cfebe4b61d8aa5efa1d020710005" approved="yes">
         <source>View</source>
         <target state="translated">Ver</target>
-        <note>Line: 659</note>
+        <note>Line: 683</note>
       </trans-unit>
       <trans-unit id="a6105c0a611b41b08f1209506350279e" approved="yes">
         <source>yes</source>
         <target state="translated">sim</target>
-        <note>Line: 685</note>
+        <note>Line: 710</note>
       </trans-unit>
       <trans-unit id="7fa3b767c460b54a2be4d49030b349c7" approved="yes">
         <source>no</source>
         <target state="translated">não</target>
-        <note>Line: 685</note>
+        <note>Line: 710</note>
       </trans-unit>
       <trans-unit id="7d341c08fd102f0b86285b5ff2e26ea7" approved="yes">
         <source>%s: %s</source>
         <target state="translated">%s: %s</target>
-        <note>Line: 709</note>
+        <note>Line: 734</note>
       </trans-unit>
       <trans-unit id="921d54865f8169b84c90d4335c256494" approved="yes">
         <source>filter by %s</source>
         <target state="translated">filtrar por %s</target>
-        <note>Line: 716</note>
+        <note>Line: 741</note>
       </trans-unit>
       <trans-unit id="a333339eb21abf3d5a04f5ede8f73ae9" approved="yes">
         <source>%s deletion</source>
         <target state="translated">Eliminação de %s</target>
-        <note>Line: 4032</note>
+        <note>Line: 4090</note>
       </trans-unit>
       <trans-unit id="6ca3b11e4d89a7649d10c2d70d98612f" approved="yes">
         <source>%s addition</source>
         <target state="translated">Adição de %s</target>
-        <note>Line: 1154</note>
+        <note>Line: 1179</note>
       </trans-unit>
       <trans-unit id="0919680b340ae0ac8d1a804c4c69b0ba" approved="yes">
         <source>%s modification</source>
         <target state="translated">Alteração de %s</target>
-        <note>Line: 1254</note>
+        <note>Line: 1279</note>
       </trans-unit>
       <trans-unit id="f7931413dee107ddf5289c8886baf7ec" approved="yes">
         <source>Edit: %s</source>
         <target state="translated">Editar: %s</target>
-        <note>Line: 1559</note>
+        <note>Line: 1586</note>
       </trans-unit>
       <trans-unit id="0095a9fa74d1713e43e370a7d7846224" approved="yes">
         <source>Export</source>
         <target state="translated">Exportar</target>
-        <note>Line: 1640</note>
+        <note>Line: 1671</note>
       </trans-unit>
       <trans-unit id="ee77ea46b0c548ed60eadf31bdd68613" approved="yes">
         <source>Bad SQL query</source>
         <target state="translated">Má query SQL</target>
-        <note>Line: 2404</note>
+        <note>Line: 2439</note>
       </trans-unit>
       <trans-unit id="431accab7897f05b0424e002ca30391d" approved="yes">
         <source>Operational</source>
         <target state="translated">Operacional</target>
-        <note>Line: 2674</note>
+        <note>Line: 2709</note>
       </trans-unit>
       <trans-unit id="fb381d41e52b0dc68e684c01decfe2ec" approved="yes">
         <source>Degraded Performance</source>
         <target state="translated">Performance Reduzida</target>
-        <note>Line: 2675</note>
+        <note>Line: 2710</note>
       </trans-unit>
       <trans-unit id="7c30b2ec6e5e59c7c327f7098fe36f36" approved="yes">
         <source>Partial Outage</source>
         <target state="translated">Interrupção Parcial</target>
-        <note>Line: 2676</note>
+        <note>Line: 2711</note>
       </trans-unit>
       <trans-unit id="b101c07e257875658c454fe5caef1db0" approved="yes">
         <source>Major Outage</source>
         <target state="translated">Interrupção Crítica</target>
-        <note>Line: 2677</note>
+        <note>Line: 2712</note>
       </trans-unit>
       <trans-unit id="ea4788705e6873b424c65e91c2846b19" approved="yes">
         <source>Cancel</source>
         <target state="translated">Cancelar</target>
-        <note>Line: 1605</note>
+        <note>Line: 1633</note>
+      </trans-unit>
+      <trans-unit id="c9cc8cce247e49bae79f15173ce97354" approved="yes">
+        <source>Save</source>
+        <target state="translated">Guardar</target>
+        <note>Line: 1658</note>
+      </trans-unit>
+      <trans-unit id="b9804794cbfeea33c6d9b2ce85100b48" approved="yes">
+        <source>Do you really want to uninstall this module?</source>
+        <target state="translated">Tem certeza que pretende desinstalar este módulo?</target>
+        <note>Line: 4392</note>
+      </trans-unit>
+      <trans-unit id="b2f31ef3065bf40b2da9fa8525c6adb9" approved="yes">
+        <source>Disable this module</source>
+        <target state="translated">Desativar este módulo</target>
+        <note>Line: 4394</note>
+      </trans-unit>
+      <trans-unit id="668c99c1164d5348f99c0878770b53a8" approved="yes">
+        <source>Enable this module for all shops</source>
+        <target state="translated">Ativar este módulo para todas as lojas</target>
+        <note>Line: 4395</note>
+      </trans-unit>
+      <trans-unit id="bcfaccebf745acfd5e75351095a5394a" approved="yes">
+        <source>Disable</source>
+        <target state="translated">Desativar</target>
+        <note>Line: 4396</note>
+      </trans-unit>
+      <trans-unit id="2faec1f9f8cc7f8f40d521c4dd574f49" approved="yes">
+        <source>Enable</source>
+        <target state="translated">Ativar</target>
+        <note>Line: 4397</note>
+      </trans-unit>
+      <trans-unit id="112b842b7d5dda8d3fed05c0e5aaf983" approved="yes">
+        <source>Disable on mobiles</source>
+        <target state="translated">Desativar em telemóveis</target>
+        <note>Line: 4398</note>
+      </trans-unit>
+      <trans-unit id="2ef92962bd1ac0c81675f10568ad5cca" approved="yes">
+        <source>Disable on tablets</source>
+        <target state="translated">Desativar em tablets</target>
+        <note>Line: 4399</note>
+      </trans-unit>
+      <trans-unit id="5e3ffb3123b3f23a33804d41e38745a0" approved="yes">
+        <source>Disable on computers</source>
+        <target state="translated">Desativar em computadores</target>
+        <note>Line: 4400</note>
+      </trans-unit>
+      <trans-unit id="862e2caedb77ba14d86f180ca7fa90a8" approved="yes">
+        <source>Display on mobiles</source>
+        <target state="translated">Mostrar em telemóveis</target>
+        <note>Line: 4401</note>
+      </trans-unit>
+      <trans-unit id="732ebdb0f33a8153b51ac58cac8f3563" approved="yes">
+        <source>Display on tablets</source>
+        <target state="translated">Mostrar em tablets</target>
+        <note>Line: 4402</note>
+      </trans-unit>
+      <trans-unit id="7f0f7c79f1d7b01b1d8a89f392e93d36" approved="yes">
+        <source>Display on computers</source>
+        <target state="translated">Mostrar em computadores</target>
+        <note>Line: 4403</note>
+      </trans-unit>
+      <trans-unit id="f1206f9fadc5ce41694f69129aecac26" approved="yes">
+        <source>Configure</source>
+        <target state="translated">Configurar</target>
+        <note>Line: 4405</note>
+      </trans-unit>
+      <trans-unit id="f2a6c498fb90ee345d997f888fce3b18" approved="yes">
+        <source>Delete</source>
+        <target state="translated">Eliminar</target>
+        <note>Line: 4406</note>
+      </trans-unit>
+      <trans-unit id="85687c63fd82afbc21632f288e53a6e4" approved="yes">
+        <source>This action will permanently remove the module from the server. Are you sure you want to do this?</source>
+        <target state="translated">Isto irá remover permanentemente o módulo do servidor. Tem a certeza que pretende fazer isto?</target>
+        <note>Line: 4410</note>
       </trans-unit>
     </body>
   </file>
@@ -2627,12 +2697,21 @@
       </trans-unit>
     </body>
   </file>
+  <file original="controllers/admin/AdminCmsController.php" source-language="en" target-language="pt-PT" datatype="plaintext">
+    <body>
+      <trans-unit id="193cfc9be3b995831c6af2fea6650e60" approved="yes">
+        <source>Page</source>
+        <target state="translated">Página</target>
+        <note>Line: 159</note>
+      </trans-unit>
+    </body>
+  </file>
   <file original="controllers/admin/AdminCustomerThreadsController.php" source-language="en" target-language="pt-PT" datatype="plaintext">
     <body>
       <trans-unit id="240f3031f25601fa128bd4e15f0a37de" approved="yes">
         <source>Comment:</source>
         <target state="translated">Comentário:</target>
-        <note>Line: 410</note>
+        <note>Line: 423</note>
       </trans-unit>
     </body>
   </file>
@@ -2773,32 +2852,32 @@ Comment: $this->list_modules_categories['search_filter']['name'] = $this->l('Sea
       <trans-unit id="8290fb626ffacf21450997f25967efeb" approved="yes">
         <source>Module not found</source>
         <target state="translated">Módulo não encontrado</target>
-        <note>Line: 858</note>
+        <note>Line: 860</note>
       </trans-unit>
       <trans-unit id="0c81f6a8e4b7b1d0a812d7285289f17d" approved="yes">
         <source>Modules to update</source>
         <target state="translated">Módulos a atualizar</target>
-        <note>Line: 1394</note>
+        <note>Line: 1396</note>
       </trans-unit>
       <trans-unit id="0f0c014bcfe255c6749d8e665ff8bb4e" approved="yes">
         <source>Translate this module</source>
         <target state="translated">Traduzir este módulo</target>
-        <note>Line: 1448</note>
+        <note>Line: 1450</note>
       </trans-unit>
       <trans-unit id="7602b3edb382cf12573e156623fe9468" approved="yes">
         <source>This module cannot be installed</source>
         <target state="translated">Este módulo não pode ser instalado</target>
-        <note>Line: 1456</note>
+        <note>Line: 1458</note>
       </trans-unit>
       <trans-unit id="ac8f751177ba1d91a0ab11d3650cdfaf" approved="yes">
         <source>Important Notice</source>
         <target state="translated">Nota Importante</target>
-        <note>Line: 1456</note>
+        <note>Line: 1458</note>
       </trans-unit>
       <trans-unit id="c472f22a7459a000f0177a23fdc4212b" approved="yes">
         <source>This module is Untrusted for your country</source>
         <target state="translated">Este módulo não é confiável para o seu país</target>
-        <note>Line: 1464</note>
+        <note>Line: 1466</note>
       </trans-unit>
     </body>
   </file>

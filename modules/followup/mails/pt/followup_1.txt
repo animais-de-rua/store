@@ -1,21 +1,21 @@
-[{shop_url}] 
+{shop_url}
 
-Olá {firstname} {lastname}, 
+Olá {firstname} {lastname},
 
-Percebemos que, durante a sua última visita à {shop_name}, não
-completou a encomenda que tinha começado.
+O seu carrinho na {shop_name}
 
-O carrinho foi guardado, pode continuar as suas compras na nossa
-loja: {shop_url} [{shop_url}]
+Thanks for your visit. However, it looks like you did not complete your purchase.
 
-Como incentivo, podemos dar-lhe um desconto de {amount}% na sua
-próxima compra! Esta oferta é válida por {days} dias, por isso não
-perca a oportunidade! 		 
+Your cart has been saved, you can go back to your order on our shop: {shop_url}
 
-AQUI ESTÁ O SEU CUPÃO: {voucher_num}
+We are pleased to offer you a discount of {amount}% off your next order. And this offer is valid for {days} days, so do not wait any longer!
 
-Digite este código no seu carrinho de compras para obter o desconto.
+Your voucher code on {shop_name}
 
-{shop_name} [{shop_url}] powered by
-PrestaShop(tm) [http://www.prestashop.com/] 
+Here is your VOUCHER CODE: {voucher_num}
 
+Enter this code in your shopping cart to get the discount.
+
+[{shop_name}]({shop_url})
+
+Powered by [PrestaShop](http://www.prestashop.com/)

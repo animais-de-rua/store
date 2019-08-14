@@ -19,15 +19,6 @@
       </trans-unit>
     </body>
   </file>
-  <file original="controllers/admin/AdminAttributesGroupsController.php" source-language="en" target-language="pt-PT" datatype="plaintext">
-    <body>
-      <trans-unit id="6252c0f2c2ed83b7b06dfca86d4650bb" approved="yes">
-        <source>Invalid characters:</source>
-        <target state="translated">Carateres inválidos:</target>
-        <note>Line: 280</note>
-      </trans-unit>
-    </body>
-  </file>
   <file original="controllers/admin/AdminCarriersController.php" source-language="en" target-language="pt-PT" datatype="plaintext">
     <body>
       <trans-unit id="d3b206d196cd6be3a2764c1fb90b200f" approved="yes">
@@ -80,6 +71,24 @@
         <source>Empty recordset returned</source>
         <target state="translated">Obtido um conjunto de registos vazio</target>
         <note>Line: 53</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/PrestaShopBundle/Resources/views/Admin/Improve/International/Tax/Blocks/form.html.twig" source-language="en" target-language="pt-PT" datatype="plaintext">
+    <body>
+      <trans-unit id="6252c0f2c2ed83b7b06dfca86d4650bb" approved="yes">
+        <source>Invalid characters:</source>
+        <target state="translated">Carateres inválidos:</target>
+        <note>Line: 40</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/PrestaShopBundle/Resources/views/Admin/Sell/Customer/Blocks/form.html.twig" source-language="en" target-language="pt-PT" datatype="plaintext">
+    <body>
+      <trans-unit id="f6916f4f1a268d4d0014ce47a2dfc3e4" approved="yes">
+        <source>Password should be at least %length% characters long.</source>
+        <target state="translated">A palavra-passe deve ter, pelo menos, %length% caracteres.</target>
+        <note>Line: 62</note>
       </trans-unit>
     </body>
   </file>

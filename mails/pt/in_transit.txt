@@ -1,27 +1,19 @@
-[{shop_url}] 
+{shop_url}
 
-Olá {firstname} {lastname}, 
+Olá {firstname} {lastname},
 
-* 
+{meta_products}
 
-{meta_products} 
+Order ID {order_name} - Em trânsito
 
-* A sua encomenda com a referência {order_name} está atualmente em
-trânsito. 
+Your order with the reference {order_name} is on its way.
 
 Pode seguir a sua encomenda usando a seguinte ligação: {followup}
-[{followup}] 		 
 
-Pode rever a sua encomenda e descarregar a sua fatura em
-"Histórico de encomendas" [{history_url}] da sua
-conta de cliente clicando em "A minha conta"
-[{my_account_url}] na nossa loja. 
+Follow your order and download your invoice on our shop, go to the [Order history and details]({history_url}) section of your customer account.
 
-Se tiver uma conta de visitante, pode seguir a sua encomenda em
-"Enc. de visitantes"
-[{guest_tracking_url}?id_order={order_name}] da
-nossa loja. 
+If you have a guest account, you can follow your order via the [Guest Tracking]({guest_tracking_url}) section on our shop.
 
-{shop_name} [{shop_url}] powered by
-PrestaShop(tm) [http://www.prestashop.com/] 
+[{shop_name}]({shop_url})
 
+Powered by [PrestaShop](http://www.prestashop.com/)

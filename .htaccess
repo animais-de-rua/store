@@ -11,10 +11,8 @@ RewriteEngine on
 
 
 #Domain: animaisderua.org
-RewriteRule . - [E=REWRITEBASE:/store/]
-RewriteRule ^api$ api/ [L]
-
-RewriteRule ^api/(.*)$ %{ENV:REWRITEBASE}webservice/dispatcher.php?url=$1 [QSA,L]
+RewriteRule . - [E=REWRITEBASE:/loja2/]
+RewriteRule ^api(?:/(.*))?$ %{ENV:REWRITEBASE}webservice/dispatcher.php?url=$1 [QSA,L]
 
 # Images
 RewriteCond %{HTTP_HOST} ^animaisderua.org$
@@ -60,6 +58,6 @@ AddType font/woff2 .woff2
 </IfModule>
 
 #If rewrite mod isn't enabled
-ErrorDocument 404 /store/index.php?controller=404
+ErrorDocument 404 /loja2/index.php?controller=404
 
 # ~~end~~ Do not remove this comment, Prestashop will keep automatically the code outside this comment when .htaccess will be generated again

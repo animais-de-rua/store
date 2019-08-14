@@ -1,14 +1,13 @@
-[{shop_url}] 
+{shop_url}
 
-Olá, 
+Olá,
 
-Este artigo está novamente disponível.
+O produto {product} já está disponível.
 
-Pode aceder à página do produto clicando na ligação: {product}
-[{product_link}]
+Good news, this item is back in stock!
 
-Pode encomendar agora mesmo na nossa loja online. 		 
+Click on the following link to visit the product page and order it: [{product}]({product_link})
 
-{shop_name} [{shop_url}] powered by
-PrestaShop(tm) [http://www.prestashop.com/] 
+[{shop_name}]({shop_url})
 
+Powered by [PrestaShop](http://www.prestashop.com/)

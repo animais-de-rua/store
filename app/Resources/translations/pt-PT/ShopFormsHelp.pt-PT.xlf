@@ -5,7 +5,7 @@
       <trans-unit id="b8760dae14ad4963c909f83424de3e7f" approved="yes">
         <source>(E.g.: %date_format%)</source>
         <target state="translated">(Ex.: %date_format%)</target>
-        <note>Line: 200</note>
+        <note>Line: 211</note>
       </trans-unit>
     </body>
   </file>
@@ -40,6 +40,11 @@
         <target state="translated">Como podemos ajudar?</target>
         <note>Line: 106</note>
       </trans-unit>
+    </body>
+  </file>
+  <file original="themes/classic/templates/_partials/form-fields.tpl" source-language="en" target-language="pt-PT" datatype="plaintext">
+    <body>
+      
     </body>
   </file>
   <file original="themes/classic/templates/catalog/_partials/product-customization.tpl" source-language="en" target-language="pt-PT" datatype="plaintext">

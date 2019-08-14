@@ -29,41 +29,27 @@
       <trans-unit id="0a4dbce7e33277b97c5f5667715e0b46" approved="yes">
         <source>Please select a module</source>
         <target state="translated">Por favor selecione um módulo</target>
-        <note>Line: 42</note>
+        <note>Line: 46</note>
       </trans-unit>
       <trans-unit id="0b08e9b451b556f1bdd62b285ee2a9df" approved="yes">
         <source>Select a module above before choosing from available hooks</source>
         <target state="translated">Selecione um módulo acima antes de escolher um gancho disponível</target>
-        <note>Line: 55</note>
+        <note>Line: 59</note>
       </trans-unit>
       <trans-unit id="74cd700f9b419dd789dc7d8d1cbf49ef" approved="yes">
         <source>Please specify the files for which you do not want the module to be displayed.</source>
         <target state="translated">Indique em que páginas não quer que o módulo seja mostrado.</target>
-        <note>Line: 69</note>
+        <note>Line: 85</note>
       </trans-unit>
       <trans-unit id="07b7dbb810d745fc3891d68448f3f213" approved="yes">
         <source>Please input each filename, separated by a comma (",").</source>
         <target state="translated">Separar as páginas por vírgula (,)</target>
-        <note>Line: 70</note>
+        <note>Line: 86</note>
       </trans-unit>
       <trans-unit id="804a997021a16e79a9e6ef9a2bf39e3d" approved="yes">
         <source>You can also click the filename in the list below, and even make a multiple selection by keeping the Ctrl key pressed while clicking, or choose a whole range of filename by keeping the Shift key pressed while clicking.</source>
         <target state="translated">Também pode clicar no nome da página na lista abaixo. Para selecionar várias páginas, mantenha a tecla CTRL pressionada ao clicar. Para escolher um grupo seguido de página mantenha a tecla SHIFT pressionada ao clicar.</target>
-        <note>Line: 71</note>
-      </trans-unit>
-    </body>
-  </file>
-  <file original="controllers/admin/AdminCmsContentController.php" source-language="en" target-language="pt-PT" datatype="plaintext">
-    <body>
-      <trans-unit id="cabfe7563d12c3e047000dc5703d9709" approved="yes">
-        <source>Add new page category</source>
-        <target state="translated">Adicionar nova categoria de página</target>
-        <note>Line: 108</note>
-      </trans-unit>
-      <trans-unit id="aa6f77f824eff8e896510f1bbaf9f8e5" approved="yes">
-        <source>Add new page</source>
-        <target state="translated">Adicionar nova página</target>
-        <note>Line: 113</note>
+        <note>Line: 87</note>
       </trans-unit>
     </body>
   </file>
@@ -72,7 +58,7 @@
       <trans-unit id="3ed349365d718a59eadb9df9d5c339f2" approved="yes">
         <source>To add "tags" click in the field, write something, and then press "Enter."</source>
         <target state="translated">Para adicionar etiquetas, clique no campo, escreva algo, e depois pressione "Enter."</target>
-        <note>Line: 200</note>
+        <note>Line: 208</note>
       </trans-unit>
     </body>
   </file>
@@ -190,7 +176,7 @@
       <trans-unit id="a06929291c19a7718975cb8c24dea961" approved="yes">
         <source>E.g. address, addresses, attachment</source>
         <target state="translated">Por ex. endereço, endereços, anexos</target>
-        <note>Line: 428</note>
+        <note>Line: 436</note>
       </trans-unit>
     </body>
   </file>
@@ -200,21 +186,6 @@
         <source>Will appear on main page. Recommended size for the default theme: height %height% and width %width%.</source>
         <target state="translated">Irá aparecer na página principal. Tamanho recomendado para o tema predefinido: altura %height% e largura %width%.</target>
         <note>Line: 415</note>
-      </trans-unit>
-      <trans-unit id="aeec498c2bb6b53e8eb24752af092828" approved="yes">
-        <source>Will appear on email headers. If undefined, the header logo will be used.</source>
-        <target state="translated">Irá aparecer nos cabeçalhos dos e-mails. Se não for definido, será usado o logótipo do cabeçalho.</target>
-        <note>Line: 429</note>
-      </trans-unit>
-      <trans-unit id="544cd7788ebd8916e7191e7a8fd0db57" approved="yes">
-        <source>Warning: if no invoice logo is available, the main logo will be used instead.</source>
-        <target state="translated">Aviso: se não estiver disponível nenhum logótipo para a fatura será usado o logótipo principal.</target>
-        <note>Line: 437</note>
-      </trans-unit>
-      <trans-unit id="b0297d22aade28eda5efbeb5c2e21e97" approved="yes">
-        <source>Will appear on invoice headers.</source>
-        <target state="translated">Aparecerá no cabeçalho das faturas.</target>
-        <note>Line: 438</note>
       </trans-unit>
       <trans-unit id="d4d7bd35b17411da70ed5e76bcb4c3da" approved="yes">
         <source>Warning: you can use a PNG file for transparency, but it can take up to 1 second per page for processing. Please consider using JPG instead.</source>
@@ -226,25 +197,109 @@
         <target state="translated">Atenção! Por favor verifique o seu tema num idioma RTL antes de gerar o arquivo de estilo RTL: O seu tema poderá já estar adaptado ao RTL.\nAssim que clicar no "Adaptar para o RTL", qualquer arquivo especifico RTL que você possa ter adicionado ao seu tema poderá ser apagado pelo arquivo criado.</target>
         <note>Line: 482</note>
       </trans-unit>
-      <trans-unit id="6894e313abf58dc29e27e6aef50b2f03" approved="yes">
-        <source>You must select a shop from the above list if you wish to choose a theme.</source>
-        <target state="translated">Tem de selecionar uma Loja da lista anterior para poder escolher um tema gráfico.</target>
-        <note>Line: 509</note>
+    </body>
+  </file>
+  <file original="src/PrestaShopBundle/Resources/views/Admin/Improve/Design/Cms/Blocks/form.html.twig" source-language="en" target-language="pt-PT" datatype="plaintext">
+    <body>
+      
+      
+    </body>
+  </file>
+  <file original="src/PrestaShopBundle/Resources/views/Admin/Improve/Design/Cms/Blocks/showcase_card.html.twig" source-language="en" target-language="pt-PT" datatype="plaintext">
+    <body>
+      
+      
+    </body>
+  </file>
+  <file original="src/PrestaShopBundle/Resources/views/Admin/Improve/Design/Cms/index.html.twig" source-language="en" target-language="pt-PT" datatype="plaintext">
+    <body>
+      <trans-unit id="cabfe7563d12c3e047000dc5703d9709" approved="yes">
+        <source>Add new page category</source>
+        <target state="translated">Adicionar nova categoria de página</target>
+        <note>Line: 31</note>
       </trans-unit>
+      <trans-unit id="aa6f77f824eff8e896510f1bbaf9f8e5" approved="yes">
+        <source>Add new page</source>
+        <target state="translated">Adicionar nova página</target>
+        <note>Line: 36</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/PrestaShopBundle/Resources/views/Admin/Improve/Design/MailTheme/Blocks/configuration_form.html.twig" source-language="en" target-language="pt-PT" datatype="plaintext">
+    <body>
+      
+    </body>
+  </file>
+  <file original="src/PrestaShopBundle/Resources/views/Admin/Improve/Design/MailTheme/Blocks/generate_mails_form.html.twig" source-language="en" target-language="pt-PT" datatype="plaintext">
+    <body>
+      
+      
+      
+    </body>
+  </file>
+  <file original="src/PrestaShopBundle/Resources/views/Admin/Improve/Design/Theme/Blocks/logo_configuration.html.twig" source-language="en" target-language="pt-PT" datatype="plaintext">
+    <body>
+      <trans-unit id="aeec498c2bb6b53e8eb24752af092828" approved="yes">
+        <source>Will appear on email headers. If undefined, the header logo will be used.</source>
+        <target state="translated">Irá aparecer nos cabeçalhos dos e-mails. Se não for definido, será usado o logótipo do cabeçalho.</target>
+        <note>Line: 88</note>
+      </trans-unit>
+      <trans-unit id="544cd7788ebd8916e7191e7a8fd0db57" approved="yes">
+        <source>Warning: if no invoice logo is available, the main logo will be used instead.</source>
+        <target state="translated">Aviso: se não estiver disponível nenhum logótipo para a fatura será usado o logótipo principal.</target>
+        <note>Line: 117</note>
+      </trans-unit>
+      <trans-unit id="b0297d22aade28eda5efbeb5c2e21e97" approved="yes">
+        <source>Will appear on invoice headers.</source>
+        <target state="translated">Aparecerá no cabeçalho das faturas.</target>
+        <note>Line: 105</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/PrestaShopBundle/Resources/views/Admin/Improve/Design/Theme/Blocks/rtl_configuration.html.twig" source-language="en" target-language="pt-PT" datatype="plaintext">
+    <body>
+      
+    </body>
+  </file>
+  <file original="src/PrestaShopBundle/Resources/views/Admin/Improve/Design/Theme/import.html.twig" source-language="en" target-language="pt-PT" datatype="plaintext">
+    <body>
       <trans-unit id="0d03fc8cc7c22c4ff80c5cda6f56ce8e" approved="yes">
         <source>Browse your computer files and select the Zip file for your new theme.</source>
         <target state="translated">Escolha no seu computador o ficheiro Zip para o novo tema gráfico.</target>
-        <note>Line: 573</note>
+        <note>Line: 59</note>
       </trans-unit>
       <trans-unit id="f545e8220cd6f37617c495e59695f7f3" approved="yes">
         <source>Indicate the complete URL to an online Zip file that contains your new theme. For instance, "http://example.com/files/theme.zip".</source>
         <target state="translated">Indique o URL completo para um ficheiro Zip que se encontre na internet e que contenha o seu novo tema gráfico. Por exemplo, "http://example.com/files/theme.zip".</target>
-        <note>Line: 595</note>
+        <note>Line: 84</note>
       </trans-unit>
       <trans-unit id="87c309a4d1deb851c8522127c1aeae54" approved="yes">
         <source>This selector lists the Zip files that you uploaded in the '/themes' folder.</source>
         <target state="translated">Esta lista mostra os ficheiros Zip que enviou na pasta '/themes'.</target>
-        <note>Line: 630</note>
+        <note>Line: 109</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/PrestaShopBundle/Resources/views/Admin/Improve/Design/Theme/index.html.twig" source-language="en" target-language="pt-PT" datatype="plaintext">
+    <body>
+      <trans-unit id="6894e313abf58dc29e27e6aef50b2f03" approved="yes">
+        <source>You must select a shop from the above list if you wish to choose a theme.</source>
+        <target state="translated">Tem de selecionar uma Loja da lista anterior para poder escolher um tema gráfico.</target>
+        <note>Line: 50</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/PrestaShopBundle/Resources/views/Admin/macros.html.twig" source-language="en" target-language="pt-PT" datatype="plaintext">
+    <body>
+      <trans-unit id="ff8ff5e54a1832486773ec48b8f8175d" approved="yes">
+        <source>You are editing this page for a specific shop or group. Click "Yes" to check all fields, "No" to uncheck all.</source>
+        <target state="translated">Está a editar esta página para uma loja específica ou um grupo de lojas. Clique em Sim para selecionar todos os campos ou Não para desmarcar todos.</target>
+        <note>Line: 286</note>
+      </trans-unit>
+      <trans-unit id="d97ccb3e617d930d52ffd95e5db2c101" approved="yes">
+        <source>If you check a field, change its value, and save, the multistore behavior will not apply to this shop (or group), for this particular parameter.</source>
+        <target state="translated">Se selecionar um campo, alterar o seu valor e guardar, o comportamento de multi-loja não será aplicado a esta loja ou grupo de lojas, para este parâmetro em particular.</target>
+        <note>Line: 287</note>
       </trans-unit>
     </body>
   </file>

@@ -1,12 +1,11 @@
 $(document).ready( function () {
-  gamificationTasks();
+  if (typeof admin_gamification_ajax_url !== 'undefined') {
+    gamificationTasks();
+  }
 });
 
 function gamificationTasks()
 {
-  if (typeof ids_ps_advice == 'undefined')
-    ids_ps_advice = new Array();
-
   gamificationInsertOnBackOfficeDOM('<div id="gamification_notif" class="notifs"></div>');
   $.ajax({
     type: 'POST',
@@ -17,7 +16,6 @@ function gamificationTasks()
       action : 'gamificationTasks',
       ajax : true,
       id_tab : current_id_tab,
-      ids_ps_advice : ids_ps_advice,
     },
     success: function(jsonData)
     {
@@ -106,12 +104,12 @@ function initHeaderNotification(html)
       {
         $('#gamification_progressbar').progressbar({
           change: function() {
-                if (current_level_percent)
-                  $( ".gamification_progress-label" ).html( gamification_level+' '+current_level+' : '+$('#gamification_progressbar').progressbar( "value" ) + "%" );
-                else
-                  $( ".gamification_progress-label" ).html('');
-              },
-          });
+            if (current_level_percent)
+              $( ".gamification_progress-label" ).html( gamification_level+' '+current_level+' : '+$('#gamification_progressbar').progressbar( "value" ) + "%" );
+            else
+              $( ".gamification_progress-label" ).html('');
+          },
+        });
         $('#gamification_progressbar').progressbar("value", current_level_percent );
       }
     }
@@ -126,22 +124,22 @@ function initHeaderNotification(html)
 
 function gamificationInsertOnBackOfficeDOM(html)
 {
-    $('#gamification_notif').remove();
-    // Before PrestaShop 1.7
-    if (0 < $('#header_notifs_icon_wrapper').length) {
-        $('#header_notifs_icon_wrapper').append(html);
-    } else if (0 < $('#notification').length) {
-        // PrestaShop 1.7 - Default theme
-        $(html).insertAfter('#notification');
-    } else if (0 < $('.notification-center').length) {
-        // PrestaShop 1.7 - New theme
-        $('.gamification-component').remove();
-        html = '<div class="component pull-md-right gamification-component"><ul>'+html+'</ul></div>';
+  $('#gamification_notif').remove();
+  // Before PrestaShop 1.7
+  if (0 < $('#header_notifs_icon_wrapper').length) {
+    $('#header_notifs_icon_wrapper').append(html);
+  } else if (0 < $('#notification').length) {
+    // PrestaShop 1.7 - Default theme
+    $(html).insertAfter('#notification');
+  } else if (0 < $('.notification-center').length) {
+    // PrestaShop 1.7 - New theme
+    $('.gamification-component').remove();
+    html = '<div class="component pull-md-right gamification-component"><ul>'+html+'</ul></div>';
 
-        $(html).insertAfter($('.notification-center').closest('.component'));
-    } else {
-        console.error('Could not find proper place to add the gamification notification center. x_x');
-    }
+    $(html).insertAfter($('.notification-center').closest('.component'));
+  } else {
+    console.error('Could not find proper place to add the gamification notification center. x_x');
+  }
 }
 
 function disabledGamificationNotification()

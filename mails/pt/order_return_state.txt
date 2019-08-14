@@ -1,15 +1,13 @@
-[{shop_url}] 
+{shop_url}
 
-Olá {firstname} {lastname}, 
+Olá {firstname} {lastname},
 
-Foi atualizado o progresso da sua devolução nº {id_order_return};
-o novo estado é o seguinte: "{state_order_return}"
+Order return #{id_order_return} - Update
 
-Pode rever a sua encomenda e descarregar a sua fatura em
-"Histórico de encomendas" [{history_url}] da sua
-conta de cliente clicando em "A minha conta"
-[{my_account_url}] na nossa loja. 
+Foi atualizado o progresso da sua devolução nº {id_order_return}; o novo estado é o seguinte: "{state_order_return}".
 
-{shop_name} [{shop_url}] powered by
-PrestaShop(tm) [http://www.prestashop.com/] 
+Follow your order and download your invoice on our shop, go to the [Order history and details]({history_url}) section of your customer account.
 
+[{shop_name}]({shop_url})
+
+Powered by [PrestaShop](http://www.prestashop.com/)

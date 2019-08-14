@@ -1,14 +1,15 @@
-[{shop_url}] 
+{shop_url}
 
-Olá, 
+Olá,
 
-O stock actual é menos do que o mínimo especificado de {last_qty}.
+O produto {product} está quase esgotado.
 
-QUANTIDADE RESTANTE: {qty}
+There are now less than {last_qty} items in stock.
 
-Deve abrir a página da gestão de produtos, na área de
-administração, de forma a repor o inventário. 		 
+Quantidade restante: {qty}
 
-{shop_name} [{shop_url}] powered by
-PrestaShop(tm) [http://www.prestashop.com/] 
+Replenish your inventory, go to the "Catalog" > "Stocks" section of your back office to manage your stock.
 
+[{shop_name}]({shop_url})
+
+Powered by [PrestaShop](http://www.prestashop.com/)

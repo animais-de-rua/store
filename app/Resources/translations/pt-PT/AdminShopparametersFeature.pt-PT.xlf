@@ -78,7 +78,7 @@
       <trans-unit id="57297718fdb439175177cf6b196172d1" approved="yes">
         <source>Order status</source>
         <target state="translated">Estado da encomenda</target>
-        <note>Line: 1560</note>
+        <note>Line: 1570</note>
       </trans-unit>
     </body>
   </file>
@@ -126,12 +126,12 @@
       <trans-unit id="c33e404a441c6ba9648f88af3c68a1ca" approved="yes">
         <source>Statistics</source>
         <target state="translated">Estatísticas</target>
-        <note>Line: 99</note>
+        <note>Line: 101</note>
       </trans-unit>
       <trans-unit id="208b51d8918ba3cdd679a5ec275df129" approved="yes">
         <source>Filter by product:</source>
         <target state="translated">Filtro por produto:</target>
-        <note>Line: 112</note>
+        <note>Line: 114</note>
       </trans-unit>
     </body>
   </file>
@@ -149,19 +149,19 @@
       <trans-unit id="69d08bd5f8cf4e228930935c3f13e42f" approved="yes">
         <source>In Stock</source>
         <target state="translated">Disponível</target>
-        <note>Line: 58
+        <note>Line: 62
 Comment: PS_LABEL_IN_STOCK_PRODUCTS on configuration_lang table</note>
       </trans-unit>
       <trans-unit id="43f098d58ceefef56f05ded453751319" approved="yes">
         <source>Product available for orders</source>
         <target state="translated">Produto disponível para encomendas</target>
-        <note>Line: 61
+        <note>Line: 65
 Comment: PS_LABEL_OOS_PRODUCTS_BOA on configuration_lang table</note>
       </trans-unit>
       <trans-unit id="2ef464d50f6acd767fb3424910995218" approved="yes">
         <source>Out-of-Stock</source>
         <target state="translated">Esgotado</target>
-        <note>Line: 64
+        <note>Line: 68
 Comment: PS_LABEL_OOS_PRODUCTS_BOD on configuration_lang table</note>
       </trans-unit>
       <trans-unit id="d2faf7873d8849348199df0e47d148ea" approved="yes">
@@ -173,44 +173,42 @@ Customer service</source>
 
 Cumprimentos,
 Apoio ao cliente</target>
-        <note>Line: 26</note>
+        <note>Line: 27</note>
       </trans-unit>
       <trans-unit id="5a88dab595c4fe254a5154bd3ee26b7f" approved="yes">
         <source>We are currently updating our shop and will be back really soon.
 Thanks for your patience.</source>
         <target state="translated">Estamos de momento a atualizar a loja e regressaremos muito brevemente.
 Obrigado pela sua compreensão.</target>
-        <note>Line: 33</note>
+        <note>Line: 35</note>
       </trans-unit>
       <trans-unit id="d1d2f5672327bcdef75062dc70e875df" approved="yes">
         <source>#IN</source>
         <target state="translated">#FT</target>
-        <note>Line: 39
+        <note>Line: 41
 Comment: PS_INVOICE_PREFIX on configuration_lang table</note>
       </trans-unit>
       <trans-unit id="b13c095eb3e41264a7b64504fa8348be" approved="yes">
         <source>#DE</source>
         <target state="translated">#DE</target>
-        <note>Line: 42
+        <note>Line: 44
 Comment: PS_DELIVERY_PREFIX on configuration_lang table</note>
       </trans-unit>
       <trans-unit id="a02341e3f02309e6a6c6832870a7e803" approved="yes">
         <source>#RE</source>
         <target state="translated">#RE</target>
-        <note>Line: 45
+        <note>Line: 47
 Comment: PS_RETURN_PREFIX on configuration_lang table</note>
       </trans-unit>
       <trans-unit id="4dfefaddceaa53498ee5bd840ac72692" approved="yes">
         <source>a|about|above|after|again|against|all|am|an|and|any|are|aren|as|at|be|because|been|before|being|below|between|both|but|by|can|cannot|could|couldn|did|didn|do|does|doesn|doing|don|down|during|each|few|for|from|further|had|hadn|has|hasn|have|haven|having|he|ll|her|here|hers|herself|him|himself|his|how|ve|if|in|into|is|isn|it|its|itself|let|me|more|most|mustn|my|myself|no|nor|not|of|off|on|once|only|or|other|ought|our|ours|ourselves|out|over|own|same|shan|she|should|shouldn|so|some|such|than|that|the|their|theirs|them|themselves|then|there|these|they|re|this|those|through|to|too|under|until|up|very|was|wasn|we|were|weren|what|when|where|which|while|who|whom|why|with|won|would|wouldn|you|your|yours|yourself|yourselves</source>
         <target state="translated">um|acerca de|acima|depois|outra vez|contra|tudo|sou|um|e|qualquer|são|não são|como|em|ser|porque|sido|antes|sendo|abaixo|entre|ambos|mas|por|pode|não pode|poderia|não poderia|fez|não fez|fazer|faz|não faz|fazendo|feito|em baixo|durante|cada|poucos|para|de|mais|teve|não teve|tem|não tem|ter|não ter|tendo|ele|terá|ela|aqui|dela|ela própria|ele|ele próprio|dele|como|tem|se|em|dentro|é|não é|isso|seu|si próprio|deixar|eu|mais|muito|não tem|o meu|eu próprio|não|nem|não|de|fora|sobre|uma vez|apenas|ou|outro|dever|o nosso|os nosso|nós próprios|fora|sobre|próprio|mesmo|dever|ela|deve|não deve|assim|algum|tal|do que|isso|o|o seu|os seus|eles|eles próprios|então|ali|estes|eles|são|isto|aqueles|através de|para|também|inferior a|até|para cima|muito|foi|não foi|nós|fomos|não fomos|o quê|quando|onde|que|enquanto|quem|a quem|porquê|com|ganhou|teria|não teria|tu|o teu|tu próprio|vós próprios</target>
-        <note>Line: 48
-Comment: PS_RETURN_PREFIX on configuration_lang table - No translate word per word but adapting for your language</note>
+        <note>Line: 51</note>
       </trans-unit>
       <trans-unit id="c3d67cba349c7ecb5465ae92bdb38970" approved="yes">
         <source>You may unsubscribe at any moment. For that purpose, please find our contact info in the legal notice.</source>
         <target state="translated">Pode cancelar a subscrição a qualquer momento. Para tal, consulte a nossa informação de contacto na declaração legal.</target>
-        <note>Line: 53
-Comment: NW_CONDITIONS on configuration_lang table - From ps_emailsubscription module</note>
+        <note>Line: 57</note>
       </trans-unit>
     </body>
   </file>
@@ -268,25 +266,6 @@ Comment: NW_CONDITIONS on configuration_lang table - From ps_emailsubscription m
         <source>Customer</source>
         <target state="translated">Cliente</target>
         <note>Line: 28</note>
-      </trans-unit>
-    </body>
-  </file>
-  <file original="controllers/admin/AdminContactsController.php" source-language="en" target-language="pt-PT" datatype="plaintext">
-    <body>
-      <trans-unit id="9aa698f602b1e5694855cee73a683488" approved="yes">
-        <source>Contacts</source>
-        <target state="translated">Contactos</target>
-        <note>Line: 75</note>
-      </trans-unit>
-      <trans-unit id="a4cd3191fdeea29906a113c78d4c0e26" approved="yes">
-        <source>Save messages?</source>
-        <target state="translated">Guardar mensagens?</target>
-        <note>Line: 98</note>
-      </trans-unit>
-      <trans-unit id="c41f67055a184ed2e895681336572761" approved="yes">
-        <source>Add new contact</source>
-        <target state="translated">Adicionar contacto</target>
-        <note>Line: 149</note>
       </trans-unit>
     </body>
   </file>
@@ -356,11 +335,6 @@ Comment: NW_CONDITIONS on configuration_lang table - From ps_emailsubscription m
         <target state="translated">Membros</target>
         <note>Line: 75</note>
       </trans-unit>
-      <trans-unit id="f870b8a1af52a144a646db03f6f63f7d" approved="yes">
-        <source>Show prices</source>
-        <target state="translated">Mostrar preços</target>
-        <note>Line: 352</note>
-      </trans-unit>
       <trans-unit id="3112209b2dd9b55cf5dbc4865dd15afd" approved="yes">
         <source>Creation date</source>
         <target state="translated">Data de criação</target>
@@ -409,45 +383,12 @@ Comment: NW_CONDITIONS on configuration_lang table - From ps_emailsubscription m
       <trans-unit id="c97b6c7f99c3c50efe826e657024d29b" approved="yes">
         <source>Category discount</source>
         <target state="translated">Desconto de uma categoria</target>
-        <note>Line: 373</note>
+        <note>Line: 374</note>
       </trans-unit>
       <trans-unit id="a5b82d7328e66186000f675d6618c414" approved="yes">
         <source>Modules authorization</source>
         <target state="translated">Autorização de módulos</target>
-        <note>Line: 379</note>
-      </trans-unit>
-    </body>
-  </file>
-  <file original="controllers/admin/AdminImportController.php" source-language="en" target-language="pt-PT" datatype="plaintext">
-    <body>
-      <trans-unit id="db72e24b402e8baf8df6ca786a59e4de" approved="yes">
-        <source>Rewritten URL</source>
-        <target state="translated">URL reescrito</target>
-        <note>Line: 203</note>
-      </trans-unit>
-    </body>
-  </file>
-  <file original="controllers/admin/AdminMetaController.php" source-language="en" target-language="pt-PT" datatype="plaintext">
-    <body>
-      <trans-unit id="532a7bf10fd5a4315e0dfefe7a110d43" approved="yes">
-        <source>Default pages</source>
-        <target state="translated">Páginas padrão</target>
-        <note>Line: 299</note>
-      </trans-unit>
-      <trans-unit id="e334486a68366ba780f5140cfe8668ac" approved="yes">
-        <source>Module pages</source>
-        <target state="translated">Páginas do módulo</target>
-        <note>Line: 303</note>
-      </trans-unit>
-      <trans-unit id="b49c4d1248da006daf31db2577b7be4a" approved="yes">
-        <source>Meta tags</source>
-        <target state="translated">Etiquetas Meta</target>
-        <note>Line: 318</note>
-      </trans-unit>
-      <trans-unit id="c0a1f9eff88edb62c46edb084004e32b" approved="yes">
-        <source>Page name</source>
-        <target state="translated">Nome da página</target>
-        <note>Line: 328</note>
+        <note>Line: 380</note>
       </trans-unit>
     </body>
   </file>
@@ -456,137 +397,137 @@ Comment: NW_CONDITIONS on configuration_lang table - From ps_emailsubscription m
       <trans-unit id="ae5d01b6efa819cc7a7c05a8c57fcc2c" approved="yes">
         <source>Visitors</source>
         <target state="translated">Visitantes</target>
-        <note>Line: 499</note>
+        <note>Line: 501</note>
       </trans-unit>
       <trans-unit id="d7e637a6e9ff116de2fa89551240a94d" approved="yes">
         <source>Visits</source>
         <target state="translated">Visitas</target>
-        <note>Line: 500</note>
+        <note>Line: 502</note>
       </trans-unit>
       <trans-unit id="453aceb005ceaf54a47da15fee8b2a26" approved="yes">
         <source>Pages</source>
         <target state="translated">Páginas</target>
-        <note>Line: 91</note>
+        <note>Line: 62</note>
       </trans-unit>
       <trans-unit id="591411cc8927851db2002208676d8330" approved="yes">
         <source>Reg.</source>
         <target state="translated">Reg.</target>
-        <note>Line: 96</note>
+        <note>Line: 67</note>
       </trans-unit>
       <trans-unit id="4bcce22b929055c8db5204629d0a64c1" approved="yes">
         <source>Avg. cart</source>
         <target state="translated">Média de Carrinho</target>
-        <note>Line: 114</note>
+        <note>Line: 85</note>
       </trans-unit>
       <trans-unit id="43005b13d452a4ad6f2d8e29b499c55a" approved="yes">
         <source>Reg. rate</source>
         <target state="translated">Média de Registos</target>
-        <note>Line: 121</note>
+        <note>Line: 92</note>
       </trans-unit>
       <trans-unit id="89741aae300253f498b0993fa678fa18" approved="yes">
         <source>Order rate</source>
         <target state="translated">Média de Encomendas</target>
-        <note>Line: 506</note>
+        <note>Line: 508</note>
       </trans-unit>
       <trans-unit id="316853cc3718335f11c048e33b9be98a" approved="yes">
         <source>Click</source>
         <target state="translated">Clique</target>
-        <note>Line: 131</note>
+        <note>Line: 102</note>
       </trans-unit>
       <trans-unit id="095a1b43effec73955e31e790438de49" approved="yes">
         <source>Base</source>
         <target state="translated">Base</target>
-        <note>Line: 138</note>
+        <note>Line: 109</note>
       </trans-unit>
       <trans-unit id="581007491cfa474c1e1c1943b4f7026e" approved="yes">
         <source>Add new referrer</source>
         <target state="translated">Adicionar novo site referenciador</target>
-        <note>Line: 173</note>
+        <note>Line: 144</note>
       </trans-unit>
       <trans-unit id="bb166feff34b74fef81127259160c93a" approved="yes">
         <source>Affiliate</source>
         <target state="translated">Afiliado</target>
-        <note>Line: 213</note>
+        <note>Line: 184</note>
       </trans-unit>
       <trans-unit id="467c4d2c6929de8029b216ef0c57df6a" approved="yes">
         <source>Affiliates can access their data with this name and password.</source>
         <target state="translated">Os afiliados podem aceder aos seus dados com este nome e palavra-passe.</target>
-        <note>Line: 240</note>
+        <note>Line: 211</note>
       </trans-unit>
       <trans-unit id="6d4acea4a9682c8387d2117120a060e5" approved="yes">
         <source>Front access:</source>
         <target state="translated">Acesso à loja:</target>
-        <note>Line: 241</note>
+        <note>Line: 212</note>
       </trans-unit>
       <trans-unit id="6691265cf8673ac521e3a1672d482723" approved="yes">
         <source>Commission plan</source>
         <target state="translated">Plano de comissão</target>
-        <note>Line: 257</note>
+        <note>Line: 228</note>
       </trans-unit>
       <trans-unit id="51d53cd2ecdae6b5dd3397875197e898" approved="yes">
         <source>Click fee</source>
         <target state="translated">Taxa de clique</target>
-        <note>Line: 507</note>
+        <note>Line: 509</note>
       </trans-unit>
       <trans-unit id="2e27c4006a026eacfc1f85b41bf9bc4c" approved="yes">
         <source>Base fee</source>
         <target state="translated">Taxa base</target>
-        <note>Line: 508</note>
+        <note>Line: 510</note>
       </trans-unit>
       <trans-unit id="86190054fc32554662ffbb12b717e8d0" approved="yes">
         <source>Percent fee</source>
         <target state="translated">Taxa percentual</target>
-        <note>Line: 509</note>
+        <note>Line: 511</note>
       </trans-unit>
       <trans-unit id="7ea17e2c839ae2f8e149a3c437773a0a" approved="yes">
         <source>Technical information -- Simple mode</source>
         <target state="translated">Informação técnica -- Modo simples</target>
-        <note>Line: 293</note>
+        <note>Line: 264</note>
       </trans-unit>
       <trans-unit id="f4d72a64acd8929c0cc9ed96a7a336cc" approved="yes">
         <source>Include</source>
         <target state="translated">Incluir</target>
-        <note>Line: 365</note>
+        <note>Line: 336</note>
       </trans-unit>
       <trans-unit id="0988f870ad8a7648219df0767f768b8d" approved="yes">
         <source>HTTP referrer</source>
         <target state="translated">Referência HTTP</target>
-        <note>Line: 354</note>
+        <note>Line: 325</note>
       </trans-unit>
       <trans-unit id="843f2812f595e7ec7c5036e89fde02d6" approved="yes">
         <source>Exclude</source>
         <target state="translated">Excluir</target>
-        <note>Line: 373</note>
+        <note>Line: 344</note>
       </trans-unit>
       <trans-unit id="efc92fb772a0037d7b1fab20dff56a85" approved="yes">
         <source>Request URI</source>
         <target state="translated">URI de pedido</target>
-        <note>Line: 369</note>
+        <note>Line: 340</note>
       </trans-unit>
       <trans-unit id="71bbbb5468f517f3508ac436977f4dd4" approved="yes">
         <source>Technical information -- Expert mode</source>
         <target state="translated">Informação técnica -- Modo avançado</target>
-        <note>Line: 344</note>
+        <note>Line: 315</note>
       </trans-unit>
       <trans-unit id="10965b2740f42ad4887932c35cee26ab" approved="yes">
         <source>Unique visitors</source>
         <target state="translated">Visitantes únicos</target>
-        <note>Line: 498</note>
+        <note>Line: 500</note>
       </trans-unit>
       <trans-unit id="d3139f39f1ad6324c80a9ddd50cc7867" approved="yes">
         <source>Pages viewed</source>
         <target state="translated">Páginas vistas</target>
-        <note>Line: 501</note>
+        <note>Line: 503</note>
       </trans-unit>
       <trans-unit id="200f5c9c419f0a53d5d361eff7b33abc" approved="yes">
         <source>Registration rate</source>
         <target state="translated">Taxa de registos</target>
-        <note>Line: 505</note>
+        <note>Line: 507</note>
       </trans-unit>
       <trans-unit id="a28735af01fbb1e35371cb120985ac47" approved="yes">
         <source>Registrations</source>
         <target state="translated">Inscrições</target>
-        <note>Line: 502</note>
+        <note>Line: 504</note>
       </trans-unit>
     </body>
   </file>
@@ -595,147 +536,142 @@ Comment: NW_CONDITIONS on configuration_lang table - From ps_emailsubscription m
       <trans-unit id="9ab81f57823f6aeb02362291f23883e6" approved="yes">
         <source>Aliases</source>
         <target state="translated">Alias</target>
-        <note>Line: 340</note>
+        <note>Line: 353</note>
       </trans-unit>
       <trans-unit id="325c9099ecef84ddc2912d5f0ed3fe2f" approved="yes">
         <source>The "indexed" products have been analyzed by PrestaShop and will appear in the results of a front office search.</source>
         <target state="translated">Os produtos "indexados" foram analisados pelo PrestaShop e irão aparecer nos resultados da pesquisa do Front Office.</target>
-        <note>Line: 78</note>
+        <note>Line: 91</note>
       </trans-unit>
       <trans-unit id="b9a7c2c18f61b96ff75de6468d1c7519" approved="yes">
         <source>Indexed products</source>
         <target state="translated">Produtos indexados</target>
-        <note>Line: 79</note>
+        <note>Line: 92</note>
       </trans-unit>
       <trans-unit id="a1f25953ca9e49615b12a626584680c5" approved="yes">
         <source>Building the product index may take a few minutes.</source>
         <target state="translated">Criar o índice de produtos poderá demorar alguns minutos.</target>
-        <note>Line: 82</note>
+        <note>Line: 95</note>
       </trans-unit>
       <trans-unit id="b90813d74ad3dc25c5b976d932fd72d7" approved="yes">
         <source>If your server stops before the process ends, you can resume the indexing by clicking "Add missing products to the index".</source>
         <target state="translated">Se o servidor parar por algum motivo antes da indexação terminar, pode continuar a indexação clicando em "Adicionar os produtos que faltam ao índice".</target>
-        <note>Line: 83</note>
+        <note>Line: 96</note>
       </trans-unit>
       <trans-unit id="d86f8ed15ec7a8f87fb1b0ed501dbb6b" approved="yes">
         <source>Add missing products to the index</source>
         <target state="translated">Adicionar os produtos que faltam ao índice</target>
-        <note>Line: 87</note>
+        <note>Line: 100</note>
       </trans-unit>
       <trans-unit id="9897b2f361910e5188f231de872d8856" approved="yes">
         <source>Re-build the entire index</source>
         <target state="translated">Recriar todo o índice</target>
-        <note>Line: 91</note>
+        <note>Line: 104</note>
       </trans-unit>
       <trans-unit id="9ed967cf992b654e59df8663fce97d59" approved="yes">
         <source>You can set a cron job that will rebuild your index using the following URL:</source>
         <target state="translated">Pode definir uma tarefa cron que irá recriar o índice utilizando o seguinte URL:</target>
-        <note>Line: 94</note>
+        <note>Line: 107</note>
       </trans-unit>
       <trans-unit id="f4ff8a799e3f7446a3a67254cf038e7e" approved="yes">
         <source>Search within word</source>
         <target state="translated">Pesquisar dentro da palavra</target>
-        <note>Line: 116</note>
+        <note>Line: 129</note>
       </trans-unit>
       <trans-unit id="969e3f96787be55242155cad3cd630d3" approved="yes">
         <source>Search exact end match</source>
         <target state="translated">Pesquisar pelo final do termo exacto</target>
-        <note>Line: 144</note>
+        <note>Line: 157</note>
       </trans-unit>
       <trans-unit id="8e7ace556216459cd9197423709bdd3a" approved="yes">
         <source>Minimum word length (in characters)</source>
         <target state="translated">Mínimo de caracteres da palavra</target>
-        <note>Line: 173</note>
+        <note>Line: 186</note>
       </trans-unit>
       <trans-unit id="5bff181421d95b49ad5ce5bb08f0ffbe" approved="yes">
         <source>Blacklisted words</source>
         <target state="translated">Palavras na lista negra</target>
-        <note>Line: 187</note>
+        <note>Line: 200</note>
       </trans-unit>
       <trans-unit id="8c489d0946f66d17d73f26366a4bf620" approved="yes">
         <source>Weight</source>
         <target state="translated">Peso</target>
-        <note>Line: 200</note>
+        <note>Line: 213</note>
       </trans-unit>
       <trans-unit id="a9f445d59022dee4cb33385aef61620f" approved="yes">
         <source>The "weight" represents its importance and relevance for the ranking of the products when completing a new search.</source>
         <target state="translated">O "peso" representa a importância e a relevância para o posicionamento dos produtos, quando concluir uma nova pesquisa.</target>
-        <note>Line: 203</note>
+        <note>Line: 216</note>
       </trans-unit>
       <trans-unit id="892e1b613b7d9628760008536bdef5da" approved="yes">
         <source>A word with a weight of eight will have four times more value than a word with a weight of two.</source>
         <target state="translated">Uma palavra com um peso de oito terá quatro vezes mais valor do que uma palavra com um peso de dois.</target>
-        <note>Line: 208</note>
+        <note>Line: 221</note>
       </trans-unit>
       <trans-unit id="33846fa0095bd29abbc2a8b742669b25" approved="yes">
         <source>We advise you to set a greater weight for words which appear in the name or reference of a product. This will allow the search results to be as precise and relevant as possible.</source>
         <target state="translated">Aconselhamos que defina um maior peso para as palavras que aparecem no nome ou na referência de um produto. Isto irá garantir que os resultados da pesquisa sejam tão precisos e relevantes quanto possível.</target>
-        <note>Line: 213</note>
+        <note>Line: 226</note>
       </trans-unit>
       <trans-unit id="15b481c8ea8041ab6000bec80b97db5a" approved="yes">
         <source>Setting a weight to 0 will exclude that field from search index. Re-build of the entire index is required when changing to or from 0</source>
         <target state="translated">Definindo o peso como 0 vai excluir este campo do índice de pesquisa. É necessário re-criar todo o índice quando houver alterações para 0, ou de 0 para outro valor</target>
-        <note>Line: 218</note>
+        <note>Line: 231</note>
       </trans-unit>
       <trans-unit id="76a591808a254d4094e1c43f937b834f" approved="yes">
         <source>Product name weight</source>
         <target state="translated">Peso do nome do produto</target>
-        <note>Line: 224</note>
+        <note>Line: 237</note>
       </trans-unit>
       <trans-unit id="f391844c98222451204cbb678d591f86" approved="yes">
         <source>Reference weight</source>
         <target state="translated">Peso da referência</target>
-        <note>Line: 230</note>
+        <note>Line: 243</note>
       </trans-unit>
       <trans-unit id="6af0a6ff1f2f2a61cbd8b98232314b03" approved="yes">
         <source>Short description weight</source>
         <target state="translated">Peso da descrição curta</target>
-        <note>Line: 237</note>
+        <note>Line: 250</note>
       </trans-unit>
       <trans-unit id="f90f799bc686f5d6a731b1f8074b4580" approved="yes">
         <source>Description weight</source>
         <target state="translated">Peso da descrição</target>
-        <note>Line: 246</note>
+        <note>Line: 259</note>
       </trans-unit>
       <trans-unit id="05cdca5b85ff26e596c3af66ed4820d5" approved="yes">
         <source>Category weight</source>
         <target state="translated">Peso da categoria</target>
-        <note>Line: 252</note>
+        <note>Line: 265</note>
       </trans-unit>
       <trans-unit id="3474b76644954c739226a10127d83329" approved="yes">
         <source>Brand weight</source>
         <target state="translated">Peso da marca</target>
-        <note>Line: 258</note>
+        <note>Line: 271</note>
       </trans-unit>
       <trans-unit id="c152439199cebb7e1c27633efeaf1eda" approved="yes">
         <source>Tags weight</source>
         <target state="translated">Peso das etiquetas</target>
-        <note>Line: 264</note>
+        <note>Line: 277</note>
       </trans-unit>
       <trans-unit id="1b25f9ffbf4d185dbb985380a04732cc" approved="yes">
         <source>Attributes weight</source>
         <target state="translated">Peso dos atributos</target>
-        <note>Line: 270</note>
+        <note>Line: 283</note>
       </trans-unit>
       <trans-unit id="4871216a35362aebc0d9908e6e288765" approved="yes">
         <source>Features weight</source>
         <target state="translated">Peso das características</target>
-        <note>Line: 276</note>
+        <note>Line: 289</note>
       </trans-unit>
       <trans-unit id="58e8dcd40d13b2c661ac86dbc9e04e02" approved="yes">
         <source>Add new alias</source>
         <target state="translated">Adicionar novo nome alternativo</target>
-        <note>Line: 292</note>
+        <note>Line: 305</note>
       </trans-unit>
       <trans-unit id="8eea62084ca7e541d918e823422bd82e" approved="yes">
         <source>Result</source>
         <target state="translated">Resultado</target>
-        <note>Line: 356</note>
-      </trans-unit>
-      <trans-unit id="13348442cc6a27032d2b4aa28b75a5d3" approved="yes">
-        <source>Search</source>
-        <target state="translated">Pesquisar</target>
-        <note>Line: 112</note>
+        <note>Line: 369</note>
       </trans-unit>
     </body>
   </file>
@@ -778,7 +714,7 @@ Comment: NW_CONDITIONS on configuration_lang table - From ps_emailsubscription m
       <trans-unit id="4493e821e06072415518bd7ae4077996" approved="yes">
         <source>Shop group</source>
         <target state="translated">Grupo da Loja</target>
-        <note>Line: 429</note>
+        <note>Line: 431</note>
       </trans-unit>
       <trans-unit id="09059cedfd08d6e8a12417b285a79ffd" approved="yes">
         <source>Root category</source>
@@ -916,7 +852,7 @@ Comment: NW_CONDITIONS on configuration_lang table - From ps_emailsubscription m
       <trans-unit id="e93c33bd1341ab74195430daeb63db13" approved="yes">
         <source>Shop name</source>
         <target state="translated">Nome loja</target>
-        <note>Line: 439</note>
+        <note>Line: 449</note>
       </trans-unit>
       <trans-unit id="57034def557be4e71accee021e74ce5b" approved="yes">
         <source>Add new store</source>
@@ -926,107 +862,107 @@ Comment: NW_CONDITIONS on configuration_lang table - From ps_emailsubscription m
       <trans-unit id="821b8ee6937cec96c30fdafbfe836d68" approved="yes">
         <source>Stores</source>
         <target state="translated">Lojas</target>
-        <note>Line: 153</note>
+        <note>Line: 159</note>
       </trans-unit>
       <trans-unit id="cb6fd19e08242c75f1af9f4d15be875d" approved="yes">
         <source>Store name (e.g. City Center Mall Store).</source>
         <target state="translated">Nome da loja (ex: Loja Central).</target>
-        <note>Line: 164</note>
+        <note>Line: 170</note>
       </trans-unit>
       <trans-unit id="e1bcd0aa73dbc610f1fc628499244d8f" approved="yes">
         <source>Allowed characters: letters, spaces and %s</source>
         <target state="translated">Caracteres permitidos: letras, espaços e %s</target>
-        <note>Line: 165</note>
+        <note>Line: 171</note>
       </trans-unit>
       <trans-unit id="6f5373ad371f50f8d9846abf459e9770" approved="yes">
         <source>Latitude / Longitude</source>
         <target state="translated">Latitude / Longitude</target>
-        <note>Line: 218</note>
+        <note>Line: 224</note>
       </trans-unit>
       <trans-unit id="2315a2ebf1ec2420376642ce9b792076" approved="yes">
         <source>Store coordinates (e.g. 45.265469/-47.226478).</source>
         <target state="translated">Coordenadas da loja (ex: 45.265469/-47226478).</target>
-        <note>Line: 222</note>
+        <note>Line: 228</note>
       </trans-unit>
       <trans-unit id="8ae5811be1a55b9b8447ad2dbdadbf6e" approved="yes">
         <source>Picture</source>
         <target state="translated">Imagem</target>
-        <note>Line: 269</note>
+        <note>Line: 275</note>
       </trans-unit>
       <trans-unit id="6f8522e0610541f1ef215a22ffa66ff6" approved="yes">
         <source>Monday</source>
         <target state="translated">Segunda-feira</target>
-        <note>Line: 293</note>
+        <note>Line: 299</note>
       </trans-unit>
       <trans-unit id="5792315f09a5d54fb7e3d066672b507f" approved="yes">
         <source>Tuesday</source>
         <target state="translated">Terça-feira</target>
-        <note>Line: 294</note>
+        <note>Line: 300</note>
       </trans-unit>
       <trans-unit id="796c163589f295373e171842f37265d5" approved="yes">
         <source>Wednesday</source>
         <target state="translated">Quarta-feira</target>
-        <note>Line: 295</note>
+        <note>Line: 301</note>
       </trans-unit>
       <trans-unit id="78ae6f0cd191d25147e252dc54768238" approved="yes">
         <source>Thursday</source>
         <target state="translated">Quinta-feira</target>
-        <note>Line: 296</note>
+        <note>Line: 302</note>
       </trans-unit>
       <trans-unit id="c33b138a163847cdb6caeeb7c9a126b4" approved="yes">
         <source>Friday</source>
         <target state="translated">Sexta-feira</target>
-        <note>Line: 297</note>
+        <note>Line: 303</note>
       </trans-unit>
       <trans-unit id="8b7051187b9191cdcdae6ed5a10e5adc" approved="yes">
         <source>Saturday</source>
         <target state="translated">Sábado</target>
-        <note>Line: 298</note>
+        <note>Line: 304</note>
       </trans-unit>
       <trans-unit id="9d1a0949c39e66a0cd65240bc0ac9177" approved="yes">
         <source>Sunday</source>
         <target state="translated">Domingo</target>
-        <note>Line: 299</note>
+        <note>Line: 305</note>
       </trans-unit>
       <trans-unit id="63406c9482c644975f227cc93788e8fb" approved="yes">
         <source>Choose your country</source>
         <target state="translated">Escolha o seu país</target>
-        <note>Line: 427</note>
+        <note>Line: 437</note>
       </trans-unit>
       <trans-unit id="ffea2d321be109fc7243cfeb515fe257" approved="yes">
         <source>Choose your state (if applicable)</source>
         <target state="translated">Escolha o estado/distrito (se aplicável)</target>
-        <note>Line: 432</note>
+        <note>Line: 442</note>
       </trans-unit>
       <trans-unit id="de30ac479f8a73106c51739a0bc92cdc" approved="yes">
         <source>Displayed in emails and page titles.</source>
         <target state="translated">Mostrado em emails e nos títulos das páginas.</target>
-        <note>Line: 440</note>
+        <note>Line: 450</note>
       </trans-unit>
       <trans-unit id="6dbec9966be60ecb814790443c2867f7" approved="yes">
         <source>Shop email</source>
         <target state="translated">Email da loja</target>
-        <note>Line: 446</note>
+        <note>Line: 456</note>
       </trans-unit>
       <trans-unit id="17e5b9e86108a7fd53884cfaa66ddb35" approved="yes">
         <source>Registration number</source>
         <target state="translated">Número de registo</target>
-        <note>Line: 453</note>
+        <note>Line: 463</note>
       </trans-unit>
       <trans-unit id="1b9a36c9acf2ab7a81d67a55432b6c8f" approved="yes">
         <source>Shop address line 1</source>
         <target state="translated">Endereço da loja linha 1</target>
-        <note>Line: 461</note>
+        <note>Line: 471</note>
       </trans-unit>
       <trans-unit id="1cdaa96d262fdea24b42a1fc28eb7564" approved="yes">
         <source>Shop address line 2</source>
         <target state="translated">Endereço da loja linha 2</target>
-        <note>Line: 466</note>
+        <note>Line: 476</note>
       </trans-unit>
       <trans-unit id="5dd532f0a63d89c5af0243b74732f63c" approved="yes">
         <source>Contact details</source>
         <target state="translated">Detalhes de contacto</target>
-        <note>Line: 539</note>
+        <note>Line: 549</note>
       </trans-unit>
     </body>
   </file>
@@ -1086,17 +1022,30 @@ Comment: NW_CONDITIONS on configuration_lang table - From ps_emailsubscription m
       </trans-unit>
     </body>
   </file>
-  <file original="src/Core/Grid/Definition/Factory/MetaGridDefinitionFactory.php" source-language="en" target-language="pt-PT" datatype="plaintext">
+  <file original="src/Core/Import/EntityField/Provider/AddressFieldsProvider.php" source-language="en" target-language="pt-PT" datatype="plaintext">
     <body>
-      <trans-unit id="193cfc9be3b995831c6af2fea6650e60" approved="yes">
-        <source>Page</source>
-        <target state="translated">Página</target>
-        <note>Line: 108</note>
+      <trans-unit id="effdb9ce6c5d44df31b89d7069c8e0fb" approved="yes">
+        <source>Alias</source>
+        <target state="translated">Nomes alternativos</target>
+        <note>Line: 58</note>
       </trans-unit>
-      <trans-unit id="12cb401e3a068898222575c6a5ef5ece" approved="yes">
-        <source>Page title</source>
-        <target state="translated">Título da página</target>
-        <note>Line: 114</note>
+    </body>
+  </file>
+  <file original="src/Core/Import/EntityField/Provider/AliasFieldsProvider.php" source-language="en" target-language="pt-PT" datatype="plaintext">
+    <body>
+      <trans-unit id="13348442cc6a27032d2b4aa28b75a5d3" approved="yes">
+        <source>Search</source>
+        <target state="translated">Pesquisar</target>
+        <note>Line: 59</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/PrestaShopBundle/Controller/Admin/Configure/ShopParameters/ContactsController.php" source-language="en" target-language="pt-PT" datatype="plaintext">
+    <body>
+      <trans-unit id="c41f67055a184ed2e895681336572761" approved="yes">
+        <source>Add new contact</source>
+        <target state="translated">Adicionar contacto</target>
+        <note>Line: 71</note>
       </trans-unit>
     </body>
   </file>
@@ -1105,16 +1054,7 @@ Comment: NW_CONDITIONS on configuration_lang table - From ps_emailsubscription m
       <trans-unit id="e1622ba9f41f5b695bddc69e3ceaa204" approved="yes">
         <source>Add a new page</source>
         <target state="translated">Adicionar nova página</target>
-        <note>Line: 81</note>
-      </trans-unit>
-    </body>
-  </file>
-  <file original="src/PrestaShopBundle/Form/Admin/Configure/AdvancedParameters/Import/ImportType.php" source-language="en" target-language="pt-PT" datatype="plaintext">
-    <body>
-      <trans-unit id="effdb9ce6c5d44df31b89d7069c8e0fb" approved="yes">
-        <source>Alias</source>
-        <target state="translated">Nomes alternativos</target>
-        <note>Line: 61</note>
+        <note>Line: 99</note>
       </trans-unit>
     </body>
   </file>
@@ -1225,17 +1165,17 @@ Comment: NW_CONDITIONS on configuration_lang table - From ps_emailsubscription m
       <trans-unit id="175db77b6b3ecd9633e85b5efc28bbc1" approved="yes">
         <source>Decrement pack only.</source>
         <target state="translated">Diminuir apenas o pacote.</target>
-        <note>Line: 67</note>
+        <note>Line: 73</note>
       </trans-unit>
       <trans-unit id="1ba020dea4ce06fa139a471db21f41a7" approved="yes">
         <source>Decrement products in pack only.</source>
         <target state="translated">Diminuir apenas os produtos no pacote.</target>
-        <note>Line: 68</note>
+        <note>Line: 74</note>
       </trans-unit>
       <trans-unit id="61b912928e920c280798dc648d4068fe" approved="yes">
         <source>Decrement both.</source>
         <target state="translated">Diminuir ambos.</target>
-        <note>Line: 69</note>
+        <note>Line: 75</note>
       </trans-unit>
     </body>
   </file>
@@ -1243,6 +1183,20 @@ Comment: NW_CONDITIONS on configuration_lang table - From ps_emailsubscription m
     <body>
       
       
+    </body>
+  </file>
+  <file original="src/PrestaShopBundle/Form/Admin/Configure/ShopParameters/TrafficSeo/Meta/MetaType.php" source-language="en" target-language="pt-PT" datatype="plaintext">
+    <body>
+      <trans-unit id="532a7bf10fd5a4315e0dfefe7a110d43" approved="yes">
+        <source>Default pages</source>
+        <target state="translated">Páginas padrão</target>
+        <note>Line: 79</note>
+      </trans-unit>
+      <trans-unit id="e334486a68366ba780f5140cfe8668ac" approved="yes">
+        <source>Module pages</source>
+        <target state="translated">Páginas do módulo</target>
+        <note>Line: 80</note>
+      </trans-unit>
     </body>
   </file>
   <file original="src/PrestaShopBundle/Resources/views/Admin/Configure/ShopParameters/Blocks/customer_preferences_general.html.twig" source-language="en" target-language="pt-PT" datatype="plaintext">
@@ -1281,15 +1235,20 @@ Comment: NW_CONDITIONS on configuration_lang table - From ps_emailsubscription m
   </file>
   <file original="src/PrestaShopBundle/Resources/views/Admin/Configure/ShopParameters/Blocks/product_preferences_general.html.twig" source-language="en" target-language="pt-PT" datatype="plaintext">
     <body>
+      <trans-unit id="f870b8a1af52a144a646db03f6f63f7d" approved="yes">
+        <source>Show prices</source>
+        <target state="translated">Mostrar preços</target>
+        <note>Line: 46</note>
+      </trans-unit>
       <trans-unit id="eb1cef1202fdc4d7954899fbf9f1734b" approved="yes">
         <source>Number of days for which the product is considered 'new'</source>
         <target state="translated">Número de dias em que o produto é novo</target>
-        <note>Line: 46</note>
+        <note>Line: 54</note>
       </trans-unit>
       <trans-unit id="9d980493b9016efc42443b1fdae49f33" approved="yes">
         <source>Max size of product summary</source>
         <target state="translated">Tamanho máx do resumo do produto</target>
-        <note>Line: 54</note>
+        <note>Line: 62</note>
       </trans-unit>
       <trans-unit id="7dbe88f99044a2b7e37ae992b8651be4" approved="yes">
         <source>Products (general)</source>
@@ -1304,17 +1263,17 @@ Comment: NW_CONDITIONS on configuration_lang table - From ps_emailsubscription m
       <trans-unit id="b5069c99813cffc6933c18ab71fd6cd9" approved="yes">
         <source>Quantity discounts based on</source>
         <target state="translated">Descontos de quantidade baseados em</target>
-        <note>Line: 61</note>
+        <note>Line: 69</note>
       </trans-unit>
       <trans-unit id="52be3e936f99d9746870ca7d356b3f21" approved="yes">
         <source>Force update of friendly URL</source>
         <target state="translated">Forçar atualização de URL reescritos</target>
-        <note>Line: 68</note>
+        <note>Line: 76</note>
       </trans-unit>
       <trans-unit id="8a93e785ac0d7204479e4697cbe8696c" approved="yes">
         <source>Default activation status</source>
         <target state="translated">Estado predefinido da ativação</target>
-        <note>Line: 75</note>
+        <note>Line: 83</note>
       </trans-unit>
     </body>
   </file>
@@ -1435,6 +1394,20 @@ Comment: NW_CONDITIONS on configuration_lang table - From ps_emailsubscription m
       </trans-unit>
     </body>
   </file>
+  <file original="src/PrestaShopBundle/Resources/views/Admin/Configure/ShopParameters/Contact/Contacts/Blocks/form.html.twig" source-language="en" target-language="pt-PT" datatype="plaintext">
+    <body>
+      <trans-unit id="9aa698f602b1e5694855cee73a683488" approved="yes">
+        <source>Contacts</source>
+        <target state="translated">Contactos</target>
+        <note>Line: 33</note>
+      </trans-unit>
+      <trans-unit id="a4cd3191fdeea29906a113c78d4c0e26" approved="yes">
+        <source>Save messages?</source>
+        <target state="translated">Guardar mensagens?</target>
+        <note>Line: 50</note>
+      </trans-unit>
+    </body>
+  </file>
   <file original="src/PrestaShopBundle/Resources/views/Admin/Configure/ShopParameters/OrderPreferences/Blocks/order_preferences_general.html.twig" source-language="en" target-language="pt-PT" datatype="plaintext">
     <body>
       <trans-unit id="c6ca929dc4c8193ad6cd154e9e075ac9" approved="yes">
@@ -1527,6 +1500,30 @@ Comment: NW_CONDITIONS on configuration_lang table - From ps_emailsubscription m
       </trans-unit>
     </body>
   </file>
+  <file original="src/PrestaShopBundle/Resources/views/Admin/Configure/ShopParameters/TrafficSeo/Meta/Blocks/form.html.twig" source-language="en" target-language="pt-PT" datatype="plaintext">
+    <body>
+      <trans-unit id="db72e24b402e8baf8df6ca786a59e4de" approved="yes">
+        <source>Rewritten URL</source>
+        <target state="translated">URL reescrito</target>
+        <note>Line: 85</note>
+      </trans-unit>
+      <trans-unit id="b49c4d1248da006daf31db2577b7be4a" approved="yes">
+        <source>Meta tags</source>
+        <target state="translated">Etiquetas Meta</target>
+        <note>Line: 31</note>
+      </trans-unit>
+      <trans-unit id="c0a1f9eff88edb62c46edb084004e32b" approved="yes">
+        <source>Page name</source>
+        <target state="translated">Nome da página</target>
+        <note>Line: 44</note>
+      </trans-unit>
+      <trans-unit id="12cb401e3a068898222575c6a5ef5ece" approved="yes">
+        <source>Page title</source>
+        <target state="translated">Título da página</target>
+        <note>Line: 54</note>
+      </trans-unit>
+    </body>
+  </file>
   <file original="src/PrestaShopBundle/Resources/views/Admin/Configure/ShopParameters/TrafficSeo/Meta/Blocks/keyword.html.twig" source-language="en" target-language="pt-PT" datatype="plaintext">
     <body>
       <trans-unit id="86d314b39d91d9c8f4578c938e4401d6" approved="yes">
@@ -1557,32 +1554,38 @@ Comment: NW_CONDITIONS on configuration_lang table - From ps_emailsubscription m
       </trans-unit>
     </body>
   </file>
+  <file original="src/PrestaShopBundle/Resources/views/Admin/Configure/ShopParameters/TrafficSeo/Meta/Blocks/seo_options_configuration.html.twig" source-language="en" target-language="pt-PT" datatype="plaintext">
+    <body>
+      
+      
+    </body>
+  </file>
   <file original="src/PrestaShopBundle/Resources/views/Admin/Configure/ShopParameters/TrafficSeo/Meta/Blocks/set_up_urls_configuration.html.twig" source-language="en" target-language="pt-PT" datatype="plaintext">
     <body>
       <trans-unit id="a7686ea311b65874a504a343c08a4341" approved="yes">
         <source>Accented URL</source>
         <target state="translated">URL acentuado</target>
-        <note>Line: 69</note>
+        <note>Line: 70</note>
       </trans-unit>
       <trans-unit id="fb64c58d84a997e89be8de9897f36ecc" approved="yes">
         <source>Redirect to the canonical URL</source>
         <target state="translated">Redirecionar para a URL canónica</target>
-        <note>Line: 77</note>
+        <note>Line: 78</note>
       </trans-unit>
       <trans-unit id="38bada4e8300d679ea0c293a8658605a" approved="yes">
         <source>Disable Apache's MultiViews option</source>
         <target state="translated">Desativar a opção MultiViews do Apache</target>
-        <note>Line: 86</note>
+        <note>Line: 87</note>
       </trans-unit>
       <trans-unit id="1260ff0747d4dbe30fcc4d360891205f" approved="yes">
         <source>Disable Apache's mod_security module</source>
         <target state="translated">Desativar o módulo mod_security do Apache</target>
-        <note>Line: 96</note>
+        <note>Line: 97</note>
       </trans-unit>
       <trans-unit id="3cb0403ba2ec65e9030c1013b5edb42d" approved="yes">
         <source>Set up URLs</source>
         <target state="translated">Definição de URLs</target>
-        <note>Line: 31</note>
+        <note>Line: 32</note>
       </trans-unit>
     </body>
   </file>
@@ -1744,6 +1747,15 @@ Comment: NW_CONDITIONS on configuration_lang table - From ps_emailsubscription m
         <source>Please click here to check if your shop supports HTTPS.</source>
         <target state="translated">Clique aqui para saber se a sua loja suporta HTTPS.</target>
         <note>Line: 59</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/PrestaShopBundle/Resources/views/Admin/Improve/Design/Cms/Blocks/form.html.twig" source-language="en" target-language="pt-PT" datatype="plaintext">
+    <body>
+      <trans-unit id="193cfc9be3b995831c6af2fea6650e60" approved="yes">
+        <source>Page</source>
+        <target state="translated">Página</target>
+        <note>Line: 31</note>
       </trans-unit>
     </body>
   </file>

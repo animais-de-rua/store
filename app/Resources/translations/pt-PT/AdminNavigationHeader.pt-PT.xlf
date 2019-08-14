@@ -30,67 +30,84 @@
       <trans-unit id="4f32a32dea642737580dd71cdfd8d3c0" approved="yes">
         <source>Quick Access</source>
         <target state="translated">Acesso Rápido</target>
-        <note>Line: 127</note>
+        <note>Line: 129</note>
       </trans-unit>
       <trans-unit id="f5c26758149849ee0f84a2eceaf0acfd" approved="yes">
         <source>Remove from QuickAccess</source>
         <target state="translated">Remover do Acesso Rápido</target>
-        <note>Line: 142</note>
+        <note>Line: 144</note>
       </trans-unit>
       <trans-unit id="383247a8cb198be4042d128986100cea" approved="yes">
         <source>Add current page to QuickAccess</source>
         <target state="translated">Adicionar a página atual ao Acesso Rápido</target>
-        <note>Line: 149</note>
+        <note>Line: 151</note>
       </trans-unit>
       <trans-unit id="165122309e15dc09c30b78951e53cb5a" approved="yes">
         <source>Manage quick accesses</source>
         <target state="translated">Gerir atalhos</target>
-        <note>Line: 156</note>
+        <note>Line: 158</note>
       </trans-unit>
       <trans-unit id="6f7579a25b7aba443386a5b86a7900b4" approved="yes">
         <source>Please name this shortcut:</source>
         <target state="translated">Atribua um nome a este atalho:</target>
-        <note>Line: 171</note>
+        <note>Line: 173</note>
       </trans-unit>
       <trans-unit id="ec3028a12402ab7f43962a6f3a667b6e" approved="yes">
         <source>Debug mode</source>
         <target state="translated">Modo de descoberta de erros (debug)</target>
-        <note>Line: 225</note>
+        <note>Line: 227</note>
       </trans-unit>
       <trans-unit id="38a27c0c7ef7a05e13efa2798ee21533" approved="yes">
         <source>Maintenance mode</source>
         <target state="translated">Modo de manutenção</target>
-        <note>Line: 240</note>
+        <note>Line: 242</note>
       </trans-unit>
       <trans-unit id="d70861cbe7f8c9a1241c39b3e7ef5ef2" approved="yes">
         <source>View my shop</source>
         <target state="translated">Ver a loja</target>
-        <note>Line: 264</note>
+        <note>Line: 266</note>
       </trans-unit>
       <trans-unit id="1558db2a9e35b7898e0b2a4a777ed2f9" approved="yes">
         <source>Latest orders</source>
         <target state="translated">Últimas encomendas</target>
-        <note>Line: 287</note>
+        <note>Line: 289</note>
       </trans-unit>
       <trans-unit id="3d8de6fcc09baf73f7175fe59f278ced" approved="yes">
         <source>Your profile</source>
         <target state="translated">O seu perfil</target>
-        <note>Line: 362</note>
+        <note>Line: 363</note>
       </trans-unit>
       <trans-unit id="65e81c540f5af5f5c59901a076f9b024" approved="yes">
         <source>My PrestaShop account</source>
         <target state="translated">Minha conta PrestaShop</target>
-        <note>Line: 364</note>
+        <note>Line: 372</note>
       </trans-unit>
       <trans-unit id="c87aacf5673fada1108c9f809d354311" approved="yes">
         <source>Sign out</source>
         <target state="translated">Fechar sessão</target>
-        <note>Line: 366</note>
+        <note>Line: 375</note>
       </trans-unit>
       <trans-unit id="5dc5aba5187b03594ed0512efb6a8d4f" approved="yes">
         <source>New customers</source>
         <target state="translated">Novos clientes</target>
-        <note>Line: 293</note>
+        <note>Line: 295</note>
+      </trans-unit>
+      <trans-unit id="cf270e40d273f9e7fd7c3061729060c3" approved="yes">
+        <source>Training</source>
+        <target state="translated">Formação</target>
+        <note>Line: 367</note>
+      </trans-unit>
+      <trans-unit id="1862c358989cfbd20d38ca9adf69e27a" approved="yes">
+        <source>PrestaShop Marketplace</source>
+        <target state="translated">PrestaShop Marketplace</target>
+        <note>Line: 369</note>
+      </trans-unit>
+      <trans-unit id="012065927bff8fcbce602e741a2d663e">
+        <source><![CDATA[https://www.prestashop.com/en/resources/documentations?utm_source=back-office&utm_medium=profile&utm_campaign=resources-en&utm_content=download17
+]]></source>
+        <target state="needs-translation"><![CDATA[
+]]></target>
+        <note>Line: 365</note>
       </trans-unit>
     </body>
   </file>
@@ -146,6 +163,12 @@
         <target state="translated">Nome do Módulo</target>
         <note>Line: 69</note>
       </trans-unit>
+    </body>
+  </file>
+  <file original="admin-dev/themes/new-theme/template/components/layout/employee_dropdown.tpl" source-language="en" target-language="pt-PT" datatype="plaintext">
+    <body>
+      
+      
     </body>
   </file>
   <file original="classes/lang/KeysReference/QuickAccessLang.php" source-language="en" target-language="pt-PT" datatype="plaintext">

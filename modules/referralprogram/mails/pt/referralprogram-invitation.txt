@@ -1,20 +1,17 @@
-[{shop_url}] 
+{shop_url}
 
-{firstname_friend} {lastname_friend}, Junte-se a nós! 
+{firstname_friend} {lastname_friend}, Join us!
 
-O seu amigo {firstname} {lastname} gostaria que visitasse a loja
-{shop_name} [{shop_url}]!
+Your friend {firstname} {lastname} wants to refer you on [{shop_name}]({shop_url})!
 
-Temos o prazer de lhe oferecer um Vale de Desconto no valor de
-{discount} que pode usar na sua próxima encomenda. Indique amigos e
-ganhe Vales de Desconto no valor de {discount}! O registo é muito
-fácil. Basta clicar aqui! [{link}] 		 
+We are pleased to offer you a voucher worth {discount} that you can use on your next order. Get referred and earn a discount voucher of {discount}!
 
-Ao registar-se, não se esqueça de indicar o endereço de email do
-amigo que pretende convidar: {email}.
+[It's very easy to sign up, just click here!]({link})
 
-Com os melhores cumprimentos, 
+When signing up, don't forget to provide the email address of your referring friend: {email}.
 
-{shop_name} [{shop_url}] powered by
-PrestaShop(tm) [http://www.prestashop.com/] 
+Com os melhores cumprimentos,
 
+[{shop_name}]({shop_url})
+
+Powered by [PrestaShop](http://www.prestashop.com/)

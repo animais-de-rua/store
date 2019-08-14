@@ -1,58 +1,41 @@
-[{shop_url}] 
+{shop_url}
 
-Parabéns! 
+Parabéns!
 
-Foi feita uma encomenda em {shop_name} pelo cliente: {firstname}
-{lastname} ({email}) 
+A new order was placed on {shop_name} by the following customer: {firstname} {lastname} ({email})
 
-ENCOMENDA: {order_name} Realizada a {date}
+Detalhes da encomenda
 
-PAGAMENTO: {payment} 		 
+Encomenda: {order_name} Realizada a {date}
 
-REFERÊNCIA
+Pagamento: {payment}
 
-PRODUTO
+Referência	Produto	Preço unitário	Quantidade	Preço total   {items}
+Produtos	{total_products}
+Descontos	{total_discounts}
+Embrulho de presente	{total_wrapping}
+Envio	{total_shipping}
+Including total tax	{total_tax_paid}
+Total pago	{total_paid}
 
-PREÇO UNITÁRIO
+Transportadora
 
-QUANTIDADE
+Transportadora: {carrier}
 
-PREÇO TOTAL
+Pagamento: {payment}
 
-{items} 
+Endereço de entrega
 
-PRODUTOS 
+{delivery_block_html}
 
-{total_products} 
+Endereço de faturação
 
-DESCONTOS 
+{invoice_block_html}
 
-{total_discounts} 
+Mensagem do cliente:
 
-EMBRULHO DE PRESENTE 
+{message}
 
-{total_wrapping} 
+[{shop_name}]({shop_url})
 
-ENVIO 
-
-{total_shipping} 
-
-TOTAL DE IMPOSTO PAGO 
-
-{total_tax_paid} 
-
-TOTAL PAGO 
-
-{total_paid} 
-
-{carrier} 
-
-{delivery_block_html} 
-
-{invoice_block_html} 
-
-{message} 
-
-{shop_name} [{shop_url}] powered by
-PrestaShop(tm) [http://www.prestashop.com/] 
-
+Powered by [PrestaShop](http://www.prestashop.com/)

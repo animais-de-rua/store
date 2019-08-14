@@ -1,12 +1,11 @@
-[{shop_url}] 
+{shop_url}
 
-Olá 
+Olá {firstname} {lastname},
 
-Isto é um EMAIL DE TESTE enviado a partir da sua loja.
+Here is a test email from your shop.
 
-Se estiver a ler esta mensagem significa que o teste foi bem
-sucedido!. 
+If you can read this, it means the test is successful!
 
-{shop_name} [{shop_url}] powered by
-PrestaShop(tm) [http://www.prestashop.com/] 
+[{shop_name}]({shop_url})
 
+Powered by [PrestaShop](http://www.prestashop.com/)

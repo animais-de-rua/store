@@ -1,14 +1,17 @@
-[{shop_url}] 
+{shop_url}
 
-Olá, 
+Olá {firstname} {lastname},
 
-Recebeu uma nova mensagem sobre a encomenda com a referência
-{order_name}.
+Message from customer
 
-CLIENTE: {firstname} {lastname} ({email})
+Recebeu uma nova mensagem sobre a encomenda com a referência {order_name}.
 
-{message} 		 
+Cliente: {firstrname} {lastname} ({email})
 
-{shop_name} [{shop_url}] powered by
-PrestaShop(tm) [http://www.prestashop.com/] 
+Mensagem do cliente:
 
+{message}
+
+[{shop_name}]({shop_url})
+
+Powered by [PrestaShop](http://www.prestashop.com/)

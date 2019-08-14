@@ -5,17 +5,17 @@
       <trans-unit id="3aaaafde6f9b2701f9e6eb9292e95521" approved="yes">
         <source>Google sitemap</source>
         <target state="translated">Google sitemap</target>
-        <note>Line: 46</note>
+        <note>Line: 47</note>
       </trans-unit>
       <trans-unit id="935a6bc13704a117d22333c3155b5dae" approved="yes">
         <source>Generate your Google sitemap file</source>
         <target state="translated">Crie o seu ficheiro para o Google sitemap</target>
-        <note>Line: 47</note>
+        <note>Line: 48</note>
       </trans-unit>
       <trans-unit id="b52bf50c73995780892b9945ddc98708" approved="yes">
         <source>An error occured while trying to check your file permissions. Please adjust your permissions to allow PrestaShop to write a file in your root directory.</source>
         <target state="translated">Ocorreu um erro ao tentar verificar as permissões do ficheiro. Por favor, altere as suas permissões de escrita para permitir que o PrestaShop possa gravar ficheiros no diretório de raiz.</target>
-        <note>Line: 580</note>
+        <note>Line: 581</note>
       </trans-unit>
     </body>
   </file>
