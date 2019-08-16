@@ -96,6 +96,7 @@ a {
 #_desktop_search_filters_clear_all,
 #search_filters,
 div.product-information > div.tabs > ul > li:nth-child(2),
+.block-category.card.card-block,
 .product-discounts,
 .block-categories {
     display: none;
